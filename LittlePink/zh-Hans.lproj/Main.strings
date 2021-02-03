@@ -1,0 +1,15 @@
+
+/* Class = "UITabBarItem"; title = "发布"; ObjectID = "ZIB-5V-7zI"; */
+"ZIB-5V-7zI.title" = "发布";
+
+/* Class = "UITabBarItem"; title = "消息"; ObjectID = "d1k-fg-gpF"; */
+"d1k-fg-gpF.title" = "消息";
+
+/* Class = "UITabBarItem"; title = "商城"; ObjectID = "dsv-xB-Bro"; */
+"dsv-xB-Bro.title" = "商城";
+
+/* Class = "UITabBarItem"; title = "我"; ObjectID = "fHz-7L-1jf"; */
+"fHz-7L-1jf.title" = "我";
+
+/* Class = "UITabBarItem"; title = "首页"; ObjectID = "rUU-73-vWJ"; */
+"rUU-73-vWJ.title" = "首页";

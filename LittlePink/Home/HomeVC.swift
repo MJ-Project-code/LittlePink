@@ -31,7 +31,7 @@ class HomeVC: ButtonBarPagerTabStripViewController {
             newCell?.label.textColor = .label
         }
         DispatchQueue.main.async {
-            self.moveToViewController(at: 1, animated: true)
+            self.moveToViewController(at: 1, animated: false)
         }
         // Do any additional setup after loading the view.
     }
