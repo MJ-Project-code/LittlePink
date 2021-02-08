@@ -30,6 +30,9 @@
 /* Begin PBXFileReference section */
 		AC1C2ECD820882225E9AFB38 /* Pods_LittlePink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LittlePink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1D380A29BBDC7C14672677 /* Pods-LittlePink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LittlePink.debug.xcconfig"; path = "Target Support Files/Pods-LittlePink/Pods-LittlePink.debug.xcconfig"; sourceTree = "<group>"; };
+		F2111D8325CCF34100C0A4D7 /* ARC+循环引用.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "ARC+循环引用.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		F22ABCA425D11A9300ACECE5 /* 枚举.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "枚举.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		F22F5DA525CCE7DF005A1AEF /* 值类型+引用类型.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "值类型+引用类型.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		F239A8DC25C28BF700D7414C /* FollowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowVC.swift; sourceTree = "<group>"; };
 		F239A8E225C28C6A00D7414C /* NearByVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearByVC.swift; sourceTree = "<group>"; };
 		F239A8E625C28C8200D7414C /* DiscoveryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryVC.swift; sourceTree = "<group>"; };
@@ -118,6 +121,9 @@
 			children = (
 				F273781525C7E26100F4A6E8 /* PostVC.swift */,
 				F273781E25C93C3500F4A6E8 /* 闭包.playground */,
+				F22F5DA525CCE7DF005A1AEF /* 值类型+引用类型.playground */,
+				F2111D8325CCF34100C0A4D7 /* ARC+循环引用.playground */,
+				F22ABCA425D11A9300ACECE5 /* 枚举.playground */,
 			);
 			path = "Demos+PH";
 			sourceTree = "<group>";
