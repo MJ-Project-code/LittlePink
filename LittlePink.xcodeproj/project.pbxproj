@@ -12,12 +12,15 @@
 		F239A8E325C28C6A00D7414C /* NearByVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F239A8E225C28C6A00D7414C /* NearByVC.swift */; };
 		F239A8E725C28C8200D7414C /* DiscoveryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F239A8E625C28C8200D7414C /* DiscoveryVC.swift */; };
 		F239A8EA25C28E3100D7414C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F239A8E925C28E3100D7414C /* Constants.swift */; };
+		F24DAEF025ECDCE7003E1043 /* PhotoFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24DAEEF25ECDCE7003E1043 /* PhotoFooter.swift */; };
 		F254F65325C4015700A02076 /* WaterfallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F254F65225C4015700A02076 /* WaterfallVC.swift */; };
 		F254F65F25C40C0B00A02076 /* WaterfallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F254F65E25C40C0B00A02076 /* WaterfallCell.swift */; };
 		F26EDB3925C6B86C0051E9E7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F26EDB3825C6B86C0051E9E7 /* README.md */; };
 		F273781325C7E02F00F4A6E8 /* TabBarC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273781225C7E02F00F4A6E8 /* TabBarC.swift */; };
 		F273781625C7E26100F4A6E8 /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273781525C7E26100F4A6E8 /* PostVC.swift */; };
 		F273781925C8E69E00F4A6E8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273781825C8E69E00F4A6E8 /* Extensions.swift */; };
+		F2752A7025D26024004EB07B /* NoteEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2752A6F25D26024004EB07B /* NoteEditVC.swift */; };
+		F27972D325DD1EC9008B2D08 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27972D225DD1EC9008B2D08 /* PhotoCell.swift */; };
 		F288A83025C160E1001B1D50 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F288A82F25C160E1001B1D50 /* HomeVC.swift */; };
 		F2AC647F25BEAE85000672E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AC647E25BEAE85000672E8 /* AppDelegate.swift */; };
 		F2AC648125BEAE85000672E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AC648025BEAE85000672E8 /* SceneDelegate.swift */; };
@@ -37,6 +40,8 @@
 		F239A8E225C28C6A00D7414C /* NearByVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearByVC.swift; sourceTree = "<group>"; };
 		F239A8E625C28C8200D7414C /* DiscoveryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryVC.swift; sourceTree = "<group>"; };
 		F239A8E925C28E3100D7414C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F24DAEEF25ECDCE7003E1043 /* PhotoFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFooter.swift; sourceTree = "<group>"; };
+		F254D30725E63C0A0054FABC /* 代码实现collectionview.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "代码实现collectionview.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		F254F65225C4015700A02076 /* WaterfallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallVC.swift; sourceTree = "<group>"; };
 		F254F65E25C40C0B00A02076 /* WaterfallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallCell.swift; sourceTree = "<group>"; };
 		F26EDB3825C6B86C0051E9E7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -46,6 +51,8 @@
 		F273781525C7E26100F4A6E8 /* PostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
 		F273781825C8E69E00F4A6E8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F273781E25C93C3500F4A6E8 /* 闭包.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "闭包.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		F2752A6F25D26024004EB07B /* NoteEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditVC.swift; sourceTree = "<group>"; };
+		F27972D225DD1EC9008B2D08 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		F288A82F25C160E1001B1D50 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		F2AC647B25BEAE85000672E8 /* LittlePink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LittlePink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2AC647E25BEAE85000672E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +105,16 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		F2404CB325EE1D2700AF1B55 /* NoteEdit */ = {
+			isa = PBXGroup;
+			children = (
+				F2752A6F25D26024004EB07B /* NoteEditVC.swift */,
+				F27972D225DD1EC9008B2D08 /* PhotoCell.swift */,
+				F24DAEEF25ECDCE7003E1043 /* PhotoFooter.swift */,
+			);
+			path = NoteEdit;
+			sourceTree = "<group>";
+		};
 		F26EDB3425C6B57C0051E9E7 /* Waterfall */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +141,7 @@
 				F22F5DA525CCE7DF005A1AEF /* 值类型+引用类型.playground */,
 				F2111D8325CCF34100C0A4D7 /* ARC+循环引用.playground */,
 				F22ABCA425D11A9300ACECE5 /* 枚举.playground */,
+				F254D30725E63C0A0054FABC /* 代码实现collectionview.playground */,
 			);
 			path = "Demos+PH";
 			sourceTree = "<group>";
@@ -154,6 +172,7 @@
 				F2AC648025BEAE85000672E8 /* SceneDelegate.swift */,
 				F2AC648425BEAE85000672E8 /* Main.storyboard */,
 				F273781225C7E02F00F4A6E8 /* TabBarC.swift */,
+				F2404CB325EE1D2700AF1B55 /* NoteEdit */,
 				F26EDB3425C6B57C0051E9E7 /* Waterfall */,
 				F239A8EC25C2900200D7414C /* Home */,
 				F2AC648A25BEAE86000672E8 /* Assets.xcassets */,
@@ -283,9 +302,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F239A8E325C28C6A00D7414C /* NearByVC.swift in Sources */,
+				F27972D325DD1EC9008B2D08 /* PhotoCell.swift in Sources */,
 				F273781325C7E02F00F4A6E8 /* TabBarC.swift in Sources */,
 				F254F65325C4015700A02076 /* WaterfallVC.swift in Sources */,
 				F254F65F25C40C0B00A02076 /* WaterfallCell.swift in Sources */,
+				F24DAEF025ECDCE7003E1043 /* PhotoFooter.swift in Sources */,
+				F2752A7025D26024004EB07B /* NoteEditVC.swift in Sources */,
 				F2AC647F25BEAE85000672E8 /* AppDelegate.swift in Sources */,
 				F288A83025C160E1001B1D50 /* HomeVC.swift in Sources */,
 				F273781625C7E26100F4A6E8 /* PostVC.swift in Sources */,

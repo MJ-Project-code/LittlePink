@@ -5,7 +5,19 @@
 //  Created by 马俊 on 2021/2/2.
 //
 
-import Foundation
+import UIKit
+
+extension UIView{
+    @IBInspectable
+    var radius:CGFloat{
+        get{
+            layer.cornerRadius
+        }
+        set{
+            layer.cornerRadius = newValue
+        }
+    }
+}
 
 extension Bundle{
     var appName:String{

@@ -35,7 +35,7 @@ class TabBarC: UITabBarController ,UITabBarControllerDelegate{
             config.screens = [.library,.video, .photo]
             
             config.preferredStatusBarStyle = UIStatusBarStyle.default
-            config.maxCameraZoomFactor = 1.0
+            config.maxCameraZoomFactor = kMaxCameraZoomFactor
             
             
             
@@ -43,7 +43,7 @@ class TabBarC: UITabBarController ,UITabBarControllerDelegate{
             
             config.library.defaultMultipleSelection = true
             config.library.maxNumberOfItems = kMaxPhotoCount
-            config.library.spacingBetweenItems = 1.0
+            config.library.spacingBetweenItems = kSpacingBetweenItems
 
             
             //视频配置
@@ -59,6 +59,16 @@ class TabBarC: UITabBarController ,UITabBarControllerDelegate{
                 if cancelled{
                     
                 }
+                for item in items {
+                    switch item {
+                    case .photo(let photo):
+                        print(photo)
+                    case .video(let video):
+                        print(video)
+                    }
+                }
+                let noteeditvv = NoteEditVC();
+                picker.pushViewController(noteeditvv, animated: true)
                 picker.dismiss(animated:  true, completion: nil)
             }
             present(picker, animated: true, completion: nil)
