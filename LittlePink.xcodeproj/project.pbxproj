@@ -28,6 +28,9 @@
 		F2AC648925BEAE85000672E8 /* LittlePink.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F2AC648725BEAE85000672E8 /* LittlePink.xcdatamodeld */; };
 		F2AC648B25BEAE86000672E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2AC648A25BEAE86000672E8 /* Assets.xcassets */; };
 		F2AC648E25BEAE86000672E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2AC648C25BEAE86000672E8 /* LaunchScreen.storyboard */; };
+		F2D198F925F2044E00DA1499 /* testVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F2D198F725F2029A00DA1499 /* testVideo.mp4 */; };
+		F2D198FC25F2151600DA1499 /* NoteEditVC-DragDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D198FB25F2151600DA1499 /* NoteEditVC-DragDrop.swift */; };
+		F2D1990025F5FFE500DA1499 /* NoteEditVC-CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D198FF25F5FFE500DA1499 /* NoteEditVC-CollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +54,7 @@
 		F273781525C7E26100F4A6E8 /* PostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
 		F273781825C8E69E00F4A6E8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F273781E25C93C3500F4A6E8 /* 闭包.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "闭包.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		F274A1CC25F0BB3E00C0DC18 /* LittlePink-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LittlePink-Bridging-Header.h"; sourceTree = "<group>"; };
 		F2752A6F25D26024004EB07B /* NoteEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditVC.swift; sourceTree = "<group>"; };
 		F27972D225DD1EC9008B2D08 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		F288A82F25C160E1001B1D50 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -62,6 +66,9 @@
 		F2AC648A25BEAE86000672E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2AC648D25BEAE86000672E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2AC648F25BEAE86000672E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2D198F725F2029A00DA1499 /* testVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = testVideo.mp4; sourceTree = "<group>"; };
+		F2D198FB25F2151600DA1499 /* NoteEditVC-DragDrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEditVC-DragDrop.swift"; sourceTree = "<group>"; };
+		F2D198FF25F5FFE500DA1499 /* NoteEditVC-CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEditVC-CollectionView.swift"; sourceTree = "<group>"; };
 		FF4B0E5D10400B0B19904172 /* Pods-LittlePink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LittlePink.release.xcconfig"; path = "Target Support Files/Pods-LittlePink/Pods-LittlePink.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				F2752A6F25D26024004EB07B /* NoteEditVC.swift */,
+				F2D198FF25F5FFE500DA1499 /* NoteEditVC-CollectionView.swift */,
+				F2D198FB25F2151600DA1499 /* NoteEditVC-DragDrop.swift */,
 				F27972D225DD1EC9008B2D08 /* PhotoCell.swift */,
 				F24DAEEF25ECDCE7003E1043 /* PhotoFooter.swift */,
 			);
@@ -179,6 +188,8 @@
 				F2AC648C25BEAE86000672E8 /* LaunchScreen.storyboard */,
 				F2AC648F25BEAE86000672E8 /* Info.plist */,
 				F2AC648725BEAE85000672E8 /* LittlePink.xcdatamodeld */,
+				F274A1CC25F0BB3E00C0DC18 /* LittlePink-Bridging-Header.h */,
+				F2D198F725F2029A00DA1499 /* testVideo.mp4 */,
 				F273781B25C9386500F4A6E8 /* Demos+PH */,
 				F26EDB3625C6B5900051E9E7 /* Common */,
 			);
@@ -248,6 +259,7 @@
 				F2AC648E25BEAE86000672E8 /* LaunchScreen.storyboard in Resources */,
 				F2AC648B25BEAE86000672E8 /* Assets.xcassets in Resources */,
 				F26EDB3925C6B86C0051E9E7 /* README.md in Resources */,
+				F2D198F925F2044E00DA1499 /* testVideo.mp4 in Resources */,
 				F2AC648625BEAE85000672E8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,12 +317,14 @@
 				F27972D325DD1EC9008B2D08 /* PhotoCell.swift in Sources */,
 				F273781325C7E02F00F4A6E8 /* TabBarC.swift in Sources */,
 				F254F65325C4015700A02076 /* WaterfallVC.swift in Sources */,
+				F2D198FC25F2151600DA1499 /* NoteEditVC-DragDrop.swift in Sources */,
 				F254F65F25C40C0B00A02076 /* WaterfallCell.swift in Sources */,
 				F24DAEF025ECDCE7003E1043 /* PhotoFooter.swift in Sources */,
 				F2752A7025D26024004EB07B /* NoteEditVC.swift in Sources */,
 				F2AC647F25BEAE85000672E8 /* AppDelegate.swift in Sources */,
 				F288A83025C160E1001B1D50 /* HomeVC.swift in Sources */,
 				F273781625C7E26100F4A6E8 /* PostVC.swift in Sources */,
+				F2D1990025F5FFE500DA1499 /* NoteEditVC-CollectionView.swift in Sources */,
 				F239A8DD25C28BF700D7414C /* FollowVC.swift in Sources */,
 				F273781925C8E69E00F4A6E8 /* Extensions.swift in Sources */,
 				F239A8E725C28C8200D7414C /* DiscoveryVC.swift in Sources */,
@@ -402,6 +416,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -457,6 +472,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -478,6 +494,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.LittlePink";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LittlePink/LittlePink-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -499,6 +516,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.LittlePink";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LittlePink/LittlePink-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

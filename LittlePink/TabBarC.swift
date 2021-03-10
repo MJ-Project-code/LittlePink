@@ -67,11 +67,13 @@ class TabBarC: UITabBarController ,UITabBarControllerDelegate{
                         print(video)
                     }
                 }
-                let noteeditvv = NoteEditVC();
-                picker.pushViewController(noteeditvv, animated: true)
-                picker.dismiss(animated:  true, completion: nil)
+//                let noteeditvv = NoteEditVC();
+//                picker.pushViewController(noteeditvv, animated: true)
+                picker.dismiss(animated:  true)
             }
-            present(picker, animated: true, completion: nil)
+            present(picker, animated: true)
+            
+            
             return false
         }
         return true

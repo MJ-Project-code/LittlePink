@@ -6,22 +6,46 @@
 //
 
 import UIKit
+import YPImagePicker
+import SKPhotoBrowser
+import AVKit
 
-class NoteEditVC: UIViewController {
-
-    let photos = [
-        UIImage(named: "1"), UIImage(named: "2")
-    ]
+class NoteEditVC: UIViewController, UITextViewDelegate {
     
+    //var dragingIndexpath = IndexPath(item: 0, section: 0)
+
+     var photos = [
+        UIImage(named: "1")!, UIImage(named: "2")!
+    ]
+    //var videoURL:URL = Bundle.main.url(forResource: "testVideo", withExtension:".mp4")!
+    var videoURL:URL?
     @IBOutlet weak var photoCollectionview: UICollectionView!
+
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var titleCountLabel: UILabel!
+    @IBOutlet weak var textView: UITextView!
+    
+    var photoCount:Int{return photos.count}
+    var isVideo:Bool{ videoURL != nil}
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        photoCollectionview.dragInteractionEnabled = true
+        hideKeyboardWhenTappedAround()
     }
     
 
+    @IBAction func TFEditBegin(_ sender: Any) {
+        titleCountLabel.isHidden = false
+    }
+    
+    @IBAction func TFEditEnd(_ sender: Any) {
+        titleCountLabel.isHidden = true
+    }
+    @IBAction func TFEndOnExit(_ sender: Any) {
+        
+    }
     /*
     // MARK: - Navigation
 
@@ -31,46 +55,14 @@ class NoteEditVC: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
 
 }
 
-extension NoteEditVC:UICollectionViewDataSource{
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        photos.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPhotoCellID, for: indexPath) as! PhotoCell
-        
-        cell.imageView.image = photos[indexPath.item]
-         
-        cell.contentView.layer.cornerRadius = 10
-        
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-//        let photoFooter = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kPhotoFooterID, for: indexPath) as! PhotoFooter
-        switch kind {
-        case UICollectionView.elementKindSectionFooter:
-            let photoFooter = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kPhotoFooterID, for: indexPath) as! PhotoFooter
-            photoFooter.addPhotoBtn.addTarget(self, action: #selector(addPhoto), for: .touchUpInside) //touchUpInside 点击后执行 action的内容
-            return photoFooter
-        default:
-            fatalError("collectionView的footerc出问题")
-        }
-    }
-    
-}
 
-extension NoteEditVC:UICollectionViewDelegate{
-    
-}
-
-//监听
-extension NoteEditVC{
-    @objc private func addPhoto(){
-        print("xxxxx")
-    }
-}
+//extension NoteEditVC:UITextFieldDelegate{
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        textField.resignFirstResponder()
+//        return true
+//    }
+//}

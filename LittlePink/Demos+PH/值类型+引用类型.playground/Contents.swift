@@ -1,6 +1,6 @@
 import UIKit
 
-let a = 1
+ let a = 1
  
 class Person{
     var name = "小马"
