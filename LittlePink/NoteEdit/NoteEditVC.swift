@@ -33,6 +33,7 @@ class NoteEditVC: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         photoCollectionview.dragInteractionEnabled = true
         hideKeyboardWhenTappedAround()
+        titleCountLabel.text = "\(kmaxNoteTitleCount)"
     }
     
 
@@ -46,23 +47,26 @@ class NoteEditVC: UIViewController, UITextViewDelegate {
     @IBAction func TFEndOnExit(_ sender: Any) {
         
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func TFEditChanged(_ sender: Any) {
+        titleCountLabel.text = "\(kmaxNoteTitleCount - titleTextField.unwrappedText.count)"
     }
-    */
+    
     
 
 }
 
 
-//extension NoteEditVC:UITextFieldDelegate{
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        textField.resignFirstResponder()
-//        return true
-//    }
-//}
+extension NoteEditVC:UITextFieldDelegate{
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        
+        let  isExceed = range.location >= kmaxNoteTitleCount || (textField.unwrappedText.count + string.count)  > kmaxNoteTitleCount
+//        if range.location >= kmaxNoteTitleCount || (textField.unwrappedText.count + string.count)  > kmaxNoteTitleCount{
+//            return false
+//        }
+        if isExceed{
+            showTextHUD("标题最多输入\(kmaxNoteTitleCount)字")
+        }
+        return !isExceed
+    }
+}

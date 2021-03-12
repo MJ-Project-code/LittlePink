@@ -137,6 +137,7 @@
                                                                         <connections>
                                                                             <action selector="TFEditBegin:" destination="SQE-aI-bZk" eventType="editingDidBegin" id="YnO-W3-uYb"/>
                                                                             <action selector="TFEditBegin:" destination="SQE-aI-bZk" eventType="editingDidEnd" id="gOI-My-UOU"/>
+                                                                            <action selector="TFEditChanged:" destination="SQE-aI-bZk" eventType="editingChanged" id="INT-dd-I17"/>
                                                                             <action selector="TFEditEnd:" destination="SQE-aI-bZk" eventType="editingDidEnd" id="LDQ-7x-4FL"/>
                                                                             <action selector="TFEndOnExit:" destination="SQE-aI-bZk" eventType="editingDidEndOnExit" id="Eza-7f-2Sk"/>
                                                                             <outlet property="delegate" destination="SQE-aI-bZk" id="ouJ-N9-OEx"/>

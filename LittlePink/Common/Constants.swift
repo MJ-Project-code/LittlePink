@@ -27,3 +27,7 @@ let kChannels = ["推荐","旅行","娱乐","才艺","美妆","白富美","美�
 let kMaxCameraZoomFactor:CGFloat = 5
 let kMaxPhotoCount = 9
 let kSpacingBetweenItems:CGFloat = 2
+
+
+//label剩余可输入字符
+let kmaxNoteTitleCount = 20
