@@ -27,13 +27,12 @@ class NoteEditVC: UIViewController, UITextViewDelegate {
     
     var photoCount:Int{return photos.count}
     var isVideo:Bool{ videoURL != nil}
+    var textViewIAView:TextViewIAView{textView.inputAccessoryView as! TextViewIAView}
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        photoCollectionview.dragInteractionEnabled = true
-        hideKeyboardWhenTappedAround()
-        titleCountLabel.text = "\(kmaxNoteTitleCount)"
+        config()
     }
     
 
@@ -48,25 +47,43 @@ class NoteEditVC: UIViewController, UITextViewDelegate {
         
     }
     @IBAction func TFEditChanged(_ sender: Any) {
+        guard titleTextField.markedTextRange == nil else { return }
+        if titleTextField.unwrappedText.count > kmaxNoteTitleCount{
+            titleTextField.text = String(titleTextField.unwrappedText.prefix(kmaxNoteTitleCount))
+            showTextHUD("标题最多输入\(kmaxNoteTitleCount)字")
+            
+            DispatchQueue.main.async {
+                let end =  self.titleTextField.endOfDocument
+                self.titleTextField.selectedTextRange = self.titleTextField.textRange(from: end, to: end)
+            }
+        }
         titleCountLabel.text = "\(kmaxNoteTitleCount - titleTextField.unwrappedText.count)"
     }
     
     
 
 }
+    //todo
 
 
-extension NoteEditVC:UITextFieldDelegate{
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
-        
-        let  isExceed = range.location >= kmaxNoteTitleCount || (textField.unwrappedText.count + string.count)  > kmaxNoteTitleCount
-//        if range.location >= kmaxNoteTitleCount || (textField.unwrappedText.count + string.count)  > kmaxNoteTitleCount{
-//            return false
-//        }
-        if isExceed{
-            showTextHUD("标题最多输入\(kmaxNoteTitleCount)字")
-        }
-        return !isExceed
+extension NoteEditVC{
+    func textViewDidChange(_ textView: UITextView) {
+        guard textView.markedTextRange == nil else{ return }
+        textViewIAView.currentTextCount = textView.text.count
     }
 }
+
+//extension NoteEditVC:UITextFieldDelegate{
+//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//
+//
+//        let  isExceed = range.location >= kmaxNoteTitleCount || (textField.unwrappedText.count + string.count)  > kmaxNoteTitleCount
+////        if range.location >= kmaxNoteTitleCount || (textField.unwrappedText.count + string.count)  > kmaxNoteTitleCount{
+////            return false
+////        }
+//        if isExceed{
+//            showTextHUD("标题最多输入\(kmaxNoteTitleCount)字")
+//        }
+//        return !isExceed
+//    }
+//}

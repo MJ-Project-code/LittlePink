@@ -20,6 +20,7 @@
 		F273781625C7E26100F4A6E8 /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273781525C7E26100F4A6E8 /* PostVC.swift */; };
 		F273781925C8E69E00F4A6E8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273781825C8E69E00F4A6E8 /* Extensions.swift */; };
 		F2752A7025D26024004EB07B /* NoteEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2752A6F25D26024004EB07B /* NoteEditVC.swift */; };
+		F275798A2600B88800109FB7 /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27579892600B88800109FB7 /* ChannelVC.swift */; };
 		F27972D325DD1EC9008B2D08 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27972D225DD1EC9008B2D08 /* PhotoCell.swift */; };
 		F288A83025C160E1001B1D50 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F288A82F25C160E1001B1D50 /* HomeVC.swift */; };
 		F2AC647F25BEAE85000672E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AC647E25BEAE85000672E8 /* AppDelegate.swift */; };
@@ -31,6 +32,9 @@
 		F2D198F925F2044E00DA1499 /* testVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F2D198F725F2029A00DA1499 /* testVideo.mp4 */; };
 		F2D198FC25F2151600DA1499 /* NoteEditVC-DragDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D198FB25F2151600DA1499 /* NoteEditVC-DragDrop.swift */; };
 		F2D1990025F5FFE500DA1499 /* NoteEditVC-CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D198FF25F5FFE500DA1499 /* NoteEditVC-CollectionView.swift */; };
+		F2D1990E25FF2DC600DA1499 /* NoteEditVC-Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D1990D25FF2DC600DA1499 /* NoteEditVC-Config.swift */; };
+		F2D1991C25FF6A3000DA1499 /* TextViewIAView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2D1991B25FF6A3000DA1499 /* TextViewIAView.xib */; };
+		F2D1991F25FF6C5200DA1499 /* TextViewIAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D1991E25FF6C5200DA1499 /* TextViewIAView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +60,7 @@
 		F273781E25C93C3500F4A6E8 /* 闭包.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "闭包.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		F274A1CC25F0BB3E00C0DC18 /* LittlePink-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LittlePink-Bridging-Header.h"; sourceTree = "<group>"; };
 		F2752A6F25D26024004EB07B /* NoteEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteEditVC.swift; sourceTree = "<group>"; };
+		F27579892600B88800109FB7 /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
 		F27972D225DD1EC9008B2D08 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		F288A82F25C160E1001B1D50 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		F2AC647B25BEAE85000672E8 /* LittlePink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LittlePink.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +74,9 @@
 		F2D198F725F2029A00DA1499 /* testVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = testVideo.mp4; sourceTree = "<group>"; };
 		F2D198FB25F2151600DA1499 /* NoteEditVC-DragDrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEditVC-DragDrop.swift"; sourceTree = "<group>"; };
 		F2D198FF25F5FFE500DA1499 /* NoteEditVC-CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEditVC-CollectionView.swift"; sourceTree = "<group>"; };
+		F2D1990D25FF2DC600DA1499 /* NoteEditVC-Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEditVC-Config.swift"; sourceTree = "<group>"; };
+		F2D1991B25FF6A3000DA1499 /* TextViewIAView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextViewIAView.xib; sourceTree = "<group>"; };
+		F2D1991E25FF6C5200DA1499 /* TextViewIAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewIAView.swift; sourceTree = "<group>"; };
 		FF4B0E5D10400B0B19904172 /* Pods-LittlePink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LittlePink.release.xcconfig"; path = "Target Support Files/Pods-LittlePink/Pods-LittlePink.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,10 +124,14 @@
 			isa = PBXGroup;
 			children = (
 				F2752A6F25D26024004EB07B /* NoteEditVC.swift */,
+				F2D1990D25FF2DC600DA1499 /* NoteEditVC-Config.swift */,
 				F2D198FF25F5FFE500DA1499 /* NoteEditVC-CollectionView.swift */,
 				F2D198FB25F2151600DA1499 /* NoteEditVC-DragDrop.swift */,
 				F27972D225DD1EC9008B2D08 /* PhotoCell.swift */,
 				F24DAEEF25ECDCE7003E1043 /* PhotoFooter.swift */,
+				F2D1991E25FF6C5200DA1499 /* TextViewIAView.swift */,
+				F2D1991B25FF6A3000DA1499 /* TextViewIAView.xib */,
+				F27579892600B88800109FB7 /* ChannelVC.swift */,
 			);
 			path = NoteEdit;
 			sourceTree = "<group>";
@@ -258,6 +270,7 @@
 			files = (
 				F2AC648E25BEAE86000672E8 /* LaunchScreen.storyboard in Resources */,
 				F2AC648B25BEAE86000672E8 /* Assets.xcassets in Resources */,
+				F2D1991C25FF6A3000DA1499 /* TextViewIAView.xib in Resources */,
 				F26EDB3925C6B86C0051E9E7 /* README.md in Resources */,
 				F2D198F925F2044E00DA1499 /* testVideo.mp4 in Resources */,
 				F2AC648625BEAE85000672E8 /* Main.storyboard in Resources */,
@@ -313,6 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2D1991F25FF6C5200DA1499 /* TextViewIAView.swift in Sources */,
 				F239A8E325C28C6A00D7414C /* NearByVC.swift in Sources */,
 				F27972D325DD1EC9008B2D08 /* PhotoCell.swift in Sources */,
 				F273781325C7E02F00F4A6E8 /* TabBarC.swift in Sources */,
@@ -325,6 +339,8 @@
 				F288A83025C160E1001B1D50 /* HomeVC.swift in Sources */,
 				F273781625C7E26100F4A6E8 /* PostVC.swift in Sources */,
 				F2D1990025F5FFE500DA1499 /* NoteEditVC-CollectionView.swift in Sources */,
+				F275798A2600B88800109FB7 /* ChannelVC.swift in Sources */,
+				F2D1990E25FF2DC600DA1499 /* NoteEditVC-Config.swift in Sources */,
 				F239A8DD25C28BF700D7414C /* FollowVC.swift in Sources */,
 				F273781925C8E69E00F4A6E8 /* Extensions.swift in Sources */,
 				F239A8E725C28C8200D7414C /* DiscoveryVC.swift in Sources */,
