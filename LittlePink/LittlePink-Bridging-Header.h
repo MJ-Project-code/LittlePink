@@ -13,3 +13,7 @@
 
 
 #import "MBProgressHUD.h"
+
+//高德
+#import <AMapFoundationKit/AMapFoundationKit.h>
+#import <AMapLocationKit/AMapLocationKit.h>

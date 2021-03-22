@@ -13,11 +13,17 @@ let kNearByVCID = "NearByVCID"
 let kDiscoveryVCID = "DiscoveryVCID"
 let kWaterfallVCID = "WaterfallVCID"
 let kNoteEditVCID = "NoteEditVCID"
+let kChannelTableVCID = "ChannelTableVCID"
 
 //cell相关id
 let kWaterfallCellID = "WaterfallCellID"
 let kPhotoCellID = "PhotoCellID"
 let kPhotoFooterID = "PhotoFooterID"
+let kSubChannelCellID = "SubChannelCellID"
+
+//资源相关
+let mainColor = UIColor(named: "main")!
+let blueColor = UIColor(named: "blue")!
 
 let kWaterfallPadding:CGFloat = 4;
 
@@ -35,7 +41,7 @@ let kmaxNoteTextCount = 1000
 
 
 //话题
-let ksubChannels = [
+let kAllSubChannels = [
     ["穿神马是神马", "就快瘦到50斤啦", "花5个小时修的靓图", "网红店入坑记"],
     ["魔都名媛会会长", "爬行西藏", "无边泳池只要9块9"],
     ["小鲜肉的魔幻剧", "国产动画雄起"],

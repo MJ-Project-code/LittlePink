@@ -12,4 +12,6 @@ target 'LittlePink' do
   pod 'MBProgressHUD', '~> 1.2.0'
   pod 'SKPhotoBrowser'
   pod 'KMPlaceholderTextView', '~> 1.4.0'
+  pod 'AMapLocation'
+  pod 'AMapSearch'
 end

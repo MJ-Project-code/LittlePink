@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		28DD14755C130CA0F7C94A7A /* Pods_LittlePink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1C2ECD820882225E9AFB38 /* Pods_LittlePink.framework */; };
+		F22E85D02603496600BF7EF9 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22E85CF2603496600BF7EF9 /* Protocols.swift */; };
+		F22E85D32604477000BF7EF9 /* POIVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22E85D22604477000BF7EF9 /* POIVC.swift */; };
+		F22E85E42604B4F600BF7EF9 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22E85E32604B4F600BF7EF9 /* ExternalAccessory.framework */; };
 		F239A8DD25C28BF700D7414C /* FollowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F239A8DC25C28BF700D7414C /* FollowVC.swift */; };
 		F239A8E325C28C6A00D7414C /* NearByVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F239A8E225C28C6A00D7414C /* NearByVC.swift */; };
 		F239A8E725C28C8200D7414C /* DiscoveryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F239A8E625C28C8200D7414C /* DiscoveryVC.swift */; };
@@ -35,6 +38,7 @@
 		F2D1990E25FF2DC600DA1499 /* NoteEditVC-Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D1990D25FF2DC600DA1499 /* NoteEditVC-Config.swift */; };
 		F2D1991C25FF6A3000DA1499 /* TextViewIAView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2D1991B25FF6A3000DA1499 /* TextViewIAView.xib */; };
 		F2D1991F25FF6C5200DA1499 /* TextViewIAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D1991E25FF6C5200DA1499 /* TextViewIAView.swift */; };
+		F2E5B22A2601FB350005AF9A /* ChannelTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E5B2292601FB350005AF9A /* ChannelTableVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,9 @@
 		EF1D380A29BBDC7C14672677 /* Pods-LittlePink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LittlePink.debug.xcconfig"; path = "Target Support Files/Pods-LittlePink/Pods-LittlePink.debug.xcconfig"; sourceTree = "<group>"; };
 		F2111D8325CCF34100C0A4D7 /* ARC+循环引用.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "ARC+循环引用.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		F22ABCA425D11A9300ACECE5 /* 枚举.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "枚举.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		F22E85CF2603496600BF7EF9 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		F22E85D22604477000BF7EF9 /* POIVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIVC.swift; sourceTree = "<group>"; };
+		F22E85E32604B4F600BF7EF9 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		F22F5DA525CCE7DF005A1AEF /* 值类型+引用类型.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "值类型+引用类型.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		F239A8DC25C28BF700D7414C /* FollowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowVC.swift; sourceTree = "<group>"; };
 		F239A8E225C28C6A00D7414C /* NearByVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearByVC.swift; sourceTree = "<group>"; };
@@ -77,6 +84,7 @@
 		F2D1990D25FF2DC600DA1499 /* NoteEditVC-Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEditVC-Config.swift"; sourceTree = "<group>"; };
 		F2D1991B25FF6A3000DA1499 /* TextViewIAView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextViewIAView.xib; sourceTree = "<group>"; };
 		F2D1991E25FF6C5200DA1499 /* TextViewIAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewIAView.swift; sourceTree = "<group>"; };
+		F2E5B2292601FB350005AF9A /* ChannelTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTableVC.swift; sourceTree = "<group>"; };
 		FF4B0E5D10400B0B19904172 /* Pods-LittlePink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LittlePink.release.xcconfig"; path = "Target Support Files/Pods-LittlePink/Pods-LittlePink.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F22E85E42604B4F600BF7EF9 /* ExternalAccessory.framework in Frameworks */,
 				28DD14755C130CA0F7C94A7A /* Pods_LittlePink.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,6 +104,7 @@
 		208E84098DECF05ABBC06FAD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F22E85E32604B4F600BF7EF9 /* ExternalAccessory.framework */,
 				AC1C2ECD820882225E9AFB38 /* Pods_LittlePink.framework */,
 			);
 			name = Frameworks;
@@ -132,6 +142,8 @@
 				F2D1991E25FF6C5200DA1499 /* TextViewIAView.swift */,
 				F2D1991B25FF6A3000DA1499 /* TextViewIAView.xib */,
 				F27579892600B88800109FB7 /* ChannelVC.swift */,
+				F2E5B2292601FB350005AF9A /* ChannelTableVC.swift */,
+				F22E85D22604477000BF7EF9 /* POIVC.swift */,
 			);
 			path = NoteEdit;
 			sourceTree = "<group>";
@@ -150,6 +162,7 @@
 			children = (
 				F239A8E925C28E3100D7414C /* Constants.swift */,
 				F273781825C8E69E00F4A6E8 /* Extensions.swift */,
+				F22E85CF2603496600BF7EF9 /* Protocols.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -327,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2D1991F25FF6C5200DA1499 /* TextViewIAView.swift in Sources */,
+				F22E85D02603496600BF7EF9 /* Protocols.swift in Sources */,
 				F239A8E325C28C6A00D7414C /* NearByVC.swift in Sources */,
 				F27972D325DD1EC9008B2D08 /* PhotoCell.swift in Sources */,
 				F273781325C7E02F00F4A6E8 /* TabBarC.swift in Sources */,
@@ -345,8 +359,10 @@
 				F273781925C8E69E00F4A6E8 /* Extensions.swift in Sources */,
 				F239A8E725C28C8200D7414C /* DiscoveryVC.swift in Sources */,
 				F2AC648125BEAE85000672E8 /* SceneDelegate.swift in Sources */,
+				F2E5B22A2601FB350005AF9A /* ChannelTableVC.swift in Sources */,
 				F2AC648925BEAE85000672E8 /* LittlePink.xcdatamodeld in Sources */,
 				F239A8EA25C28E3100D7414C /* Constants.swift in Sources */,
+				F22E85D32604477000BF7EF9 /* POIVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +516,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LittlePink/LittlePink.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 88YKHY9ZQF;
 				INFOPLIST_FILE = LittlePink/Info.plist;
@@ -508,7 +525,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.LittlePink";
+				PRODUCT_BUNDLE_IDENTIFIER = com.majun.LittlePink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LittlePink/LittlePink-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -522,6 +539,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LittlePink/LittlePink.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 88YKHY9ZQF;
 				INFOPLIST_FILE = LittlePink/Info.plist;
@@ -530,7 +548,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.LittlePink";
+				PRODUCT_BUNDLE_IDENTIFIER = com.majun.LittlePink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "LittlePink/LittlePink-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

@@ -19,11 +19,19 @@ class NoteEditVC: UIViewController, UITextViewDelegate {
     ]
     //var videoURL:URL = Bundle.main.url(forResource: "testVideo", withExtension:".mp4")!
     var videoURL:URL?
+    
+    var channel = ""
+    var subChannel = ""
+    
+    let locationManager = CLLocationManager()
     @IBOutlet weak var photoCollectionview: UICollectionView!
-
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var titleCountLabel: UILabel!
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var channelIcon: UIImageView!
+    @IBOutlet weak var channelLabel: UILabel!
+    @IBOutlet weak var channelPlaceholderLabel: UILabel!
+    
     
     var photoCount:Int{return photos.count}
     var isVideo:Bool{ videoURL != nil}
@@ -59,17 +67,37 @@ class NoteEditVC: UIViewController, UITextViewDelegate {
         }
         titleCountLabel.text = "\(kmaxNoteTitleCount - titleTextField.unwrappedText.count)"
     }
+    //待做 存草稿之前判断当前用户输入字数是否符合要求
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let channelVC = segue.destination as? ChannelVC{
+            channelVC.PVdelegate = self
+        }
+    }
     
 
 }
-    //todo
+
+
 
 
 extension NoteEditVC{
     func textViewDidChange(_ textView: UITextView) {
         guard textView.markedTextRange == nil else{ return }
         textViewIAView.currentTextCount = textView.text.count
+    }
+}
+
+extension NoteEditVC:ChannelVCDelegate{
+    func updateChannel(channel: String, subChannel: String) {
+        //数据部分
+        self.channel = channel
+        self.subChannel = subChannel
+        //UI
+        channelLabel.text = subChannel
+        channelIcon.tintColor = blueColor
+        channelLabel.textColor = blueColor
+        channelPlaceholderLabel.isHidden = true
     }
 }
 

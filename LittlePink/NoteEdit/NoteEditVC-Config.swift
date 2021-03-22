@@ -37,6 +37,7 @@ extension NoteEditVC{
             textViewIAView.maxTextCountLabel.text = "/\(kmaxNoteTextCount)"
         
         //textView.inputAccessoryView
+        locationManager.requestWhenInUseAuthorization()
     }
 }
 //监听
