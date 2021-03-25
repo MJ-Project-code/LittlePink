@@ -14,8 +14,10 @@ extension POIVC{
         locationManager.locationTimeout = 5
         locationManager.reGeocodeTimeout = 5
         
-        
+        mapSearch?.delegate = self
+
         tableview.mj_footer = footer
+        
         
     }
 }

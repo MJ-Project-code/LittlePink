@@ -73,7 +73,7 @@ extension POIVC{
 
 
 extension POIVC{
-    func makeAroundSearch(_ page: Int = 1 ){
+    private func makeAroundSearch(_ page: Int = 1 ){
         aroundSearchRequest.page = page
         mapSearch?.aMapPOIAroundSearch(aroundSearchRequest)
     }

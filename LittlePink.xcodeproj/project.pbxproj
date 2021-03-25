@@ -35,6 +35,7 @@
 		F2B9EC5A26086E59001E74BA /* POICell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B9EC5926086E59001E74BA /* POICell.swift */; };
 		F2B9EC5D2608833F001E74BA /* POIVC-Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B9EC5C2608833F001E74BA /* POIVC-Config.swift */; };
 		F2B9EC6026088408001E74BA /* POVIC-Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B9EC5F26088408001E74BA /* POVIC-Location.swift */; };
+		F2B9EC72260C89FD001E74BA /* POIVC-KeywordsSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B9EC71260C89FD001E74BA /* POIVC-KeywordsSearch.swift */; };
 		F2D198F925F2044E00DA1499 /* testVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F2D198F725F2029A00DA1499 /* testVideo.mp4 */; };
 		F2D198FC25F2151600DA1499 /* NoteEditVC-DragDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D198FB25F2151600DA1499 /* NoteEditVC-DragDrop.swift */; };
 		F2D1990025F5FFE500DA1499 /* NoteEditVC-CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D198FF25F5FFE500DA1499 /* NoteEditVC-CollectionView.swift */; };
@@ -84,6 +85,7 @@
 		F2B9EC5926086E59001E74BA /* POICell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POICell.swift; sourceTree = "<group>"; };
 		F2B9EC5C2608833F001E74BA /* POIVC-Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "POIVC-Config.swift"; sourceTree = "<group>"; };
 		F2B9EC5F26088408001E74BA /* POVIC-Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "POVIC-Location.swift"; sourceTree = "<group>"; };
+		F2B9EC71260C89FD001E74BA /* POIVC-KeywordsSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "POIVC-KeywordsSearch.swift"; sourceTree = "<group>"; };
 		F2D198F725F2029A00DA1499 /* testVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = testVideo.mp4; sourceTree = "<group>"; };
 		F2D198FB25F2151600DA1499 /* NoteEditVC-DragDrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEditVC-DragDrop.swift"; sourceTree = "<group>"; };
 		F2D198FF25F5FFE500DA1499 /* NoteEditVC-CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEditVC-CollectionView.swift"; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				F22E85D22604477000BF7EF9 /* POIVC.swift */,
 				F2B9EC5C2608833F001E74BA /* POIVC-Config.swift */,
 				F2B9EC5F26088408001E74BA /* POVIC-Location.swift */,
+				F2B9EC71260C89FD001E74BA /* POIVC-KeywordsSearch.swift */,
 				F2B9EC5926086E59001E74BA /* POICell.swift */,
 			);
 			path = NoteEdit;
@@ -357,6 +360,7 @@
 				F254F65325C4015700A02076 /* WaterfallVC.swift in Sources */,
 				F2D198FC25F2151600DA1499 /* NoteEditVC-DragDrop.swift in Sources */,
 				F254F65F25C40C0B00A02076 /* WaterfallCell.swift in Sources */,
+				F2B9EC72260C89FD001E74BA /* POIVC-KeywordsSearch.swift in Sources */,
 				F24DAEF025ECDCE7003E1043 /* PhotoFooter.swift in Sources */,
 				F2752A7025D26024004EB07B /* NoteEditVC.swift in Sources */,
 				F2AC647F25BEAE85000672E8 /* AppDelegate.swift in Sources */,
