@@ -9,63 +9,116 @@ import UIKit
 
 class POIVC: UIViewController, AMapLocationManagerDelegate {
 
-    private let locationManager = AMapLocationManager()
+    let locationManager = AMapLocationManager()
+    lazy  var mapSearch = AMapSearchAPI()
+    lazy  var aroundSearchRequest:AMapPOIAroundSearchRequest = {
+        let request = AMapPOIAroundSearchRequest()
+                
+        request.location = AMapGeoPoint.location(withLatitude: CGFloat(latitude), longitude: CGFloat(longitude))
+        //request.types = kPOITypes
+        request.requireExtension = true
+        request.offset = kPOIsOffset
+        return request
+    }()
+    
+    lazy var keywordsSearchRequest:AMapPOIKeywordsSearchRequest = {
+        let request = AMapPOIKeywordsSearchRequest()
+        request.requireExtension = true
+        request.keywords = keywords
+        request.offset = kPOIsOffset
+        return request
+    }()
+
+    lazy var footer = MJRefreshAutoNormalFooter()
+    
+    var pois = kPOIsInitArr
+    var aroundSearchPOIs = kPOIsInitArr //完全同步周边poi数组,撤销输入后返回周边poi 
+    var latitude = 0.0
+    var longitude = 0.0
+    var keywords = ""
+    var currentAroundPage = 1
+    var pageCount = 1
+    
+    @IBOutlet weak var tableview: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //locationManager.delegate = self
         
-        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
-
-        locationManager.locationTimeout = 5
-
-        locationManager.reGeocodeTimeout = 5
+        config()
+        requestLocation()
         
-        locationManager.requestLocation(withReGeocode: true, completionBlock: { [weak self] (location: CLLocation?, reGeocode: AMapLocationReGeocode?, error: Error?) in
-             //print (reGeocode == nil)
-            if let error = error {
-                let error = error as NSError
-                
-                if error.code == AMapLocationErrorCode.locateFailed.rawValue {
-                    //定位错误：此时location和regeocode没有返回值，不进行annotation的添加
-                    print("定位错误:{\(error.code) - \(error.localizedDescription)};")
-                    return
-                }
-                else if error.code == AMapLocationErrorCode.reGeocodeFailed.rawValue
-                    || error.code == AMapLocationErrorCode.timeOut.rawValue
-                    || error.code == AMapLocationErrorCode.cannotFindHost.rawValue
-                    || error.code == AMapLocationErrorCode.badURL.rawValue
-                    || error.code == AMapLocationErrorCode.notConnectedToInternet.rawValue
-                    || error.code == AMapLocationErrorCode.cannotConnectToHost.rawValue {
-                    
-                    //逆地理错误：在带逆地理的单次定位中，逆地理过程可能发生错误，此时location有返回值，regeocode无返回值，进行annotation的添加
-                    print("逆地理错误:{\(error.code) - \(error.localizedDescription)};")
-                }
-                else {
-                    //没有错误：location有返回值，regeocode是否有返回值取决于是否进行逆地理操作，进行annotation的添加
-                    print("123")
-                }
-            }
-            
-            if let location = location {
-                print("location:", location)
-            }
-            
-            if let reGeocode = reGeocode {
-                print("reGeocode:", reGeocode)
-            }
-        })
+        mapSearch?.delegate = self
     }
     
 }
 
+extension POIVC:UISearchBarDelegate{
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {dismiss(animated: true)}
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty{
+            pois = aroundSearchPOIs
+            tableview.reloadData()
+        }
+    }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        //print(searchBar.text)
+        guard let searchText = searchBar.text ,!searchText.isBlank else{ return }
+                keywords = searchText
+                pois.removeAll()
+                showLoadHUD()
+                keywordsSearchRequest.keywords = keywords
+                mapSearch?.aMapPOIKeywordsSearch(keywordsSearchRequest)
+    }
+}
+
+
+//所有搜索api的回调
+extension POIVC : AMapSearchDelegate{
+    func onPOISearchDone(_ request: AMapPOISearchBaseRequest!, response: AMapPOISearchResponse!) {
+        let poiCount = response.count
+        hideLoadHUD()
+        if poiCount == 0 {
+            return
+        }
+        
+        for poi in response.pois{
+            //            poi.name
+            let province =  poi.province == poi.city ? "" : poi.province
+            //偏远地区
+            let address = poi.district == poi.address ? "" : poi.address
+            
+            let poi = [
+                poi.name ?? kNoPOIPH,
+                "\(province.unwrappedText)\(poi.city.unwrappedText)\(poi.district.unwrappedText)\(address.unwrappedText)"]
+            
+            pois.append(poi)
+            if request is AMapPOIAroundSearchRequest{
+                aroundSearchPOIs.append(poi)
+            }
+        }
+        if poiCount > kPOIsOffset{
+            pageCount = response.count / kPOIsOffset + 1
+        }else{
+            footer.endRefreshingWithNoMoreData()
+        }
+        
+        tableview.reloadData()
+    }
+}
+
 extension POIVC:UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        0
+        pois.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: kPOICellID, for: indexPath) as! POICell
+        
+        let poi = pois[indexPath.row]
+        cell.poi = poi
+        
+        return cell
     }
     
     

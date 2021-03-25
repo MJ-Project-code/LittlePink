@@ -17,3 +17,7 @@
 //高德
 #import <AMapFoundationKit/AMapFoundationKit.h>
 #import <AMapLocationKit/AMapLocationKit.h>
+#import <AMapSearchKit/AMapSearchKit.h>
+
+//上拉加载,下拉刷新
+#import "MJRefresh.h"
