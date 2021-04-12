@@ -38,6 +38,10 @@ extension NoteEditVC{
         
         //提前请求位置权限
         locationManager.requestWhenInUseAuthorization()
+        
+        print(NSHomeDirectory())
+//        print(NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0])
+//        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0])
     }
 }
 //监听

@@ -43,7 +43,7 @@ extension POIVC{
                 POIVC.longitude = location.coordinate.longitude
                 
                 //检索周边poi
-                POIVC.footer.setRefreshingTarget(POIVC, refreshingAction: #selector(POIVC.aroundSearchPullToRefresh))
+                POIVC.setAroundSearchFooter()
                 POIVC.makeAroundSearch()
             }
             
@@ -77,16 +77,16 @@ extension POIVC{
         aroundSearchRequest.page = page
         mapSearch?.aMapPOIAroundSearch(aroundSearchRequest)
     }
+    func setAroundSearchFooter(){
+        footer.resetNoMoreData()
+        footer.setRefreshingTarget(self, refreshingAction: #selector(aroundSearchPullToRefresh))
+    }
 }
 
 extension POIVC{
     @objc private func aroundSearchPullToRefresh() {
         currentAroundPage += 1
         makeAroundSearch(currentAroundPage)
-        if currentAroundPage < pageCount{
-            footer.endRefreshing()
-        }else{
-            footer.endRefreshingWithNoMoreData()  //不会有更多请求了 不再监听
-        }
+        endRefreshing(currentAroundPage)
     }
 }

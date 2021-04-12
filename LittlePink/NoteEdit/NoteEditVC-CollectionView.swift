@@ -34,7 +34,7 @@ extension NoteEditVC:UICollectionViewDataSource{
             photoFooter.addPhotoBtn.addTarget(self, action: #selector(addPhoto), for: .touchUpInside) //touchUpInside 点击后执行 action的内容
             return photoFooter
         default:
-            fatalError("collectionView的footerc出问题")
+            fatalError("collectionView的footer出问题")
         }
     }
     

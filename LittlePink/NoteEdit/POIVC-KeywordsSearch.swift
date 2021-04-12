@@ -10,19 +10,20 @@ extension POIVC:UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.isEmpty{
             pois = aroundSearchPOIs
+            setAroundSearchFooter()
             tableview.reloadData()
         }
     }
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        //print(searchBar.text)
+        //每次发起搜索都需要重置,pois、currentKeywordsPage重置和footer控件重置
         guard let searchText = searchBar.text ,!searchText.isBlank else{ return }
         keywords = searchText
         pois.removeAll()
-        ()
-        keywordsSearchRequest.keywords = keywords
-        footer.setRefreshingTarget(self, refreshingAction: #selector(keywordsSearchPullToRefresh))
+        currentKeywordsPage = 1
+        setKeywordsSearchFooter()
         showLoadHUD()
-        mapSearch?.aMapPOIKeywordsSearch(keywordsSearchRequest)
+        makeKeywordsSearch(keywords)
+        //searchBar.resignFirstResponder()
     }
 }
 
@@ -65,14 +66,24 @@ extension POIVC : AMapSearchDelegate{
 }
 
 extension POIVC{
-    private func makeKeywordsSearch(){
-        
+    private func makeKeywordsSearch(_ keywords :String, _ page:Int = 1){
+        keywordsSearchRequest.keywords = keywords
+        keywordsSearchRequest.page = page
+        mapSearch?.aMapPOIKeywordsSearch(keywordsSearchRequest)
+    }
+    private func setKeywordsSearchFooter(){
+        footer.resetNoMoreData()
+        footer.setRefreshingTarget(self, refreshingAction: #selector(keywordsSearchPullToRefresh))
     }
 }
 
 //关键字下拉刷新
 extension POIVC{
     @objc private func keywordsSearchPullToRefresh(){
-        
+        currentKeywordsPage += 1
+        makeKeywordsSearch(keywords,currentKeywordsPage)
+        endRefreshing(currentKeywordsPage)
     }
 }
+
+

@@ -17,11 +17,12 @@ class NoteEditVC: UIViewController, UITextViewDelegate {
      var photos = [
         UIImage(named: "1")!, UIImage(named: "2")!
     ]
-    //var videoURL:URL = Bundle.main.url(forResource: "testVideo", withExtension:".mp4")!
+    //var videoURL:URL? = Bundle.main.url(forResource: "TV", withExtension:".mp4")!
     var videoURL:URL?
     
     var channel = ""
     var subChannel = ""
+    var poiName = ""
     
     let locationManager = CLLocationManager()
     @IBOutlet weak var photoCollectionview: UICollectionView!
@@ -31,6 +32,8 @@ class NoteEditVC: UIViewController, UITextViewDelegate {
     @IBOutlet weak var channelIcon: UIImageView!
     @IBOutlet weak var channelLabel: UILabel!
     @IBOutlet weak var channelPlaceholderLabel: UILabel!
+    @IBOutlet weak var poiNameLabel: UILabel!
+    @IBOutlet weak var poiNameIcon: UIImageView!
     
     
     var photoCount:Int{return photos.count}
@@ -68,10 +71,53 @@ class NoteEditVC: UIViewController, UITextViewDelegate {
         titleCountLabel.text = "\(kmaxNoteTitleCount - titleTextField.unwrappedText.count)"
     }
     //待做 存草稿之前判断当前用户输入字数是否符合要求
+    @IBAction func saveDraftNote(_ sender: Any) {
+        guard textViewIAView.currentTextCount <= kmaxNoteTextCount else{
+            showTextHUD("标题最多输入\(kmaxNoteTitleCount)字")
+            return
+        }
+
+        
+
+        let draftNote = DraftNote(context: context)
+        
+        if isVideo{
+            draftNote.video = try? Data(contentsOf: videoURL!)
+        }
+        
+        draftNote.coverPhoto = photos[0].jpeg(.high)
+
+        var photos:[Data] = []
+        for photo in self.photos{
+            if let pngData = photo.pngData(){
+                photos.append(pngData)
+            }
+        }
+        
+        draftNote.photos = try? JSONEncoder().encode(photos)
+        
+        draftNote.isVideo = isVideo
+        draftNote.title = titleTextField.exactText
+        draftNote.text = textView.exactText
+        draftNote.channel = channel
+        draftNote.subChannel = subChannel
+        draftNote.poiName = poiName
+        draftNote.updatedAt = Date()
+        
+        appDelegate.saveContext()
+    }
     
+    @IBAction func postNote(_ sender: Any) {
+    }
+    
+    //跳转 storyboard
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let channelVC = segue.destination as? ChannelVC{
+            view.endEditing(true)
             channelVC.PVdelegate = self
+        }else if let poiVC = segue.destination as? POIVC{
+            poiVC.delegate = self
+            poiVC.poiName = poiName
         }
     }
     
@@ -94,10 +140,29 @@ extension NoteEditVC:ChannelVCDelegate{
         self.channel = channel
         self.subChannel = subChannel
         //UI
-        channelLabel.text = subChannel
         channelIcon.tintColor = blueColor
+        channelLabel.text = subChannel
         channelLabel.textColor = blueColor
         channelPlaceholderLabel.isHidden = true
+    }
+}
+
+extension NoteEditVC:POIVCDelegate{
+    func updatePOIName(_ poiName: String) {
+        
+        if poiName == kPOIsInitArr[0][0]{
+            self.poiName = ""
+            poiNameIcon.tintColor = .label
+            poiNameLabel.text = "添加地点"
+            poiNameLabel.textColor = .label
+        }else{
+            self.poiName = poiName
+            
+            poiNameIcon.tintColor = blueColor
+            poiNameLabel.text = poiName
+            poiNameLabel.textColor = blueColor
+        }
+        
     }
 }
 
@@ -115,3 +180,4 @@ extension NoteEditVC:ChannelVCDelegate{
 //        return !isExceed
 //    }
 //}
+

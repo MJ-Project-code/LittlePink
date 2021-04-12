@@ -8,6 +8,9 @@
 import UIKit
 
 class POIVC: UIViewController, AMapLocationManagerDelegate {
+    
+    var delegate:POIVCDelegate?
+    var poiName = ""
 
     let locationManager = AMapLocationManager()
     lazy  var mapSearch = AMapSearchAPI()
@@ -37,7 +40,9 @@ class POIVC: UIViewController, AMapLocationManagerDelegate {
     var longitude = 0.0
     var keywords = ""
     var currentAroundPage = 1
-    var pageCount = 1
+    var currentKeywordsPage = 1
+    var pageCount = 1 //所有搜索的总页数
+
     
     @IBOutlet weak var tableview: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -47,7 +52,6 @@ class POIVC: UIViewController, AMapLocationManagerDelegate {
         
         config()
         requestLocation()
-        
     }
     
 }
@@ -65,6 +69,10 @@ extension POIVC:UITableViewDataSource{
         let poi = pois[indexPath.row]
         cell.poi = poi
         
+        if poi[0] == poiName{
+            cell.accessoryType = .checkmark
+        }
+        
         return cell
     }
     
@@ -72,5 +80,24 @@ extension POIVC:UITableViewDataSource{
 }
 
 extension POIVC:UITableViewDelegate{
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)!
+        cell.accessoryType = .checkmark
+        
+        delegate?.updatePOIName(pois[indexPath.row][0])
+        
+        dismiss(animated: true)
+    }
 }
+
+
+extension POIVC{
+    func endRefreshing(_ currentPage : Int){
+        if currentPage < pageCount{
+            footer.endRefreshing()
+        }else{
+            footer.endRefreshingWithNoMoreData()  //不会有更多请求了 不再监听
+        }
+    }
+}
+

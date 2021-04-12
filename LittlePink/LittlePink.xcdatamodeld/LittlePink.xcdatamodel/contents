@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19H524" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DraftNote" representedClassName="DraftNote" syncable="YES" codeGenerationType="class">
+        <attribute name="channel" attributeType="String" defaultValueString=""/>
+        <attribute name="coverPhoto" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="isVideo" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="photos" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="poiName" attributeType="String" defaultValueString=""/>
+        <attribute name="subChannel" attributeType="String" defaultValueString=""/>
+        <attribute name="text" attributeType="String" defaultValueString=""/>
+        <attribute name="title" attributeType="String" defaultValueString=""/>
+        <attribute name="updatedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="video" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+    </entity>
+    <elements>
+        <element name="DraftNote" positionX="-63" positionY="-18" width="128" height="193"/>
+    </elements>
 </model>

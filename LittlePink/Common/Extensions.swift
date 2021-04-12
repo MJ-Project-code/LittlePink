@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import DateToolsSwift
 
 extension String{
     var isBlank:Bool{
@@ -17,8 +18,70 @@ extension Optional where Wrapped == String{
     var unwrappedText:String{ self ?? ""}
 }
 
+//刚刚//5分钟前//今天21:30//昨天21:30//09-15//2019-09-15
+extension Date{
+    var formattedDate:String{
+        let currentYear = Date().year
+        
+        if year == currentYear{ //今年
+            
+            if isToday{
+                if minutesAgo > 10 {
+                    return "今天 \(format(with: "HH:mm"))"
+                }else{
+                    return  timeAgoSinceNow
+                }
+                
+                
+            }else if isYesterday{
+                return "昨天 \(format(with: "HH:mm"))"
+            }else{
+                return format(with: "MM-dd")
+            }
+            
+        }else if year < currentYear{
+            return format(with: "yyyy-MM-dd")
+        }else{
+            return "未来?"
+        }
+    }
+}
+
+extension UIImage{
+    
+    convenience init?(_ data:Data?){  //init?可失败构造器
+        if let unwrappedData = data{
+            self.init(data:unwrappedData)
+        } else{
+            return nil;
+        }
+    }
+    
+    enum JPEGQuality: CGFloat{
+        case lowest = 0
+        case low = 0.25
+        case meduim = 0.5
+        case high = 0.75
+        case highest = 1
+    }
+    
+    func jpeg(_ jpegQuality:JPEGQuality) -> Data?{
+        jpegData(compressionQuality: jpegQuality.rawValue)
+    }
+}
+
 extension UITextField{
     var unwrappedText:String{ text ?? ""}
+    var exactText : String{
+        unwrappedText.isBlank ? "" : unwrappedText
+    }
+}
+
+extension UITextView{
+    var unwrappedText:String{ text ?? ""}
+    var exactText : String{
+        unwrappedText.isBlank ? "" : unwrappedText
+    }
 }
 
 extension UIView{

@@ -18,6 +18,8 @@ extension POIVC{
 
         tableview.mj_footer = footer
         
-        
+        if let cancelButton =  searchBar.value(forKey: "cancelButton") as? UIButton{
+            cancelButton.isEnabled = true
+        }
     }
 }
