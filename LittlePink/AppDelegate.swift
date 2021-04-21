@@ -77,6 +77,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    func saveBackgroundContext(){
+        if backgroundContext.hasChanges{
+            do {
+                try backgroundContext.save()
+            } catch  {
+                fatalError("后台存储数据失败\(error)")
+            }
+        }
+    }
 
 }
 
@@ -86,5 +96,7 @@ extension AppDelegate{
         AMapServices.shared().enableHTTPS = true
         AMapServices.shared().apiKey = "5668d352b14b4dd1f85d102996274d40"
         
+        //UI
+        UINavigationBar.appearance().tintColor = .label
     }
 }

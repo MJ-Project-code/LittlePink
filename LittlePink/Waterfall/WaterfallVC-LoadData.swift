@@ -28,10 +28,16 @@ extension WaterfallVC{
         request.propertiesToFetch = ["coverPhoto","title","updatedAt","isVideo"]
         
         
-        let draftNotes =  try! context.fetch(request)
+        backgroundContext.perform {
+            if let draftNotes =  try?  backgroundContext.fetch(request){
+                self.draftNotes = draftNotes
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+            }
+            self.hideLoadHUD()
+        }
         
         
-        
-        self.draftNotes = draftNotes
     }
 }

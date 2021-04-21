@@ -16,8 +16,6 @@ class FollowVC: UIViewController, IndicatorInfoProvider{
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        let btn = ColorBtn(frame: CGRect(x: 50, y: 100, width: 100, height: 100), color: .green)
-//        view.addSubview(btn)
     }
     
 

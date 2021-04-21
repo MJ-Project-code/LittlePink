@@ -149,3 +149,29 @@ extension Bundle{
         fatalError("加载\(type)类型失败")
     }
 }
+
+extension FileManager{
+    func save(_ data:Data?, to dirName: String, as fileName:String) -> URL?{
+        guard let data = data else {
+            print("data为nil")
+            return nil
+        }
+        
+        
+        let dirURL =  URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(dirName, isDirectory: true)
+        
+        if fileExists(atPath: dirURL.path){
+            guard let _ = try? createDirectory(at: dirURL, withIntermediateDirectories: true) else{
+                print("创建文件夹失败")
+                return nil
+            }
+        }
+        
+        let fileURL = dirURL.appendingPathComponent(fileName)
+        
+        if !fileExists(atPath: fileURL.path){
+            guard let _  = try? data.write(to: fileURL) else{ return nil }
+        }
+        return fileURL
+    }
+}

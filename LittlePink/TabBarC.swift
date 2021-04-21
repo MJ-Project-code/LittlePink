@@ -61,14 +61,14 @@ class TabBarC: UITabBarController ,UITabBarControllerDelegate{
                 }
                 for item in items {
                     switch item {
-                    case .photo(let photo):
+                    case let .photo(photo):
                         print(photo)
                     case .video(let video):
                         print(video)
                     }
                 }
-//                let noteeditvv = NoteEditVC();
-//                picker.pushViewController(noteeditvv, animated: true)
+                //let noteeditvv = NoteEditVC();
+                //picker.pushViewController(noteeditvv, animated: true)
                 picker.dismiss(animated:  true)
             }
             present(picker, animated: true)

@@ -29,7 +29,9 @@ let blueColor = UIColor(named: "blue")!
 
 //coredata
 let appDelegate = UIApplication.shared.delegate as! AppDelegate
-let context = appDelegate.persistentContainer.viewContext
+let persistentContainer = appDelegate.persistentContainer
+let context = persistentContainer.viewContext
+let backgroundContext = persistentContainer.newBackgroundContext()
 
 //ui布局
 let screenRect =  UIScreen.main.bounds
