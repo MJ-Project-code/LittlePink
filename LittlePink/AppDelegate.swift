@@ -94,7 +94,7 @@ extension AppDelegate{
     private func  config(){
         //高德
         AMapServices.shared().enableHTTPS = true
-        AMapServices.shared().apiKey = "5668d352b14b4dd1f85d102996274d40"
+        AMapServices.shared().apiKey = kAMapapiKey
         
         //UI
         UINavigationBar.appearance().tintColor = .label

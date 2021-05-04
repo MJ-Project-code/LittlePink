@@ -22,9 +22,10 @@ extension NoteEditVC{
             self.handleOthers(draftNote)
             
             DispatchQueue.main.async {
-                self.showTextHUD("保存草稿成功")
+                self.showTextHUD("保存草稿成功",false)
             }
         }
+        dismiss(animated: true ) //dismiss会把父视图一起dismiss
         
     }
     
@@ -35,10 +36,9 @@ extension NoteEditVC{
             }
             
             self.handleOthers(draftNote)
-            self.updateDraftNoteFinished?()
             
             DispatchQueue.main.async {
-                self.showTextHUD("更新草稿成功")
+                self.updateDraftNoteFinished?()
             }
         }
         

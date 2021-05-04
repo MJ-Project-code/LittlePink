@@ -7,6 +7,7 @@
 
 import UIKit
 import DateToolsSwift
+import AVFoundation
 
 extension String{
     var isBlank:Bool{
@@ -46,6 +47,26 @@ extension Date{
         }
     }
 }
+
+//封面图
+extension URL{
+    var thumbnail:UIImage{
+        let asset = AVAsset(url: self)
+        let assetImgGenerate = AVAssetImageGenerator(asset: asset)
+        assetImgGenerate.appliesPreferredTrackTransform = true
+        //视频尺寸确定的话可以用下面这句话提高性能
+        //assetImgGenerate.maximumSize = CGSize(width: , height: )
+        let time = CMTimeMakeWithSeconds(1.0, preferredTimescale: 600)
+        do{
+            let img = try assetImgGenerate.copyCGImage(at: time, actualTime: nil)
+            let thumbnail = UIImage(cgImage: img)
+            return thumbnail
+        }catch{
+            return UIImage(named: "1")!;
+        }
+    }
+}
+
 
 extension UIImage{
     
@@ -114,8 +135,12 @@ extension UIViewController{
     }
     
     //提示框(自动隐藏)
-    func showTextHUD(_ title:String,_ subTitle:String? = nil){
-        let hud = MBProgressHUD.showAdded(to: view, animated: true)
+    func showTextHUD(_ title:String,_ inCurrentView:Bool = true ,_ subTitle:String? = nil  ){
+        var viewToShow = view!
+        if !inCurrentView{
+            viewToShow = UIApplication.shared.windows.last!
+        }
+        let hud = MBProgressHUD.showAdded(to: viewToShow, animated: true)
         hud.mode = .text //
         hud.label.text = title
         hud.detailsLabel.text = subTitle

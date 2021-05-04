@@ -25,7 +25,6 @@ extension WaterfallVC{
                 vc.videoURL = videoURL
                 vc.updateDraftNoteFinished = {
                     self.getDraftNotes()
-                    self.collectionView.reloadData() 
                 }
                 navigationController?.pushViewController(vc, animated: true)
                 

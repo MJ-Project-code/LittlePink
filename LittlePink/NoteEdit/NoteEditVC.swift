@@ -67,7 +67,7 @@ class NoteEditVC: UIViewController, UITextViewDelegate {
     }
     //待做 存草稿之前判断当前用户输入字数是否符合要求
     @IBAction func saveDraftNote(_ sender: Any) {
-        validateNote()
+        guard isValidateNote() else {return }
         
         if let draftNote = draftNote{
             updateDraftNote(draftNote)
@@ -78,7 +78,7 @@ class NoteEditVC: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func postNote(_ sender: Any) {
-        validateNote()
+        guard isValidateNote() else {return }
     }
     
     //跳转 storyboard

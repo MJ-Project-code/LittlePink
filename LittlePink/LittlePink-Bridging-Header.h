@@ -21,3 +21,6 @@
 
 //上拉加载,下拉刷新
 #import "MJRefresh.h"
+
+//极光认证
+#import "JVERIFICATIONService.h"

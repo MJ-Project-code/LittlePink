@@ -46,15 +46,16 @@ extension WaterfallVC{
             
             self.draftNotes.remove(at: index)
             
-
-        }
-        DispatchQueue.main.async {
-            //UI
-            self.collectionView.performBatchUpdates {
-                self.collectionView.deleteItems(at: [IndexPath(item: index, section: 0)])
+            DispatchQueue.main.async {
+                //UI
+    //            self.collectionView.performBatchUpdates {
+    //                self.collectionView.deleteItems(at: [IndexPath(item: index, section: 0)])
+    //            }
+                self.collectionView.reloadData()
+                self.showTextHUD("删除草稿成功")
             }
-            self.showTextHUD("删除草稿成功")
         }
+
         
     }
 }
