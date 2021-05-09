@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-LittlePink/Pods-LittlePink-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/CHTCollectionViewWaterfallLayout/CHTCollectionViewWaterfallLayout.framework
 ${BUILT_PRODUCTS_DIR}/DateToolsSwift/DateToolsSwift.framework
 ${BUILT_PRODUCTS_DIR}/KMPlaceholderTextView/KMPlaceholderTextView.framework

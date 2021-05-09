@@ -4,9 +4,9 @@
 //
 //  Created by 马俊 on 2021/4/23.
 //
+import Alamofire
 
-
-extension LoginVC{
+extension UIViewController{
     
     @objc func locallogin(){
         
@@ -23,7 +23,7 @@ extension LoginVC{
                         self.presentLocalLoginUI()
                         self.presentLocalLoginVC()
                     }else{
-                        //print("预取号失败, 错误码:\(result!["code"]),错误描述:\(result!["content"])")
+                        self.presentLocalLoginVC()
                     }
                 }
                 
@@ -35,11 +35,67 @@ extension LoginVC{
         JVERIFICATIONService.setup(with: config)
     }
     
+    
+
+    
+    
+    //弹出一键登录授权页+用户点击登录
+    private func presentLocalLoginVC(){
+        JVERIFICATIONService.getAuthorizationWith(self, hide: true, animated: true, timeout: 5*1000, completion: { (result) in
+            if let result = result , let loginToken = result["loginToken"] as? String{
+                //  一键登录成功
+                JVERIFICATIONService.clearPreLoginCache()
+                
+                //print(loginToken)
+                self.getEncryptedPhoneNum(loginToken)
+            }else{
+                print("一键登录失败")
+                self.otherLogin()
+            }
+        }) { (type, content) in
+            if let content = content {
+                print("一键登录 actionBlock :type = \(type), content = \(content)")
+            }
+        }
+    }
+    
+}
+
+
+//监听
+extension UIViewController{
+    @objc private func otherLogin(){
+        JVERIFICATIONService.dismissLoginController(animated: true){
+            self.presentLocalLoginVC()
+        }
+        
+    }
+    
+    @objc private func dismissLocalLoginVC(){
+        JVERIFICATIONService.dismissLoginController(animated: true, completion: nil)
+    }
+}
+
+extension UIViewController{
+    private func presentCodeLoginVC(){
+        let mainSB =  UIStoryboard(name: "Main", bundle: nil)
+        let loginNaviC = mainSB.instantiateViewController(identifier: kLoginNaviID)
+        loginNaviC.modalPresentationStyle = .fullScreen
+        present(loginNaviC, animated: true)
+        //(presentedViewController as! UINavigationController).pushViewController(loginNaviC, animated: true)
+    }
+}
+
+
+//UI
+extension UIViewController{
     private func presentLocalLoginUI(){
         let config = JVUIConfig()
         config.prefersStatusBarHidden = true
         config.navTransparent = true
         config.navText = NSAttributedString(string: "")
+        config.navReturnHidden = true
+        config.navControl = UIBarButtonItem(title: "关闭", style: .plain, target: self, action: #selector(dismissLocalLoginVC))
         
         let constraintX = JVLayoutConstraint(attribute: NSLayoutConstraint.Attribute.centerX, relatedBy: NSLayoutConstraint.Relation.equal, to: JVLayoutItem.super, attribute: NSLayoutConstraint.Attribute.centerX, multiplier: 1, constant: 0)!
        let logoConstraintY = JVLayoutConstraint(attribute: NSLayoutConstraint.Attribute.top, relatedBy: NSLayoutConstraint.Relation.equal, to: JVLayoutItem.super, attribute: NSLayoutConstraint.Attribute.bottom, multiplier: 1/7, constant: 0)
@@ -96,25 +152,41 @@ extension LoginVC{
             ])
         }
     }
+
+}
+
+extension UIViewController{
     
-    @objc private func otherLogin(){
-        
+    struct localLoginRes : Encodable,Decodable{
+        let phone : String
     }
     
-    //弹出一键登录授权页+用户点击登录
-    private func presentLocalLoginVC(){
-        JVERIFICATIONService.getAuthorizationWith(self, hide: true, animated: true, timeout: 5*1000, completion: { (result) in
-            if let result = result , let _ = result["loginToken"]{
-                //  一键登录成功
-                JVERIFICATIONService.clearPreLoginCache()
-            }else{
-                print("一键登录失败")
-            }
-        }) { (type, content) in
-            if let content = content {
-                print("一键登录 actionBlock :type = \(type), content = \(content)")
-            }
+    private func getEncryptedPhoneNum(_ loginToken: String){
+     //   let headers: HTTPHeaders = [
+     //       .authorization(username: kJappKey, password: "e325d603ea549c7ac008c2ee")
+     //   ]
+        
+        let parameters = ["token":loginToken]
+        
+//        AF.request(
+//            "http://47.103.42.236:8080/test/phone",
+//            method: .post,
+//            parameters: parameters,
+//            encoder: JSONParameterEncoder.default,
+//            headers: nil
+//        ).responseDecodable(of: localLoginRes.self) { response in
+//            if let localLoginRes = response.value{
+//                print(localLoginRes.phone)
+//            }
+//        }
+        AF.request(
+            "http://47.103.42.236:8080/test/phone",
+            method: .post,
+            parameters: parameters,
+            encoder: JSONParameterEncoder.default,
+            headers: nil
+        ).response{ response in
+            print(String(decoding: response.value!!, as: UTF8.self))
         }
     }
-    
 }

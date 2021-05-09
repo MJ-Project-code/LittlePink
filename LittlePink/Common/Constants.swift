@@ -22,6 +22,7 @@ let kPhotoFooterID = "PhotoFooterID"
 let kSubChannelCellID = "SubChannelCellID"
 let kPOICellID = "POICellID"
 let kDraftNoteWaterfallCellID = "DraftNoteWaterfallCellID"
+let kLoginNaviID = "LoginNaviID"
 
 //资源相关
 let mainColor = UIColor(named: "main")!
