@@ -50,9 +50,12 @@
 		F2D1990E25FF2DC600DA1499 /* NoteEditVC-Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D1990D25FF2DC600DA1499 /* NoteEditVC-Config.swift */; };
 		F2D1991C25FF6A3000DA1499 /* TextViewIAView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2D1991B25FF6A3000DA1499 /* TextViewIAView.xib */; };
 		F2D1991F25FF6C5200DA1499 /* TextViewIAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D1991E25FF6C5200DA1499 /* TextViewIAView.swift */; };
+		F2D7AF9C264ADAD900809FFB /* Iterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D7AF9B264ADAD900809FFB /* Iterator.swift */; };
 		F2E5B22A2601FB350005AF9A /* ChannelTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E5B2292601FB350005AF9A /* ChannelTableVC.swift */; };
 		F2E5C3992623DF7C002E06FD /* WaterfallVC-DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E5C3982623DF7C002E06FD /* WaterfallVC-DataSource.swift */; };
 		F2E5C39C26242DA6002E06FD /* WaterfallVC-Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E5C39B26242DA6002E06FD /* WaterfallVC-Delegate.swift */; };
+		F2FCC579264C1E8D0004C106 /* SocialLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FCC578264C1E8D0004C106 /* SocialLoginVC.swift */; };
+		F2FCC57C264C20210004C106 /* SocialLoginVC-Alipay.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FCC57B264C20210004C106 /* SocialLoginVC-Alipay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,9 +113,12 @@
 		F2D1990D25FF2DC600DA1499 /* NoteEditVC-Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteEditVC-Config.swift"; sourceTree = "<group>"; };
 		F2D1991B25FF6A3000DA1499 /* TextViewIAView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextViewIAView.xib; sourceTree = "<group>"; };
 		F2D1991E25FF6C5200DA1499 /* TextViewIAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewIAView.swift; sourceTree = "<group>"; };
+		F2D7AF9B264ADAD900809FFB /* Iterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Iterator.swift; sourceTree = "<group>"; };
 		F2E5B2292601FB350005AF9A /* ChannelTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTableVC.swift; sourceTree = "<group>"; };
 		F2E5C3982623DF7C002E06FD /* WaterfallVC-DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WaterfallVC-DataSource.swift"; sourceTree = "<group>"; };
 		F2E5C39B26242DA6002E06FD /* WaterfallVC-Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WaterfallVC-Delegate.swift"; sourceTree = "<group>"; };
+		F2FCC578264C1E8D0004C106 /* SocialLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginVC.swift; sourceTree = "<group>"; };
+		F2FCC57B264C20210004C106 /* SocialLoginVC-Alipay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SocialLoginVC-Alipay.swift"; sourceTree = "<group>"; };
 		FF4B0E5D10400B0B19904172 /* Pods-LittlePink.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LittlePink.release.xcconfig"; path = "Target Support Files/Pods-LittlePink/Pods-LittlePink.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -225,6 +231,7 @@
 				F2111D8325CCF34100C0A4D7 /* ARC+循环引用.playground */,
 				F22ABCA425D11A9300ACECE5 /* 枚举.playground */,
 				F254D30725E63C0A0054FABC /* 代码实现collectionview.playground */,
+				F2D7AF9B264ADAD900809FFB /* Iterator.swift */,
 			);
 			path = "Demos+PH";
 			sourceTree = "<group>";
@@ -233,6 +240,8 @@
 			isa = PBXGroup;
 			children = (
 				F27EBB10263294F9003D5286 /* LoginVC.swift */,
+				F2FCC578264C1E8D0004C106 /* SocialLoginVC.swift */,
+				F2FCC57B264C20210004C106 /* SocialLoginVC-Alipay.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -291,6 +300,7 @@
 				F2AC647825BEAE85000672E8 /* Frameworks */,
 				F2AC647925BEAE85000672E8 /* Resources */,
 				16E93540116A509A5A71C841 /* [CP] Embed Pods Frameworks */,
+				467FDBECA51512D0FDFC94EB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -367,6 +377,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LittlePink/Pods-LittlePink-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		467FDBECA51512D0FDFC94EB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LittlePink/Pods-LittlePink-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LittlePink/Pods-LittlePink-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LittlePink/Pods-LittlePink-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4E3F88B8A99765757E7A9E2C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -397,8 +424,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2B9EC5A26086E59001E74BA /* POICell.swift in Sources */,
+				F2FCC57C264C20210004C106 /* SocialLoginVC-Alipay.swift in Sources */,
 				F2D1991F25FF6C5200DA1499 /* TextViewIAView.swift in Sources */,
 				F2750E9E26256D370021989A /* NoteEditVC-Helper.swift in Sources */,
+				F2D7AF9C264ADAD900809FFB /* Iterator.swift in Sources */,
 				F22E85D02603496600BF7EF9 /* Protocols.swift in Sources */,
 				F239A8E325C28C6A00D7414C /* NearByVC.swift in Sources */,
 				F27972D325DD1EC9008B2D08 /* PhotoCell.swift in Sources */,
@@ -409,6 +438,7 @@
 				F2B9EC72260C89FD001E74BA /* POIVC-KeywordsSearch.swift in Sources */,
 				F2E5C3992623DF7C002E06FD /* WaterfallVC-DataSource.swift in Sources */,
 				F24DAEF025ECDCE7003E1043 /* PhotoFooter.swift in Sources */,
+				F2FCC579264C1E8D0004C106 /* SocialLoginVC.swift in Sources */,
 				F2752A7025D26024004EB07B /* NoteEditVC.swift in Sources */,
 				F2750EA42626D5E30021989A /* NoteEditVC-DraftNote.swift in Sources */,
 				F2AC647F25BEAE85000672E8 /* AppDelegate.swift in Sources */,

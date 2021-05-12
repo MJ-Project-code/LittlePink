@@ -24,3 +24,5 @@
 
 //极光认证
 #import "JVERIFICATIONService.h"
+
+#import <AlipaySDK/AlipaySDK.h>

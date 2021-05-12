@@ -7,17 +7,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2A402704-8134-484D-8F84-142E6807030D"
+            uuid = "FADECCA5-076E-40C4-A541-50111F399C70"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Pods/AMapLocation/AMapLocationKit.framework/Headers/AMapLocationManager.h"
+            filePath = "LittlePink/Demos+PH/Iterator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
-            landmarkName = "-requestLocationWithReGeocode:completionBlock:"
-            landmarkType = "6">
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "findNext(elm:)"
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

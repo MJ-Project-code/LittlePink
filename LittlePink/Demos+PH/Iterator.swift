@@ -1,3 +1,12 @@
+//
+//  Iterator.swift
+//  LittlePink
+//
+//  Created by 马俊 on 2021/5/11.
+//
+
+import Foundation
+
 class stateItr : IteratorProtocol{
     
     var num:Int = 1
@@ -15,4 +24,5 @@ func findNext<I: IteratorProtocol>(elm: I) -> AnyIterator<I.Element> where I.Ele
     }
 
 
-findNext(elm:  stateItr()).next()
+
+//findNext(elm: findNext(elm: findNext(elm: stateItr())))

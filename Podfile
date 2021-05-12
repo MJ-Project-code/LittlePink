@@ -18,5 +18,6 @@ target 'LittlePink' do
   pod 'DateToolsSwift'
   pod 'JVerification'
   pod 'Alamofire', '~> 5.2'
-
+  pod 'AlipaySDK-iOS'
+  
 end
