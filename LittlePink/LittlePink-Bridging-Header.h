@@ -26,3 +26,4 @@
 #import "JVERIFICATIONService.h"
 
 #import <AlipaySDK/AlipaySDK.h>
+#import "APRSASigner.h"

@@ -50,6 +50,36 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
 
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        guard let url  = URLContexts.first?.url else { return }
+            
+        if url.host == "safePay"{
+            AlipaySDK.defaultService()?.processAuth_V2Result(url){ res in
+                guard let res = res else { return }
+                
+                let resultStatus = res["resultStatus"] as! String
+                
+                if resultStatus == "9000"{
+                    
+                    let resultStr = res["result"] as! String
+                    
+                    let resultArr =  resultStr.components(separatedBy: "&")
+                    
+                    for subRes in resultArr{
+                        let equalIndex =  subRes.firstIndex(of: "=")!
+                        let equalEndIndex = subRes.index(after: equalIndex)
+                        //let prefix =  subRes[..<equalIndex]
+                        let suffix = subRes[equalEndIndex...]
+                        
+                        if subRes.hasPrefix("auth_code"){
+                            
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
 
 }
 
