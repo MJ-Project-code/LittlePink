@@ -8,15 +8,27 @@ PODS:
     - AMapFoundation (~> 1.6.4)
   - CHTCollectionViewWaterfallLayout/Swift (0.9.8)
   - DateToolsSwift (5.0.0)
+  - GRDB.swift (4.14.0):
+    - GRDB.swift/standard (= 4.14.0)
+  - GRDB.swift/standard (4.14.0)
   - JCore (2.6.2)
   - JVerification (2.7.0):
     - JCore (< 6.0.0, >= 2.1.6)
   - KMPlaceholderTextView (1.4.0)
+  - LeanCloud (17.8.0):
+    - LeanCloud/RTM (= 17.8.0)
+  - LeanCloud/Foundation (17.8.0):
+    - Alamofire (~> 5.4)
+  - LeanCloud/RTM (17.8.0):
+    - GRDB.swift (~> 4.14)
+    - LeanCloud/Foundation (= 17.8.0)
+    - SwiftProtobuf (~> 1.15)
   - MBProgressHUD (1.2.0)
   - MJRefresh (3.5.0)
   - PryntTrimmerView (4.0.2)
   - SKPhotoBrowser (6.1.0)
   - SteviaLayout (4.7.3)
+  - SwiftProtobuf (1.17.0)
   - XLPagerTabStrip (9.0.0)
   - YPImagePicker (4.4.0):
     - PryntTrimmerView (~> 4.0.2)
@@ -31,6 +43,7 @@ DEPENDENCIES:
   - DateToolsSwift
   - JVerification
   - KMPlaceholderTextView (~> 1.4.0)
+  - LeanCloud
   - MBProgressHUD (~> 1.2.0)
   - MJRefresh
   - SKPhotoBrowser
@@ -46,14 +59,17 @@ SPEC REPOS:
     - AMapSearch
     - CHTCollectionViewWaterfallLayout
     - DateToolsSwift
+    - GRDB.swift
     - JCore
     - JVerification
     - KMPlaceholderTextView
+    - LeanCloud
     - MBProgressHUD
     - MJRefresh
     - PryntTrimmerView
     - SKPhotoBrowser
     - SteviaLayout
+    - SwiftProtobuf
     - XLPagerTabStrip
     - YPImagePicker
 
@@ -65,17 +81,20 @@ SPEC CHECKSUMS:
   AMapSearch: a62d0b2508270dff5a9b05ba3af9fc8843b48c8a
   CHTCollectionViewWaterfallLayout: 5f241d2480ab4939aa0d1ad4981de9eef1fbe60d
   DateToolsSwift: 4207ada6ad615d8dc076323d27037c94916dbfa6
+  GRDB.swift: 8cc3ab7c8b8b4ac1761deb8dca4b51c1c9d429f8
   JCore: 0cb4fc5892bc97af4f27283875369ead3eaa3067
   JVerification: 6d0827cd8c4a50690372167397bd6c328dfe0357
   KMPlaceholderTextView: 2206c3df39979e9396e2d96fa9f427a8951121b0
+  LeanCloud: ff95ea8076a30e10358542ecaa53e87c4308c8bd
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   PryntTrimmerView: 6a43cc90df5d99addeabd33d4ba09b1365322130
   SKPhotoBrowser: 343de95d89dc7913763c5dda243cc6e606e4a168
   SteviaLayout: c2ecdcff57d44e38fd2f65e54ad52aeae28ca0c4
+  SwiftProtobuf: 9c85136c6ba74b0a1b84279dbf0f6db8efb714e0
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
   YPImagePicker: 15aed8bcaa4dad976e11b6114126d731a2f9f3c9
 
-PODFILE CHECKSUM: daafebab0c8b9fbd0a0d3d57d89a3286fbb89ff2
+PODFILE CHECKSUM: d47a08f85dfa8d67e9c9396c844af35ba18624be
 
 COCOAPODS: 1.10.1

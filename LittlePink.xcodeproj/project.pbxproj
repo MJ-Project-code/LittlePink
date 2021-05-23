@@ -54,6 +54,9 @@
 		F2E5B22A2601FB350005AF9A /* ChannelTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E5B2292601FB350005AF9A /* ChannelTableVC.swift */; };
 		F2E5C3992623DF7C002E06FD /* WaterfallVC-DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E5C3982623DF7C002E06FD /* WaterfallVC-DataSource.swift */; };
 		F2E5C39C26242DA6002E06FD /* WaterfallVC-Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E5C39B26242DA6002E06FD /* WaterfallVC-Delegate.swift */; };
+		F2F2EDB42653BE6D00097D55 /* SocialLoginVC-apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F2EDB32653BE6D00097D55 /* SocialLoginVC-apple.swift */; };
+		F2F2EDCE2656AAA000097D55 /* CodeLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F2EDCD2656AAA000097D55 /* CodeLoginVC.swift */; };
+		F2F2EDD12656ABE100097D55 /* PasswordLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F2EDD02656ABE100097D55 /* PasswordLoginVC.swift */; };
 		F2FCC579264C1E8D0004C106 /* SocialLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FCC578264C1E8D0004C106 /* SocialLoginVC.swift */; };
 		F2FCC57C264C20210004C106 /* SocialLoginVC-Alipay.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FCC57B264C20210004C106 /* SocialLoginVC-Alipay.swift */; };
 		F2FCC5B226502D620004C106 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2FCC5B126502D620004C106 /* libssl.a */; };
@@ -123,6 +126,9 @@
 		F2E5B2292601FB350005AF9A /* ChannelTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTableVC.swift; sourceTree = "<group>"; };
 		F2E5C3982623DF7C002E06FD /* WaterfallVC-DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WaterfallVC-DataSource.swift"; sourceTree = "<group>"; };
 		F2E5C39B26242DA6002E06FD /* WaterfallVC-Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WaterfallVC-Delegate.swift"; sourceTree = "<group>"; };
+		F2F2EDB32653BE6D00097D55 /* SocialLoginVC-apple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SocialLoginVC-apple.swift"; sourceTree = "<group>"; };
+		F2F2EDCD2656AAA000097D55 /* CodeLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeLoginVC.swift; sourceTree = "<group>"; };
+		F2F2EDD02656ABE100097D55 /* PasswordLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordLoginVC.swift; sourceTree = "<group>"; };
 		F2FCC578264C1E8D0004C106 /* SocialLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginVC.swift; sourceTree = "<group>"; };
 		F2FCC57B264C20210004C106 /* SocialLoginVC-Alipay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SocialLoginVC-Alipay.swift"; sourceTree = "<group>"; };
 		F2FCC5B126502D620004C106 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = AliSDKDemo/libssl.a; sourceTree = "<group>"; };
@@ -337,6 +343,9 @@
 				F27EBB10263294F9003D5286 /* LoginVC.swift */,
 				F2FCC578264C1E8D0004C106 /* SocialLoginVC.swift */,
 				F2FCC57B264C20210004C106 /* SocialLoginVC-Alipay.swift */,
+				F2F2EDB32653BE6D00097D55 /* SocialLoginVC-apple.swift */,
+				F2F2EDCD2656AAA000097D55 /* CodeLoginVC.swift */,
+				F2F2EDD02656ABE100097D55 /* PasswordLoginVC.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -624,6 +633,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2B9EC5A26086E59001E74BA /* POICell.swift in Sources */,
+				F2F2EDB42653BE6D00097D55 /* SocialLoginVC-apple.swift in Sources */,
 				F2FCC57C264C20210004C106 /* SocialLoginVC-Alipay.swift in Sources */,
 				F2D1991F25FF6C5200DA1499 /* TextViewIAView.swift in Sources */,
 				F2750E9E26256D370021989A /* NoteEditVC-Helper.swift in Sources */,
@@ -633,6 +643,7 @@
 				F27972D325DD1EC9008B2D08 /* PhotoCell.swift in Sources */,
 				F2FCC60D26502E120004C106 /* openssl_wrapper.m in Sources */,
 				F273781325C7E02F00F4A6E8 /* TabBarC.swift in Sources */,
+				F2F2EDCE2656AAA000097D55 /* CodeLoginVC.swift in Sources */,
 				F254F65325C4015700A02076 /* WaterfallVC.swift in Sources */,
 				F2D198FC25F2151600DA1499 /* NoteEditVC-DragDrop.swift in Sources */,
 				F254F65F25C40C0B00A02076 /* WaterfallCell.swift in Sources */,
@@ -647,6 +658,7 @@
 				F288A83025C160E1001B1D50 /* HomeVC.swift in Sources */,
 				F2B0FCBF26298A5D004E206B /* MeVC.swift in Sources */,
 				F273781625C7E26100F4A6E8 /* PostVC.swift in Sources */,
+				F2F2EDD12656ABE100097D55 /* PasswordLoginVC.swift in Sources */,
 				F2750EA126256F180021989A /* NoteEditVC-UI.swift in Sources */,
 				F2D1990025F5FFE500DA1499 /* NoteEditVC-CollectionView.swift in Sources */,
 				F275798A2600B88800109FB7 /* ChannelVC.swift in Sources */,

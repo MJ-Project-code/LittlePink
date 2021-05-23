@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import AuthenticationServices
+import LeanCloud
 
 class SocialLoginVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         // Do any additional setup after loading the view.
     }
     
@@ -20,6 +23,15 @@ class SocialLoginVC: UIViewController {
     }
     
     @IBAction func signWithApple(_ sender: Any) {
+        let provider = ASAuthorizationAppleIDProvider()
+        let request = provider.createRequest()
+        request.requestedScopes = [.email,.fullName]
+        
+        let controller = ASAuthorizationController(authorizationRequests: [request])
+        
+        controller.delegate = self
+        controller.presentationContextProvider = self
+        controller.performRequests()
     }
     /*
     // MARK: - Navigation

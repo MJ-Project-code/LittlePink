@@ -36,10 +36,10 @@
             </objects>
             <point key="canvasLocation" x="706" y="1416"/>
         </scene>
-        <!--View Controller-->
+        <!--Code LoginVC-->
         <scene sceneID="edd-YJ-VW4">
             <objects>
-                <viewController id="dgL-yo-0BP" sceneMemberID="viewController">
+                <viewController id="dgL-yo-0BP" customClass="CodeLoginVC" customModule="LittlePink" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AqB-Y1-73J">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -54,6 +54,9 @@
                                         <state key="normal" image="xmark" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                         </state>
+                                        <connections>
+                                            <action selector="dismiss:" destination="dgL-yo-0BP" eventType="touchUpInside" id="3gg-PO-eLh"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56k-Qd-b7W">
                                         <rect key="frame" x="288" y="0.0" width="94" height="22"/>
@@ -82,7 +85,11 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入手机号码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CVJ-lD-rWb">
                                                 <rect key="frame" x="0.0" y="0.0" width="334" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="tel"/>
+                                                <connections>
+                                                    <action selector="TFEditingChanged:" destination="dgL-yo-0BP" eventType="editingChanged" id="eIW-0f-3ae"/>
+                                                    <outlet property="delegate" destination="dgL-yo-0BP" id="3qN-ZO-yeV"/>
+                                                </connections>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OBw-SJ-HZR">
                                                 <rect key="frame" x="0.0" y="42" width="334" height="1"/>
@@ -100,14 +107,20 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="334" height="34"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入验证码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YBr-V1-fZP">
-                                                        <rect key="frame" x="0.0" y="0.0" width="234" height="34"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="334" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="dgL-yo-0BP" id="CEF-OV-FWf"/>
+                                                        </connections>
                                                     </textField>
-                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8x-GD-9hh">
-                                                        <rect key="frame" x="242" y="0.0" width="92" height="34"/>
+                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8x-GD-9hh">
+                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <state key="normal" title="获取验证码"/>
+                                                        <connections>
+                                                            <action selector="getAuthCode:" destination="dgL-yo-0BP" eventType="touchUpInside" id="5Qd-99-RtG"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -146,6 +159,9 @@
                                         <real key="value" value="22"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="login:" destination="dgL-yo-0BP" eventType="touchUpInside" id="YWh-fC-EUl"/>
+                                </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oqM-yi-cSE">
                                 <rect key="frame" x="16" y="734" width="382" height="88"/>
@@ -180,15 +196,21 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KE7-9h-Yiv"/>
+                    <connections>
+                        <outlet property="authCodeTF" destination="YBr-V1-fZP" id="aMI-qG-7rG"/>
+                        <outlet property="getAuthCode" destination="E8x-GD-9hh" id="159-4x-4a8"/>
+                        <outlet property="loginBtn" destination="F4B-oY-NyC" id="SFg-Sj-bWd"/>
+                        <outlet property="phoneNumTF" destination="CVJ-lD-rWb" id="amc-5h-EAu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F12-1H-MJN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2489.8550724637685" y="1394.8660714285713"/>
         </scene>
-        <!--View Controller-->
+        <!--Password LoginVC-->
         <scene sceneID="1yh-EN-4XR">
             <objects>
-                <viewController id="Arp-kj-Q4v" sceneMemberID="viewController">
+                <viewController id="Arp-kj-Q4v" customClass="PasswordLoginVC" customModule="LittlePink" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="06b-WA-Ouo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -203,6 +225,9 @@
                                         <state key="normal" image="xmark" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                         </state>
+                                        <connections>
+                                            <action selector="dismiss:" destination="Arp-kj-Q4v" eventType="touchUpInside" id="plY-JR-L8V"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBw-8b-Aif">
                                         <rect key="frame" x="302" y="0.0" width="80" height="22"/>
@@ -210,6 +235,9 @@
                                         <color key="tintColor" systemColor="secondaryLabelColor"/>
                                         <inset key="contentEdgeInsets" minX="4" minY="0.0" maxX="4" maxY="0.0"/>
                                         <state key="normal" title="验证码登录"/>
+                                        <connections>
+                                            <action selector="backToCodeLoginVC:" destination="Arp-kj-Q4v" eventType="touchUpInside" id="tST-uv-AsQ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -323,6 +351,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="e9Z-O2-gfl"/>
+                    <connections>
+                        <outlet property="phoneNumberTF" destination="ahp-kw-6wI" id="xTb-Jb-zrx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dY4-q1-WN2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1251,7 +1282,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mTY-GU-4PX">
-                                <rect key="frame" x="76.5" y="-4" width="229" height="28"/>
+                                <rect key="frame" x="78" y="-4" width="226" height="28"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登录注册代表同意" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3CD-XW-6tV">
                                         <rect key="frame" x="0.0" y="0.0" width="114.5" height="28"/>
@@ -1264,14 +1295,14 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="用户协议"/>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="74.5" translatesAutoresizingMaskIntoConstraints="NO" id="hwO-5j-8zG">
-                                        <rect key="frame" x="168.5" y="0.0" width="6.5" height="28"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="74.5" translatesAutoresizingMaskIntoConstraints="NO" id="hwO-5j-8zG">
+                                        <rect key="frame" x="168.5" y="0.0" width="3.5" height="28"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" systemColor="secondaryLabelColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOa-Xb-kHe">
-                                        <rect key="frame" x="175" y="0.0" width="54" height="28"/>
+                                        <rect key="frame" x="172" y="0.0" width="54" height="28"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="隐私政策"/>
                                     </button>
@@ -1325,7 +1356,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="44" id="UWh-iF-MbU"/>
                                                 </constraints>
-                                                <state key="normal" image="AppleLogo"/>
+                                                <state key="normal" image="appleLogo"/>
                                                 <connections>
                                                     <action selector="signWithApple:" destination="Y3Q-1W-IjA" eventType="touchUpInside" id="cXd-19-MPC"/>
                                                 </connections>
@@ -1357,7 +1388,7 @@
     <resources>
         <image name="7" width="1080" height="1398"/>
         <image name="AlipayLogo" width="421" height="421"/>
-        <image name="AppleLogo" width="56" height="56"/>
+        <image name="appleLogo" width="56" height="56"/>
         <image name="cart.fill" catalog="system" width="128" height="102"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>

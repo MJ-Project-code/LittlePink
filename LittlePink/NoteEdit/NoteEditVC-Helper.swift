@@ -24,7 +24,7 @@ extension NoteEditVC{
     }
     
     func handleTFEditChanged(){
-        guard titleTextField.markedTextRange == nil else { return }
+        guard titleTextField.markedTextRange == nil else { return } //有拼音就不校验
         if titleTextField.unwrappedText.count > kmaxNoteTitleCount{
             titleTextField.text = String(titleTextField.unwrappedText.prefix(kmaxNoteTitleCount))
             showTextHUD("标题最多输入\(kmaxNoteTitleCount)字")
