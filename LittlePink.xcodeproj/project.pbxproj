@@ -384,8 +384,7 @@
 				F2AC648025BEAE85000672E8 /* SceneDelegate.swift */,
 				F2AC648425BEAE85000672E8 /* Main.storyboard */,
 				F273781225C7E02F00F4A6E8 /* TabBarC.swift */,
-				F2F2EDDC265EA2CD00097D55 /* LoginAndMeParentVC.swift */,
-				F2B0FCBE26298A5D004E206B /* MeVC.swift */,
+				F2F2EDE2265EB2B300097D55 /* Me */,
 				F27EBB0F263294D1003D5286 /* Login */,
 				F2404CB325EE1D2700AF1B55 /* NoteEdit */,
 				F26EDB3425C6B57C0051E9E7 /* Waterfall */,
@@ -400,6 +399,15 @@
 				F26EDB3625C6B5900051E9E7 /* Common */,
 			);
 			path = LittlePink;
+			sourceTree = "<group>";
+		};
+		F2F2EDE2265EB2B300097D55 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				F2F2EDDC265EA2CD00097D55 /* LoginAndMeParentVC.swift */,
+				F2B0FCBE26298A5D004E206B /* MeVC.swift */,
+			);
+			path = Me;
 			sourceTree = "<group>";
 		};
 		F2FCC5B826502E110004C106 /* AliSDKDemo */ = {
