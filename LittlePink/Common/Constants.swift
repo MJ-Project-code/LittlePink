@@ -14,6 +14,8 @@ let kDiscoveryVCID = "DiscoveryVCID"
 let kWaterfallVCID = "WaterfallVCID"
 let kNoteEditVCID = "NoteEditVCID"
 let kChannelTableVCID = "ChannelTableVCID"
+let kLoginVCID = "LoginVCID"
+let kMeVCID = "MeVCID"
 
 //cell相关id
 let kWaterfallCellID = "WaterfallCellID"
@@ -89,11 +91,19 @@ let kAliPayPrivateKey = "MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCAgYk
 
 let kAppScheme = "LittlePink"
 
-//LeanCloud
-let kLCAppID = "i2v2REDMUWNJeJh97TmprWYm-gzGzoHsz"
-let kLCAppKey = "lFb6RCiANNg3d4FWsOWThXuP"
-let kLCServerURL = "https://i2v2redm.lc-cn-n1-shared.com"
 
 
 //正则表达式
 let kPhoneRegEx = "^1\\d{10}$"  //^1\d{10}$
+let kAuthCodeRegEx = "^\\d{6}$"
+
+
+//leanCloud
+let kLCAppID = "i2v2REDMUWNJeJh97TmprWYm-gzGzoHsz"
+let kLCAppKey = "lFb6RCiANNg3d4FWsOWThXuP"
+let kLCServerURL = "https://i2v2redm.lc-cn-n1-shared.com"
+//leanCloud User表
+let knickNameCol = "nickName"
+let kAvatarCol = "avatar"
+let kGenderCol = "gender"
+let kIntroCol = "intro"

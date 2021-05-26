@@ -28,7 +28,7 @@
 		F275798A2600B88800109FB7 /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27579892600B88800109FB7 /* ChannelVC.swift */; };
 		F27972D325DD1EC9008B2D08 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27972D225DD1EC9008B2D08 /* PhotoCell.swift */; };
 		F27EBB11263294F9003D5286 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EBB10263294F9003D5286 /* LoginVC.swift */; };
-		F27EBB1526329690003D5286 /* Login-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EBB1426329690003D5286 /* Login-Extension.swift */; };
+		F27EBB1526329690003D5286 /* LocalLogin-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EBB1426329690003D5286 /* LocalLogin-Extension.swift */; };
 		F288A83025C160E1001B1D50 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F288A82F25C160E1001B1D50 /* HomeVC.swift */; };
 		F292AE1F261593CD006B2C7C /* DraftNoteWaterfallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F292AE1E261593CD006B2C7C /* DraftNoteWaterfallCell.swift */; };
 		F292AE32261E9DAC006B2C7C /* WaterfallVC-LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F292AE31261E9DAC006B2C7C /* WaterfallVC-LoadData.swift */; };
@@ -54,9 +54,12 @@
 		F2E5B22A2601FB350005AF9A /* ChannelTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E5B2292601FB350005AF9A /* ChannelTableVC.swift */; };
 		F2E5C3992623DF7C002E06FD /* WaterfallVC-DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E5C3982623DF7C002E06FD /* WaterfallVC-DataSource.swift */; };
 		F2E5C39C26242DA6002E06FD /* WaterfallVC-Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E5C39B26242DA6002E06FD /* WaterfallVC-Delegate.swift */; };
-		F2F2EDB42653BE6D00097D55 /* SocialLoginVC-apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F2EDB32653BE6D00097D55 /* SocialLoginVC-apple.swift */; };
+		F2F2EDB42653BE6D00097D55 /* SocialLoginVC-Apple.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F2EDB32653BE6D00097D55 /* SocialLoginVC-Apple.swift */; };
 		F2F2EDCE2656AAA000097D55 /* CodeLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F2EDCD2656AAA000097D55 /* CodeLoginVC.swift */; };
 		F2F2EDD12656ABE100097D55 /* PasswordLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F2EDD02656ABE100097D55 /* PasswordLoginVC.swift */; };
+		F2F2EDD4265CE58800097D55 /* LC-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F2EDD3265CE58800097D55 /* LC-Extension.swift */; };
+		F2F2EDD9265D3D7A00097D55 /* Login-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F2EDD8265D3D7A00097D55 /* Login-Extension.swift */; };
+		F2F2EDDD265EA2CD00097D55 /* LoginAndMeParentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F2EDDC265EA2CD00097D55 /* LoginAndMeParentVC.swift */; };
 		F2FCC579264C1E8D0004C106 /* SocialLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FCC578264C1E8D0004C106 /* SocialLoginVC.swift */; };
 		F2FCC57C264C20210004C106 /* SocialLoginVC-Alipay.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FCC57B264C20210004C106 /* SocialLoginVC-Alipay.swift */; };
 		F2FCC5B226502D620004C106 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2FCC5B126502D620004C106 /* libssl.a */; };
@@ -98,7 +101,7 @@
 		F27579892600B88800109FB7 /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
 		F27972D225DD1EC9008B2D08 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		F27EBB10263294F9003D5286 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		F27EBB1426329690003D5286 /* Login-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login-Extension.swift"; sourceTree = "<group>"; };
+		F27EBB1426329690003D5286 /* LocalLogin-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalLogin-Extension.swift"; sourceTree = "<group>"; };
 		F288A82F25C160E1001B1D50 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		F292AE1E261593CD006B2C7C /* DraftNoteWaterfallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftNoteWaterfallCell.swift; sourceTree = "<group>"; };
 		F292AE31261E9DAC006B2C7C /* WaterfallVC-LoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WaterfallVC-LoadData.swift"; sourceTree = "<group>"; };
@@ -126,9 +129,12 @@
 		F2E5B2292601FB350005AF9A /* ChannelTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTableVC.swift; sourceTree = "<group>"; };
 		F2E5C3982623DF7C002E06FD /* WaterfallVC-DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WaterfallVC-DataSource.swift"; sourceTree = "<group>"; };
 		F2E5C39B26242DA6002E06FD /* WaterfallVC-Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WaterfallVC-Delegate.swift"; sourceTree = "<group>"; };
-		F2F2EDB32653BE6D00097D55 /* SocialLoginVC-apple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SocialLoginVC-apple.swift"; sourceTree = "<group>"; };
+		F2F2EDB32653BE6D00097D55 /* SocialLoginVC-Apple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SocialLoginVC-Apple.swift"; sourceTree = "<group>"; };
 		F2F2EDCD2656AAA000097D55 /* CodeLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeLoginVC.swift; sourceTree = "<group>"; };
 		F2F2EDD02656ABE100097D55 /* PasswordLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordLoginVC.swift; sourceTree = "<group>"; };
+		F2F2EDD3265CE58800097D55 /* LC-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LC-Extension.swift"; sourceTree = "<group>"; };
+		F2F2EDD8265D3D7A00097D55 /* Login-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login-Extension.swift"; sourceTree = "<group>"; };
+		F2F2EDDC265EA2CD00097D55 /* LoginAndMeParentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAndMeParentVC.swift; sourceTree = "<group>"; };
 		F2FCC578264C1E8D0004C106 /* SocialLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginVC.swift; sourceTree = "<group>"; };
 		F2FCC57B264C20210004C106 /* SocialLoginVC-Alipay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SocialLoginVC-Alipay.swift"; sourceTree = "<group>"; };
 		F2FCC5B126502D620004C106 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = AliSDKDemo/libssl.a; sourceTree = "<group>"; };
@@ -293,8 +299,10 @@
 		F254EA4B2641976400A63145 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				F27EBB1426329690003D5286 /* Login-Extension.swift */,
 				F273781825C8E69E00F4A6E8 /* System-Extensions.swift */,
+				F27EBB1426329690003D5286 /* LocalLogin-Extension.swift */,
+				F2F2EDD8265D3D7A00097D55 /* Login-Extension.swift */,
+				F2F2EDD3265CE58800097D55 /* LC-Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -343,7 +351,7 @@
 				F27EBB10263294F9003D5286 /* LoginVC.swift */,
 				F2FCC578264C1E8D0004C106 /* SocialLoginVC.swift */,
 				F2FCC57B264C20210004C106 /* SocialLoginVC-Alipay.swift */,
-				F2F2EDB32653BE6D00097D55 /* SocialLoginVC-apple.swift */,
+				F2F2EDB32653BE6D00097D55 /* SocialLoginVC-Apple.swift */,
 				F2F2EDCD2656AAA000097D55 /* CodeLoginVC.swift */,
 				F2F2EDD02656ABE100097D55 /* PasswordLoginVC.swift */,
 			);
@@ -376,6 +384,7 @@
 				F2AC648025BEAE85000672E8 /* SceneDelegate.swift */,
 				F2AC648425BEAE85000672E8 /* Main.storyboard */,
 				F273781225C7E02F00F4A6E8 /* TabBarC.swift */,
+				F2F2EDDC265EA2CD00097D55 /* LoginAndMeParentVC.swift */,
 				F2B0FCBE26298A5D004E206B /* MeVC.swift */,
 				F27EBB0F263294D1003D5286 /* Login */,
 				F2404CB325EE1D2700AF1B55 /* NoteEdit */,
@@ -633,7 +642,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2B9EC5A26086E59001E74BA /* POICell.swift in Sources */,
-				F2F2EDB42653BE6D00097D55 /* SocialLoginVC-apple.swift in Sources */,
+				F2F2EDB42653BE6D00097D55 /* SocialLoginVC-Apple.swift in Sources */,
+				F2F2EDDD265EA2CD00097D55 /* LoginAndMeParentVC.swift in Sources */,
 				F2FCC57C264C20210004C106 /* SocialLoginVC-Alipay.swift in Sources */,
 				F2D1991F25FF6C5200DA1499 /* TextViewIAView.swift in Sources */,
 				F2750E9E26256D370021989A /* NoteEditVC-Helper.swift in Sources */,
@@ -670,11 +680,13 @@
 				F292AE32261E9DAC006B2C7C /* WaterfallVC-LoadData.swift in Sources */,
 				F273781925C8E69E00F4A6E8 /* System-Extensions.swift in Sources */,
 				F239A8E725C28C8200D7414C /* DiscoveryVC.swift in Sources */,
+				F2F2EDD4265CE58800097D55 /* LC-Extension.swift in Sources */,
+				F2F2EDD9265D3D7A00097D55 /* Login-Extension.swift in Sources */,
 				F2AC648125BEAE85000672E8 /* SceneDelegate.swift in Sources */,
 				F2E5B22A2601FB350005AF9A /* ChannelTableVC.swift in Sources */,
 				F2AC648925BEAE85000672E8 /* LittlePink.xcdatamodeld in Sources */,
 				F2B9EC6026088408001E74BA /* POVIC-Location.swift in Sources */,
-				F27EBB1526329690003D5286 /* Login-Extension.swift in Sources */,
+				F27EBB1526329690003D5286 /* LocalLogin-Extension.swift in Sources */,
 				F239A8EA25C28E3100D7414C /* Constants.swift in Sources */,
 				F22E85D32604477000BF7EF9 /* POIVC.swift in Sources */,
 				F2B9EC5D2608833F001E74BA /* POIVC-Config.swift in Sources */,

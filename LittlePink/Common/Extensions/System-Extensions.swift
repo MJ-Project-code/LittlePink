@@ -17,6 +17,15 @@ extension String{
     var isPhoneNum: Bool{
         Int(self) != nil  && NSRegularExpression(kPhoneRegEx).matches(self)
     }
+    
+    var isAuthCode: Bool{
+        Int(self) != nil  && NSRegularExpression(kAuthCodeRegEx).matches(self)
+    }
+    
+    static func randomString(_ length: Int) -> String{
+        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        return  String((0..<length).map{ _ in letters.randomElement()! })
+    }
 }
 
 extension NSRegularExpression{
@@ -177,6 +186,14 @@ extension UIViewController{
         hud.hide(animated: true, afterDelay: 2)
     }
     
+    func showTextHUD(_ title:String, in view: UIView, _ subTitle:String? = nil ){
+        let hud = MBProgressHUD.showAdded(to: view, animated: true)
+        hud.mode = .text //
+        hud.label.text = title
+        hud.detailsLabel.text = subTitle
+        hud.hide(animated: true, afterDelay: 2)
+    }
+    
     func hideKeyboardWhenTappedAround(){
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         tap.cancelsTouchesInView = false
@@ -184,6 +201,28 @@ extension UIViewController{
     }
     @objc func dismissKeyboard(){
         view.endEditing(true)
+    }
+    
+    //添加子视图控制器
+    func add(child vc:UIViewController){
+        addChild(vc)
+        vc.view.frame = view.bounds  //若vc是代码创建责需要加这句
+        view.addSubview(vc.view)
+        vc.didMove(toParent: self)
+    }
+    
+    func remove(child vc:UIViewController){
+        vc.willMove(toParent: nil)
+        vc.view.removeFromSuperview()
+        vc.removeFromParent()
+    }
+    
+    func removeChildren(){
+        if !children.isEmpty{
+            for vc in children{
+                remove(child:vc)
+            }
+        }
     }
 }
 
