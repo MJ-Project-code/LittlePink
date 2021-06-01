@@ -20,5 +20,6 @@ target 'LittlePink' do
   pod 'Alamofire', '~> 5.2'
   pod 'AlipaySDK-iOS'
   pod 'LeanCloud'
+  pod 'PopupDialog', '~> 1.1'
 
 end

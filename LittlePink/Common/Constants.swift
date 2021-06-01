@@ -102,8 +102,31 @@ let kAuthCodeRegEx = "^\\d{6}$"
 let kLCAppID = "i2v2REDMUWNJeJh97TmprWYm-gzGzoHsz"
 let kLCAppKey = "lFb6RCiANNg3d4FWsOWThXuP"
 let kLCServerURL = "https://i2v2redm.lc-cn-n1-shared.com"
-//leanCloud User表
+
+//表
+let kNoteTable = "Note"
+
+//User表
 let knickNameCol = "nickName"
 let kAvatarCol = "avatar"
 let kGenderCol = "gender"
 let kIntroCol = "intro"
+
+//Note表
+let kCoverPhotoCol = "coverPhoto"
+let kPhotosCol = "photos"
+let kVideoCol = "video"
+let kTitleCol = "title"
+let kTextCol = "text"
+let kChannelCol = "channel"
+let kSubChannelCol = "subChannel"
+let kPoiNameCol = "PoiName"
+let kIsVideoCol = "isVideo"
+
+
+func largeIcon(_ iconName: String, with color:UIColor = .label) -> UIImage {
+    let config = UIImage.SymbolConfiguration(scale: .large)
+    let icon = UIImage(systemName: iconName,withConfiguration: config)!
+    
+    return icon.withTintColor(color)
+}

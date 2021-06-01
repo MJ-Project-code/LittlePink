@@ -8,7 +8,7 @@ import Alamofire
 
 extension UIViewController{
     
-    @objc func locallogin(){
+     func locallogin(){
         
         showLoadHUD()
         let config = JVAuthConfig()
@@ -23,7 +23,7 @@ extension UIViewController{
                         self.presentLocalLoginUI()
                         self.presentLocalLoginVC()
                     }else{
-                        self.presentLocalLoginVC()
+                        self.presentCodeLoginVC()
                     }
                 }
                 
@@ -77,7 +77,7 @@ extension UIViewController{
 }
 
 extension UIViewController{
-    private func presentCodeLoginVC(){
+     func presentCodeLoginVC(){
         let mainSB =  UIStoryboard(name: "Main", bundle: nil)
         let loginNaviC = mainSB.instantiateViewController(identifier: kLoginNaviID)
         loginNaviC.modalPresentationStyle = .fullScreen

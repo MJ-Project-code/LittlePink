@@ -9,15 +9,15 @@ import UIKit
 import LeanCloud
 
 class MeVC: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-         
         navigationItem.backButtonDisplayMode = .minimal
     }
-    @IBAction func logoutTest(_ sender: Any) {
+    
+    @IBAction func LogoutTest(_ sender: Any) {
+        print(1)
         LCUser.logOut()
         
         let LoginVC = storyboard!.instantiateViewController(identifier: kLoginVCID)

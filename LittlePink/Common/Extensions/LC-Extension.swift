@@ -8,7 +8,8 @@
 import LeanCloud
 
 extension LCFile{
-    func save(to table: LCObject , as record: String ){
+    func save(to table: LCObject , as record: String, group: DispatchGroup? = nil ){
+        group?.enter()
         self.save { result in
             switch result {
             case .success:
@@ -17,6 +18,7 @@ extension LCFile{
                     
                     do {
                         try table.set(record, value: self)
+                        group?.enter()
                         table.save { (result) in
                             switch result {
                             case .success:
@@ -24,6 +26,7 @@ extension LCFile{
                             case .failure(error: let error):
                                 print("保存表的数据失败")
                             }
+                            group?.leave()
                         }
                         
                     } catch {
@@ -34,6 +37,7 @@ extension LCFile{
                 // 保存失败，可能是文件无法被读取，或者上传过程中出现问题
                 print("保存文件进云端失败\(error)")
             }
+            group?.leave()
         }
     }
 }

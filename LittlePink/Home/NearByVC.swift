@@ -61,7 +61,22 @@ class NearByVC: UIViewController ,IndicatorInfoProvider{
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             
         }
-
+        
+        
+        
+        //调度组,返回结果依赖异步数据
+        let group = DispatchGroup()
+        
+        group.enter()
+        DispatchQueue.global().asyncAfter(deadline: .now()+2) {
+            print(1)
+            group.leave()
+        }
+        
+        group.notify(queue: .main) {
+            print(2)
+        }
+        
     }
     
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {

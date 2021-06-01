@@ -23,16 +23,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "386B339E-31BE-45F7-A098-EAEF17E5A556"
-            shouldBeEnabled = "Yes"
+            uuid = "02DFF87C-39AA-4172-A249-509A5D49B53D"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LittlePink/NoteEdit/NoteEditVC.swift"
+            filePath = "LittlePink/Common/Extensions/LocalLogin-Extension.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "TFEditChanged(_:)"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "presentLocalLoginVC()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

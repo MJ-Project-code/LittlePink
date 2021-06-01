@@ -10,14 +10,16 @@ import LeanCloud
 extension UIViewController{
     func configAfterLogin(_ user: LCUser,_ nickName: String,_ email: String = ""){
         if let _ = user.get(knickNameCol){
-            
+            dismissAndShowMeVC()
         }else{//首次登录(注册动作)
+            let group = DispatchGroup()
+            
             let randomAvatar = UIImage(named: "avatarPH\(Int.random(in: 1...4))")!
             if let avatarData = randomAvatar.pngData(){
                 let avatarFile = LCFile(payload: .data(data: avatarData))
                 avatarFile.mimeType = "image/jpeg"
                 
-                avatarFile.save(to: user, as: kAvatarCol)
+                avatarFile.save(to: user, as: kAvatarCol ,group: group)
             }
             
             do {
@@ -29,13 +31,27 @@ extension UIViewController{
                 print("字段赋值失败\(error)")
                 return
             }
-            
-            user.save { result in
-                if case .success = result{
-                    
-                }
+            group.enter()
+            user.save { _ in
+                group.leave()
             }
+            
+            group.notify(queue: .main) {
+                self.dismissAndShowMeVC()
+            }
+            
         }
-        
+
+    }
+    func  dismissAndShowMeVC(){
+        self.hideLoadHUD()
+        DispatchQueue.main.async {
+            let mainSB = UIStoryboard(name:"Main", bundle: nil)
+            let meVC =  mainSB.instantiateViewController(identifier: kMeVCID)
+            loginAndMeParentVC.removeChildren()
+            loginAndMeParentVC.add(child: meVC)
+            
+            self.dismiss(animated: true)
+        }
     }
 }

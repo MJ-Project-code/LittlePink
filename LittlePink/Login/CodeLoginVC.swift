@@ -86,7 +86,6 @@ class CodeLoginVC: UIViewController {
         
         showLoadHUD()
         LCUser.signUpOrLogIn(mobilePhoneNumber: phoneNumStr, verificationCode: authCodeStr) { result in
-            self.hideLoadHUD()
             switch result {
             case let .success(object: user): //登录成功  user是lc对象
                 //判断是否首次登录
@@ -94,6 +93,7 @@ class CodeLoginVC: UIViewController {
                 self.configAfterLogin(user,randomNickName)
                 
             case let .failure(error:  error):
+                self.hideLoadHUD()
                 DispatchQueue.main.async {
                     self.showTextHUD("登录失败", true, error.reason)
                 }

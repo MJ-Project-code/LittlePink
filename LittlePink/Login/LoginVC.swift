@@ -15,7 +15,7 @@ class LoginVC: UIViewController {
         btn.setTitleColor(.white, for: .normal)
         btn.backgroundColor = mainColor
         btn.layer.cornerRadius = 22
-        btn.addTarget(self, action: #selector(locallogin), for: .touchUpInside)
+        btn.addTarget(self, action: #selector(login), for: .touchUpInside)
         btn.translatesAutoresizingMaskIntoConstraints = false
         return btn
     }()
@@ -47,5 +47,12 @@ class LoginVC: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @objc private func login(){
+        #if targetEnvironment(simulator)
+            presentCodeLoginVC()
+        #else
+            locallogin()
+        #endif
+        
+    }
 }
