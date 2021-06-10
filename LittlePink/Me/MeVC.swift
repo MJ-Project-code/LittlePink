@@ -26,4 +26,9 @@ class MeVC: UIViewController {
         loginAndMeParentVC.add(child: LoginVC)
     }
     
+    @IBAction func showDraftNotes(_ sender: Any) {
+        let navi = storyboard!.instantiateViewController(identifier: kDraftNotesNavID)
+        navi.modalPresentationStyle = .fullScreen
+        present(navi, animated: true)
+    }
 }

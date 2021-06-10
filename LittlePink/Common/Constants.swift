@@ -16,6 +16,7 @@ let kNoteEditVCID = "NoteEditVCID"
 let kChannelTableVCID = "ChannelTableVCID"
 let kLoginVCID = "LoginVCID"
 let kMeVCID = "MeVCID"
+let kDraftNotesNavID = "DraftNotesNavID"
 
 //cell相关id
 let kWaterfallCellID = "WaterfallCellID"

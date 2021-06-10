@@ -26,6 +26,9 @@ extension WaterfallVC{
                 vc.updateDraftNoteFinished = {
                     self.getDraftNotes()
                 }
+                vc.postDraftNoteFinished = {
+                    self.getDraftNotes()
+                }
                 navigationController?.pushViewController(vc, animated: true)
                 
                 

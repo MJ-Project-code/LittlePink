@@ -9,9 +9,13 @@ PODS:
   - CHTCollectionViewWaterfallLayout/Swift (0.9.8)
   - DateToolsSwift (5.0.0)
   - DynamicBlurView (4.1.0)
+  - FaveButton (3.2.1)
   - GRDB.swift (4.14.0):
     - GRDB.swift/standard (= 4.14.0)
   - GRDB.swift/standard (4.14.0)
+  - ImageSlideshow (1.9.2):
+    - ImageSlideshow/Core (= 1.9.2)
+  - ImageSlideshow/Core (1.9.2)
   - JCore (2.6.2)
   - JVerification (2.7.0):
     - JCore (< 6.0.0, >= 2.1.6)
@@ -44,6 +48,8 @@ DEPENDENCIES:
   - AMapSearch
   - CHTCollectionViewWaterfallLayout/Swift
   - DateToolsSwift
+  - FaveButton
+  - ImageSlideshow (~> 1.9.0)
   - JVerification
   - KMPlaceholderTextView (~> 1.4.0)
   - LeanCloud
@@ -64,7 +70,9 @@ SPEC REPOS:
     - CHTCollectionViewWaterfallLayout
     - DateToolsSwift
     - DynamicBlurView
+    - FaveButton
     - GRDB.swift
+    - ImageSlideshow
     - JCore
     - JVerification
     - KMPlaceholderTextView
@@ -88,7 +96,9 @@ SPEC CHECKSUMS:
   CHTCollectionViewWaterfallLayout: 5f241d2480ab4939aa0d1ad4981de9eef1fbe60d
   DateToolsSwift: 4207ada6ad615d8dc076323d27037c94916dbfa6
   DynamicBlurView: 58e18fae80bb614e34681a4486870e7d257b62e8
+  FaveButton: 93cfebf6030336fa7653fad2068c3152ed668b39
   GRDB.swift: 8cc3ab7c8b8b4ac1761deb8dca4b51c1c9d429f8
+  ImageSlideshow: be305b54eaf2b2cfc7a7141c7c734605d44dc07d
   JCore: 0cb4fc5892bc97af4f27283875369ead3eaa3067
   JVerification: 6d0827cd8c4a50690372167397bd6c328dfe0357
   KMPlaceholderTextView: 2206c3df39979e9396e2d96fa9f427a8951121b0
@@ -103,6 +113,6 @@ SPEC CHECKSUMS:
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
   YPImagePicker: 15aed8bcaa4dad976e11b6114126d731a2f9f3c9
 
-PODFILE CHECKSUM: 683f8a4ffaeb49fab5b6f0cd580569779c019d18
+PODFILE CHECKSUM: 31aceab283c44c169103dd68a6153c1f419791d6
 
 COCOAPODS: 1.10.1

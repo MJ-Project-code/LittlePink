@@ -24,7 +24,10 @@ class WaterfallVC: UICollectionViewController {
         
     }
 
-
+    @IBAction func dismissDraftNotesVC(_ sender: Any) {
+        dismiss(animated: true)
+    }
+    
 }
 
 //delegate 调瀑布流布局
