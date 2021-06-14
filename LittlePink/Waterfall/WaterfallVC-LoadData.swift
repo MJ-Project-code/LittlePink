@@ -6,6 +6,7 @@
 //
 
 import CoreData
+import LeanCloud
 
 extension WaterfallVC{
     func getDraftNotes(){
@@ -39,5 +40,21 @@ extension WaterfallVC{
         }
         
         
+    }
+    
+    func getNotes(){
+        let query = LCQuery(className: kNoteTable)
+        
+        query.whereKey(kChannelCol, .equalTo(channel))
+        query.whereKey(kAuthorCol, .included)
+        query.whereKey(kUpdatedAtCol, .descending)
+        query.limit = kNotesOffset
+        
+        query.find { result in
+            if case let  .success(objects: notes) =  result{
+                self.notes = notes
+                self.collectionView.reloadData()
+            }
+        }
     }
 }

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		28DD14755C130CA0F7C94A7A /* Pods_LittlePink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1C2ECD820882225E9AFB38 /* Pods_LittlePink.framework */; };
+		F2041B9C267648E800BBDE6C /* avatarPH.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F2041B9A267648E700BBDE6C /* avatarPH.jpeg */; };
+		F2041B9D267648E800BBDE6C /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F2041B9B267648E700BBDE6C /* logo.png */; };
 		F21D403E266E720000D91828 /* CustomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21D403D266E720000D91828 /* CustomViews.swift */; };
 		F22E85D02603496600BF7EF9 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22E85CF2603496600BF7EF9 /* Protocols.swift */; };
 		F22E85D32604477000BF7EF9 /* POIVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22E85D22604477000BF7EF9 /* POIVC.swift */; };
@@ -78,6 +80,8 @@
 /* Begin PBXFileReference section */
 		AC1C2ECD820882225E9AFB38 /* Pods_LittlePink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LittlePink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1D380A29BBDC7C14672677 /* Pods-LittlePink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LittlePink.debug.xcconfig"; path = "Target Support Files/Pods-LittlePink/Pods-LittlePink.debug.xcconfig"; sourceTree = "<group>"; };
+		F2041B9A267648E700BBDE6C /* avatarPH.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avatarPH.jpeg; sourceTree = "<group>"; };
+		F2041B9B267648E700BBDE6C /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		F2111D8325CCF34100C0A4D7 /* ARC+循环引用.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "ARC+循环引用.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		F21D403D266E720000D91828 /* CustomViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViews.swift; sourceTree = "<group>"; };
 		F22ABCA425D11A9300ACECE5 /* 枚举.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "枚举.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -270,6 +274,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		F2041BA0267648F800BBDE6C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				F2041B9A267648E700BBDE6C /* avatarPH.jpeg */,
+				F2041B9B267648E700BBDE6C /* logo.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		F22ED63726672F1A0021956C /* NoteDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -412,6 +425,7 @@
 				F2404CB325EE1D2700AF1B55 /* NoteEdit */,
 				F22ED63726672F1A0021956C /* NoteDetail */,
 				F27EBB0F263294D1003D5286 /* Login */,
+				F2041BA0267648F800BBDE6C /* Resource */,
 				F2AC648A25BEAE86000672E8 /* Assets.xcassets */,
 				F2AC648C25BEAE86000672E8 /* LaunchScreen.storyboard */,
 				F2AC648F25BEAE86000672E8 /* Info.plist */,
@@ -599,9 +613,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2AC648E25BEAE86000672E8 /* LaunchScreen.storyboard in Resources */,
+				F2041B9D267648E800BBDE6C /* logo.png in Resources */,
 				F2AC648B25BEAE86000672E8 /* Assets.xcassets in Resources */,
 				F2D1991C25FF6A3000DA1499 /* TextViewIAView.xib in Resources */,
 				F2D198F925F2044E00DA1499 /* TV.mp4 in Resources */,
+				F2041B9C267648E800BBDE6C /* avatarPH.jpeg in Resources */,
 				F2AC648625BEAE85000672E8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

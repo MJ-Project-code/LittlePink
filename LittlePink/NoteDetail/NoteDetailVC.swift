@@ -7,8 +7,13 @@
 
 import UIKit
 import ImageSlideshow
+import LeanCloud
 
 class NoteDetailVC: UIViewController {
+    
+    let note: LCObject
+    
+    
     @IBOutlet weak var authorAvatarBtn: UIButton!
     @IBOutlet weak var authorNickNameBtn: UIButton!
     @IBOutlet weak var followBtn: UIButton!
@@ -18,6 +23,17 @@ class NoteDetailVC: UIViewController {
     
     @IBOutlet weak var imageSlideShow: ImageSlideshow!
     @IBOutlet weak var imageSlideShowHeight: NSLayoutConstraint!
+    
+    //依赖注入note
+    init?(coder: NSCoder ,note :LCObject ) {
+        self.note = note
+        super.init(coder: coder)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

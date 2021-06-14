@@ -41,3 +41,31 @@ extension LCFile{
         }
     }
 }
+
+extension LCObject{
+    func getExactStringVal(_ col: String) -> String { get(col)?.stringValue ?? "" }
+    func getExactIntVal(_ col:String) -> Int { get(col)?.intValue ?? 0 }
+    func getExactDoubleVal(_ col: String) -> Double { get(col)?.doubleValue ?? 1 }
+    func getExactBoolVal(_ col: String) -> Bool { get(col)?.boolValue ?? true }
+    
+    enum imageType {
+        case avatar
+        case coverPhoto
+    }
+    
+    func getImageURL(from col:String,_ type: imageType) -> URL{
+        if let file =  get(col) as? LCFile,
+           let path = file.url?.stringValue,
+           let url = URL(string: path){
+            return url
+        }else{
+            switch type {
+            case .avatar:
+                return Bundle.main.url(forResource: "avatarPH", withExtension: "jpeg")!
+            case .coverPhoto:
+                return Bundle.main.url(forResource: "logo", withExtension: "png")!
+            }
+        }
+    }
+}
+

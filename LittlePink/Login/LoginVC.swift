@@ -51,7 +51,8 @@ class LoginVC: UIViewController {
         #if targetEnvironment(simulator)
             presentCodeLoginVC()
         #else
-            locallogin()
+            //locallogin()
+        presentCodeLoginVC()
         #endif
         
     }

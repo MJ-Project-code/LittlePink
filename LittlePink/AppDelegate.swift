@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         config()
+        print(NSHomeDirectory())
         return true
     }
 
@@ -101,7 +102,7 @@ extension AppDelegate{
         UINavigationBar.appearance().tintColor = .label
         
         //初始化LeanCloud
-        LCApplication.logLevel = .off
+        LCApplication.logLevel = .all
         do {
             try LCApplication.default.set(
                 id: kLCAppID,

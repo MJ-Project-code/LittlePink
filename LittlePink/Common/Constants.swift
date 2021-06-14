@@ -47,7 +47,8 @@ let screenRect =  UIScreen.main.bounds
 
 //瀑布流
 let kWaterfallPadding:CGFloat = 4;
-let kDraftNoteWaterfallCellButtomViewH: CGFloat = 86.5
+let kDraftNoteWaterfallCellButtomViewH: CGFloat = 70.5
+let kWaterfallCellButtomViewH:CGFloat = 70.5
 
 //Mark: -业务逻辑相关
 let kChannels = ["推荐","旅行","娱乐","才艺","美妆","白富美","美食","萌宠"]
@@ -104,6 +105,10 @@ let kLCAppID = "i2v2REDMUWNJeJh97TmprWYm-gzGzoHsz"
 let kLCAppKey = "lFb6RCiANNg3d4FWsOWThXuP"
 let kLCServerURL = "https://i2v2redm.lc-cn-n1-shared.com"
 
+//
+let kCreatedAtCol = "createdAt"
+let kUpdatedAtCol = "updatedAt"
+
 //表
 let kNoteTable = "Note"
 
@@ -115,6 +120,7 @@ let kIntroCol = "intro"
 
 //Note表
 let kCoverPhotoCol = "coverPhoto"
+let kCoverPhotoRatioCol = "coverPhotoRatio"
 let kPhotosCol = "photos"
 let kVideoCol = "video"
 let kTitleCol = "title"
@@ -123,7 +129,13 @@ let kChannelCol = "channel"
 let kSubChannelCol = "subChannel"
 let kPoiNameCol = "PoiName"
 let kIsVideoCol = "isVideo"
+let kLikeCountCol = "likeCount"
+let kFavCountCol = "favCount"
+let kCommentCountCol = "commentCount"
+let kAuthorCol = "author"
 
+//云端
+let kNotesOffset = 10
 
 func largeIcon(_ iconName: String, with color:UIColor = .label) -> UIImage {
     let config = UIImage.SymbolConfiguration(scale: .large)

@@ -17,7 +17,6 @@ class MeVC: UIViewController {
     }
     
     @IBAction func LogoutTest(_ sender: Any) {
-        print(1)
         LCUser.logOut()
         
         let LoginVC = storyboard!.instantiateViewController(identifier: kLoginVCID)

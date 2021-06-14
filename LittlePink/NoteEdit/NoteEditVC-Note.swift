@@ -20,6 +20,7 @@ extension NoteEditVC{
             
             if let coverPhotoData =  photos[0].jpeg(.high){ //封面图
                 let coverPhoto =  LCFile(payload: .data(data: coverPhotoData))
+                coverPhoto.mimeType = "image/jpeg"
                 coverPhoto.save(to: note, as: kCoverPhotoCol, group: noteGroup)
             }
             let photoGroup = DispatchGroup()
@@ -29,9 +30,12 @@ extension NoteEditVC{
                 if let photoData = eachPhoto.pngData(){
                     let photo = LCFile(payload: .data(data: photoData))
                     photoGroup.enter()
-                    photo.save { (res) in
+                    photo.save { res in
                         if case .success = res , let path = photo.url?.stringValue{
                             photoPaths[index] = path
+                        }
+                        if case .failure(error: let error )  = res{
+                            print(error)
                         }
                         photoGroup.leave()
                     }
@@ -50,12 +54,21 @@ extension NoteEditVC{
                     print("字段赋值失败\(error)")
                 }
             }
+            let coverPhotoSize = photos[0].size
+            let coverPhotoRatio = Double(coverPhotoSize.height / coverPhotoSize.width)
             
+            try note.set(kCoverPhotoRatioCol, value: coverPhotoRatio )
             try note.set(kTitleCol, value: titleTextField.exactText)
             try note.set(kTextCol,value: textView.exactText)
             try note.set(kChannelCol, value: channel.isEmpty ? "推荐" : channel )
             try note.set(kSubChannelCol,value: subChannel)
             try note.set(kPoiNameCol, value: poiName)
+            try note.set(kLikeCountCol,value: 0)
+            try note.set(kFavCountCol, value: 0)
+            try note.set(kCommentCountCol, value: 0)
+            
+            //笔记作者
+            try note.set(kAuthorCol, value: LCApplication.default.currentUser!)
             
             noteGroup.enter()
             note.save { res in

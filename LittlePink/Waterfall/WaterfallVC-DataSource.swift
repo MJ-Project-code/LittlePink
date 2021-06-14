@@ -12,7 +12,7 @@ extension WaterfallVC{
         if isMyDraft{
             return draftNotes.count
         }
-        return 13
+        return notes.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -25,7 +25,7 @@ extension WaterfallVC{
             return cell
         }else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kWaterfallCellID, for: indexPath) as! WaterfallCell
-            cell.imageview.image = UIImage(named: "\(indexPath.item + 1)")
+            cell.note = notes[indexPath.item]
             return cell
         }
         
