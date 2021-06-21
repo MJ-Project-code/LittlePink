@@ -8,6 +8,7 @@
 import UIKit
 import ImageSlideshow
 import LeanCloud
+import FaveButton
 
 class NoteDetailVC: UIViewController {
     
@@ -20,16 +21,51 @@ class NoteDetailVC: UIViewController {
     @IBOutlet weak var shareBtn: UIButton!
     
     @IBOutlet weak var tableHeaderView: UIView!
-    
     @IBOutlet weak var imageSlideShow: ImageSlideshow!
     @IBOutlet weak var imageSlideShowHeight: NSLayoutConstraint!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var textLabel: UILabel!
+    @IBOutlet weak var channelBtn: UIButton!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var commentCountLabel: UILabel!
+    @IBOutlet weak var avatarImageView: UIImageView!
+    //整个tableview
+    @IBOutlet weak var tableView: UITableView!
+    //下方bar
+    @IBOutlet weak var likeBtn: FaveButton!
+    @IBOutlet weak var likeCountLbael: UILabel!
+    @IBOutlet weak var favBtn: FaveButton!
+    @IBOutlet weak var favCountLabel: UILabel!
+    @IBOutlet weak var commentCountBtn: UIButton!
     
+    var likeCount = 0{
+        didSet{
+            likeCountLbael.text = likeCount == 0 ? "点赞" : likeCount.formattedStr
+        }
+    }
+    
+    var favCount = 0{
+        didSet{
+            favCountLabel.text = favCount == 0 ? "收藏" : favCount.formattedStr
+        }
+    }
+    
+    var commentCount = 0{
+        didSet{
+            commentCountLabel.text = "\(commentCount)"
+            commentCountBtn.setTitle(commentCount == 0 ? "评论" : commentCount.formattedStr, for: .normal)
+        }
+    }
+    
+    //计算属性
+    var author:LCUser?{ note.get(kAuthorCol) as? LCUser}
     //依赖注入note
     init?(coder: NSCoder ,note :LCObject ) {
         self.note = note
         super.init(coder: coder)
     }
     
+    //从sb走 storyboard.instance只用id创建走这里
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -39,13 +75,13 @@ class NoteDetailVC: UIViewController {
         
         config()
         
-        imageSlideShow.setImageInputs([
-            ImageSource(image: UIImage(named: "1")!),
-            ImageSource(image: UIImage(named: "2")!),
-            ImageSource(image: UIImage(named: "3")!),
-        ])
-        let imageSize = UIImage(named: "1")!.size
-        imageSlideShowHeight.constant = (imageSize.height / imageSize.width) * screenRect.width
+//        imageSlideShow.setImageInputs([
+//            ImageSource(image: UIImage(named: "1")!),
+//            ImageSource(image: UIImage(named: "2")!),
+//            ImageSource(image: UIImage(named: "3")!),
+//        ])
+//        let imageSize = UIImage(named: "1")!.size
+//        imageSlideShowHeight.constant = (imageSize.height / imageSize.width) * screenRect.width
         setUI()
 
     }
@@ -63,15 +99,8 @@ class NoteDetailVC: UIViewController {
         
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    @IBAction func like(_ sender: Any) { like() }
+    
+    @IBAction func fav(_ sender: Any) { fav() }
+    
 }

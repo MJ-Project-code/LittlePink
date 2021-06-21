@@ -1069,7 +1069,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="324" height="353"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eyC-3R-cYS">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eyC-3R-cYS">
                                             <rect key="frame" x="0.0" y="0.0" width="324" height="290"/>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fHT-Jo-0HX">
@@ -1494,7 +1494,7 @@
         <!--Note DetailVC-->
         <scene sceneID="fhq-Qf-jCL">
             <objects>
-                <viewController id="A4I-o3-N4Q" customClass="NoteDetailVC" customModule="LittlePink" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NoteDetailVCID" id="A4I-o3-N4Q" customClass="NoteDetailVC" customModule="LittlePink" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kQc-6m-iB4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1601,7 +1601,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我是正文" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rT7-VN-7o3">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我是正文" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rT7-VN-7o3">
                                                     <rect key="frame" x="0.0" y="34" width="57.5" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" systemColor="secondaryLabelColor"/>
@@ -1769,6 +1769,9 @@
                                                                         <color key="value" name="main"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="like:" destination="A4I-o3-N4Q" eventType="touchUpInside" id="Ygj-sC-IAV"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.8万" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9f-2w-bZ1">
                                                                 <rect key="frame" x="34" y="0.0" width="35" height="36"/>
@@ -1793,6 +1796,9 @@
                                                                         <color key="value" systemColor="systemYellowColor"/>
                                                                     </userDefinedRuntimeAttribute>
                                                                 </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="fav:" destination="A4I-o3-N4Q" eventType="touchUpInside" id="acD-3H-KVp"/>
+                                                                </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="收藏" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="200-La-FwB">
                                                                 <rect key="frame" x="34" y="0.0" width="29" height="36"/>
@@ -1848,11 +1854,23 @@
                     <connections>
                         <outlet property="authorAvatarBtn" destination="p7K-VQ-Vja" id="PYh-mp-d5p"/>
                         <outlet property="authorNickNameBtn" destination="GK0-5v-oln" id="cFr-ze-XjL"/>
+                        <outlet property="avatarImageView" destination="rgR-8I-V6p" id="xSt-S2-N9g"/>
+                        <outlet property="channelBtn" destination="Psx-mT-lDj" id="vuJ-M7-sbO"/>
+                        <outlet property="commentCountBtn" destination="dIR-iu-dmJ" id="Klt-dx-Sow"/>
+                        <outlet property="commentCountLabel" destination="rG6-30-vpk" id="B2n-cb-OVI"/>
+                        <outlet property="dateLabel" destination="D6V-D4-l2D" id="jHf-YZ-akp"/>
+                        <outlet property="favBtn" destination="9ek-We-Ji4" id="2ii-Gg-Ysx"/>
+                        <outlet property="favCountLabel" destination="200-La-FwB" id="glf-q1-Nig"/>
                         <outlet property="followBtn" destination="5LE-FU-547" id="hbG-BT-Osg"/>
                         <outlet property="imageSlideShow" destination="zzA-nk-RIW" id="0SA-08-WfW"/>
                         <outlet property="imageSlideShowHeight" destination="x5H-Ge-zfp" id="IIL-oM-yRN"/>
+                        <outlet property="likeBtn" destination="y78-nS-CGS" id="dKO-4l-obh"/>
+                        <outlet property="likeCountLbael" destination="v9f-2w-bZ1" id="h3X-mV-3Ne"/>
                         <outlet property="shareBtn" destination="rWR-ll-aMc" id="xvu-yg-MCg"/>
                         <outlet property="tableHeaderView" destination="ZMp-Hg-Qrl" id="jLK-lL-6Vp"/>
+                        <outlet property="tableView" destination="giL-wN-s6T" id="OvM-do-z0C"/>
+                        <outlet property="textLabel" destination="rT7-VN-7o3" id="dzf-VL-Bjb"/>
+                        <outlet property="titleLabel" destination="oTC-jJ-sQO" id="X9X-dZ-yIi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SQb-MH-Xga" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

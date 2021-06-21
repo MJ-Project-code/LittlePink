@@ -27,7 +27,7 @@ extension NoteEditVC{
             //多个图片存储
             var photoPaths : [Int:String] = [:]
             for (index,eachPhoto) in photos.enumerated(){
-                if let photoData = eachPhoto.pngData(){
+                if let photoData = eachPhoto.jpeg(.high){
                     let photo = LCFile(payload: .data(data: photoData))
                     photoGroup.enter()
                     photo.save { res in

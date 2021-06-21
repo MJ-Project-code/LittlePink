@@ -17,6 +17,7 @@ let kChannelTableVCID = "ChannelTableVCID"
 let kLoginVCID = "LoginVCID"
 let kMeVCID = "MeVCID"
 let kDraftNotesNavID = "DraftNotesNavID"
+let kNoteDetailVCID = "NoteDetailVCID"
 
 //cell相关id
 let kWaterfallCellID = "WaterfallCellID"
@@ -133,6 +134,7 @@ let kLikeCountCol = "likeCount"
 let kFavCountCol = "favCount"
 let kCommentCountCol = "commentCount"
 let kAuthorCol = "author"
+let kHasEidtCol = "hasEdit"
 
 //云端
 let kNotesOffset = 10

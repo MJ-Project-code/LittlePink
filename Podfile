@@ -24,5 +24,6 @@ target 'LittlePink' do
   pod 'FaveButton'
   pod 'ImageSlideshow', '~> 1.9.0'
   pod 'Kingfisher', '~> 6.0'
+  pod "ImageSlideshow/Kingfisher"
   
 end

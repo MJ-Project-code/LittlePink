@@ -9,6 +9,23 @@ import UIKit
 import DateToolsSwift
 import AVFoundation
 
+extension Int{
+    var formattedStr: String{
+        let num = Double(self)
+        let tenThousand = num / 10_000
+        let hundredMillion = num / 100_000_000
+        
+        if  tenThousand < 1{
+            return "\(self)"
+        }else if hundredMillion >= 1{
+            return "\(round(hundredMillion*10) / 10)亿"
+        }else{
+            return "\(round(tenThousand*10) / 10)万"
+        }
+        
+    }
+}
+
 extension String{
     var isBlank:Bool{
         self.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty

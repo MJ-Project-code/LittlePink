@@ -10,6 +10,7 @@
 		28DD14755C130CA0F7C94A7A /* Pods_LittlePink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1C2ECD820882225E9AFB38 /* Pods_LittlePink.framework */; };
 		F2041B9C267648E800BBDE6C /* avatarPH.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F2041B9A267648E700BBDE6C /* avatarPH.jpeg */; };
 		F2041B9D267648E800BBDE6C /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F2041B9B267648E700BBDE6C /* logo.png */; };
+		F21AED07268074FD0022DEF2 /* NoteDetailVC-LikeFav.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21AED06268074FD0022DEF2 /* NoteDetailVC-LikeFav.swift */; };
 		F21D403E266E720000D91828 /* CustomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21D403D266E720000D91828 /* CustomViews.swift */; };
 		F22E85D02603496600BF7EF9 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22E85CF2603496600BF7EF9 /* Protocols.swift */; };
 		F22E85D32604477000BF7EF9 /* POIVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22E85D22604477000BF7EF9 /* POIVC.swift */; };
@@ -83,6 +84,7 @@
 		F2041B9A267648E700BBDE6C /* avatarPH.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avatarPH.jpeg; sourceTree = "<group>"; };
 		F2041B9B267648E700BBDE6C /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		F2111D8325CCF34100C0A4D7 /* ARC+循环引用.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "ARC+循环引用.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		F21AED06268074FD0022DEF2 /* NoteDetailVC-LikeFav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteDetailVC-LikeFav.swift"; sourceTree = "<group>"; };
 		F21D403D266E720000D91828 /* CustomViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViews.swift; sourceTree = "<group>"; };
 		F22ABCA425D11A9300ACECE5 /* 枚举.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "枚举.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		F22E85CF2603496600BF7EF9 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 				F22ED63426672EF90021956C /* NoteDetailVC.swift */,
 				F22ED63D266E69C70021956C /* NoteDetailVC-Config.swift */,
 				F22ED63A266E69A90021956C /* NoteDetailVC-UI.swift */,
+				F21AED06268074FD0022DEF2 /* NoteDetailVC-LikeFav.swift */,
 			);
 			path = NoteDetail;
 			sourceTree = "<group>";
@@ -718,6 +721,7 @@
 				F2B0FCBF26298A5D004E206B /* MeVC.swift in Sources */,
 				F273781625C7E26100F4A6E8 /* PostVC.swift in Sources */,
 				F22ED63526672EF90021956C /* NoteDetailVC.swift in Sources */,
+				F21AED07268074FD0022DEF2 /* NoteDetailVC-LikeFav.swift in Sources */,
 				F2F2EDD12656ABE100097D55 /* PasswordLoginVC.swift in Sources */,
 				F2750EA126256F180021989A /* NoteEditVC-UI.swift in Sources */,
 				F2D1990025F5FFE500DA1499 /* NoteEditVC-CollectionView.swift in Sources */,

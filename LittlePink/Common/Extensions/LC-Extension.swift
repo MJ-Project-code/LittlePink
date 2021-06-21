@@ -46,7 +46,7 @@ extension LCObject{
     func getExactStringVal(_ col: String) -> String { get(col)?.stringValue ?? "" }
     func getExactIntVal(_ col:String) -> Int { get(col)?.intValue ?? 0 }
     func getExactDoubleVal(_ col: String) -> Double { get(col)?.doubleValue ?? 1 }
-    func getExactBoolVal(_ col: String) -> Bool { get(col)?.boolValue ?? true }
+    func getExactBoolVal(_ col: String) -> Bool { get(col)?.boolValue ?? false }
     
     enum imageType {
         case avatar
