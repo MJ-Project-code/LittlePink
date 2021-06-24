@@ -13,7 +13,7 @@ import FaveButton
 class NoteDetailVC: UIViewController {
     
     let note: LCObject
-    
+    var isLikeFromWaterfallCell = false
     
     @IBOutlet weak var authorAvatarBtn: UIButton!
     @IBOutlet weak var authorNickNameBtn: UIButton!
@@ -43,6 +43,7 @@ class NoteDetailVC: UIViewController {
             likeCountLbael.text = likeCount == 0 ? "点赞" : likeCount.formattedStr
         }
     }
+    var currentLikeCount = 0
     
     var favCount = 0{
         didSet{
@@ -59,6 +60,7 @@ class NoteDetailVC: UIViewController {
     
     //计算属性
     var author:LCUser?{ note.get(kAuthorCol) as? LCUser}
+    var isLike:Bool{ likeBtn.isSelected }
     //依赖注入note
     init?(coder: NSCoder ,note :LCObject ) {
         self.note = note
@@ -99,6 +101,9 @@ class NoteDetailVC: UIViewController {
         
     }
     
+    @IBAction func back(_ sender: Any) {
+        dismiss(animated: true)
+    }
     @IBAction func like(_ sender: Any) { like() }
     
     @IBAction func fav(_ sender: Any) { fav() }

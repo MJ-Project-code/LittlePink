@@ -10,7 +10,7 @@
 		28DD14755C130CA0F7C94A7A /* Pods_LittlePink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1C2ECD820882225E9AFB38 /* Pods_LittlePink.framework */; };
 		F2041B9C267648E800BBDE6C /* avatarPH.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F2041B9A267648E700BBDE6C /* avatarPH.jpeg */; };
 		F2041B9D267648E800BBDE6C /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F2041B9B267648E700BBDE6C /* logo.png */; };
-		F21AED07268074FD0022DEF2 /* NoteDetailVC-LikeFav.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21AED06268074FD0022DEF2 /* NoteDetailVC-LikeFav.swift */; };
+		F21AED07268074FD0022DEF2 /* NoteDetailVC-Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21AED06268074FD0022DEF2 /* NoteDetailVC-Like.swift */; };
 		F21D403E266E720000D91828 /* CustomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21D403D266E720000D91828 /* CustomViews.swift */; };
 		F22E85D02603496600BF7EF9 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22E85CF2603496600BF7EF9 /* Protocols.swift */; };
 		F22E85D32604477000BF7EF9 /* POIVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22E85D22604477000BF7EF9 /* POIVC.swift */; };
@@ -26,6 +26,8 @@
 		F24DAEF025ECDCE7003E1043 /* PhotoFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24DAEEF25ECDCE7003E1043 /* PhotoFooter.swift */; };
 		F254F65325C4015700A02076 /* WaterfallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F254F65225C4015700A02076 /* WaterfallVC.swift */; };
 		F254F65F25C40C0B00A02076 /* WaterfallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F254F65E25C40C0B00A02076 /* WaterfallCell.swift */; };
+		F25D6E07268483D900CFEA5A /* WaterfallCell-Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25D6E06268483D900CFEA5A /* WaterfallCell-Like.swift */; };
+		F25D6E0C2684867B00CFEA5A /* NoteDetailVC-Fav.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25D6E0B2684867B00CFEA5A /* NoteDetailVC-Fav.swift */; };
 		F273781325C7E02F00F4A6E8 /* TabBarC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273781225C7E02F00F4A6E8 /* TabBarC.swift */; };
 		F273781625C7E26100F4A6E8 /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273781525C7E26100F4A6E8 /* PostVC.swift */; };
 		F273781925C8E69E00F4A6E8 /* System-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273781825C8E69E00F4A6E8 /* System-Extensions.swift */; };
@@ -84,7 +86,7 @@
 		F2041B9A267648E700BBDE6C /* avatarPH.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avatarPH.jpeg; sourceTree = "<group>"; };
 		F2041B9B267648E700BBDE6C /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		F2111D8325CCF34100C0A4D7 /* ARC+循环引用.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "ARC+循环引用.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		F21AED06268074FD0022DEF2 /* NoteDetailVC-LikeFav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteDetailVC-LikeFav.swift"; sourceTree = "<group>"; };
+		F21AED06268074FD0022DEF2 /* NoteDetailVC-Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteDetailVC-Like.swift"; sourceTree = "<group>"; };
 		F21D403D266E720000D91828 /* CustomViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViews.swift; sourceTree = "<group>"; };
 		F22ABCA425D11A9300ACECE5 /* 枚举.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "枚举.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		F22E85CF2603496600BF7EF9 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
@@ -103,6 +105,8 @@
 		F254D30725E63C0A0054FABC /* 代码实现collectionview.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "代码实现collectionview.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		F254F65225C4015700A02076 /* WaterfallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallVC.swift; sourceTree = "<group>"; };
 		F254F65E25C40C0B00A02076 /* WaterfallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallCell.swift; sourceTree = "<group>"; };
+		F25D6E06268483D900CFEA5A /* WaterfallCell-Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WaterfallCell-Like.swift"; sourceTree = "<group>"; };
+		F25D6E0B2684867B00CFEA5A /* NoteDetailVC-Fav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteDetailVC-Fav.swift"; sourceTree = "<group>"; };
 		F273780825C7D55000F4A6E8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		F273780925C7D55000F4A6E8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		F273781225C7E02F00F4A6E8 /* TabBarC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarC.swift; sourceTree = "<group>"; };
@@ -291,7 +295,8 @@
 				F22ED63426672EF90021956C /* NoteDetailVC.swift */,
 				F22ED63D266E69C70021956C /* NoteDetailVC-Config.swift */,
 				F22ED63A266E69A90021956C /* NoteDetailVC-UI.swift */,
-				F21AED06268074FD0022DEF2 /* NoteDetailVC-LikeFav.swift */,
+				F21AED06268074FD0022DEF2 /* NoteDetailVC-Like.swift */,
+				F25D6E0B2684867B00CFEA5A /* NoteDetailVC-Fav.swift */,
 			);
 			path = NoteDetail;
 			sourceTree = "<group>";
@@ -353,6 +358,7 @@
 				F2E5C3982623DF7C002E06FD /* WaterfallVC-DataSource.swift */,
 				F2E5C39B26242DA6002E06FD /* WaterfallVC-Delegate.swift */,
 				F254F65E25C40C0B00A02076 /* WaterfallCell.swift */,
+				F25D6E06268483D900CFEA5A /* WaterfallCell-Like.swift */,
 				F292AE1E261593CD006B2C7C /* DraftNoteWaterfallCell.swift */,
 			);
 			path = Waterfall;
@@ -706,6 +712,7 @@
 				F273781325C7E02F00F4A6E8 /* TabBarC.swift in Sources */,
 				F2F2EDCE2656AAA000097D55 /* CodeLoginVC.swift in Sources */,
 				F22ED63B266E69A90021956C /* NoteDetailVC-UI.swift in Sources */,
+				F25D6E0C2684867B00CFEA5A /* NoteDetailVC-Fav.swift in Sources */,
 				F254F65325C4015700A02076 /* WaterfallVC.swift in Sources */,
 				F2D198FC25F2151600DA1499 /* NoteEditVC-DragDrop.swift in Sources */,
 				F254F65F25C40C0B00A02076 /* WaterfallCell.swift in Sources */,
@@ -721,7 +728,7 @@
 				F2B0FCBF26298A5D004E206B /* MeVC.swift in Sources */,
 				F273781625C7E26100F4A6E8 /* PostVC.swift in Sources */,
 				F22ED63526672EF90021956C /* NoteDetailVC.swift in Sources */,
-				F21AED07268074FD0022DEF2 /* NoteDetailVC-LikeFav.swift in Sources */,
+				F21AED07268074FD0022DEF2 /* NoteDetailVC-Like.swift in Sources */,
 				F2F2EDD12656ABE100097D55 /* PasswordLoginVC.swift in Sources */,
 				F2750EA126256F180021989A /* NoteEditVC-UI.swift in Sources */,
 				F2D1990025F5FFE500DA1499 /* NoteEditVC-CollectionView.swift in Sources */,
@@ -735,6 +742,7 @@
 				F292AE32261E9DAC006B2C7C /* WaterfallVC-LoadData.swift in Sources */,
 				F273781925C8E69E00F4A6E8 /* System-Extensions.swift in Sources */,
 				F21D403E266E720000D91828 /* CustomViews.swift in Sources */,
+				F25D6E07268483D900CFEA5A /* WaterfallCell-Like.swift in Sources */,
 				F239A8E725C28C8200D7414C /* DiscoveryVC.swift in Sources */,
 				F2F2EDD4265CE58800097D55 /* LC-Extension.swift in Sources */,
 				F2F2EDD9265D3D7A00097D55 /* Login-Extension.swift in Sources */,

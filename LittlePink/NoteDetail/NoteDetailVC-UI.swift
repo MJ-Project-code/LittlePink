@@ -15,6 +15,7 @@ extension NoteDetailVC{
         followBtn.layer.borderColor = mainColor.cgColor
         
         showNote()
+        showLike()
     }
     
     private func showNote(){
@@ -69,7 +70,13 @@ extension NoteDetailVC{
         
         //底部bar的点赞数,收藏数,评论数
         likeCount = note.getExactIntVal(kLikeCountCol)
+        currentLikeCount = likeCount
         favCount = note.getExactIntVal(kFavCountCol)
         commentCount = note.getExactIntVal(kCommentCountCol)
+    }
+    
+    private func showLike(){
+        //ImageSlideshow包的用法,从首页进入详情页不显示点赞动画
+        self.likeBtn.setSelected(selected: isLikeFromWaterfallCell, animated: false)
     }
 }

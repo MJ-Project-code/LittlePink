@@ -41,6 +41,9 @@ extension WaterfallVC{
             let detailVC = storyboard!.instantiateViewController(identifier: kNoteDetailVCID){ coder  in
                 NoteDetailVC(coder: coder,note: self.notes[indexPath.item])
             }
+            if let cell = collectionView.cellForItem(at: indexPath) as? WaterfallCell{
+                detailVC.isLikeFromWaterfallCell = cell.isLike
+            }
             detailVC.modalPresentationStyle = .fullScreen
             present(detailVC, animated: true)
         }

@@ -112,6 +112,8 @@ let kUpdatedAtCol = "updatedAt"
 
 //表
 let kNoteTable = "Note"
+let kUserLikeTable = "userLike"
+let kUserFavTable = "userFav"
 
 //User表
 let knickNameCol = "nickName"
@@ -136,6 +138,10 @@ let kCommentCountCol = "commentCount"
 let kAuthorCol = "author"
 let kHasEidtCol = "hasEdit"
 
+//userLike 表
+let kUserCol = "user"
+let kNoteCol = "note"
+
 //云端
 let kNotesOffset = 10
 
@@ -144,4 +150,12 @@ func largeIcon(_ iconName: String, with color:UIColor = .label) -> UIImage {
     let icon = UIImage(systemName: iconName,withConfiguration: config)!
     
     return icon.withTintColor(color)
+}
+
+func showGlobalTextHUD(_ title:String){
+    let window = UIApplication.shared.windows.last!
+    let hud = MBProgressHUD.showAdded(to: window, animated: true)
+    hud.mode = .text
+    hud.label.text = title
+    hud.hide(animated: true ,afterDelay: 2)
 }

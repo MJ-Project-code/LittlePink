@@ -1118,6 +1118,9 @@
                                                                     <state key="normal" title="423" image="heart" catalog="system">
                                                                         <color key="titleColor" systemColor="secondaryLabelColor"/>
                                                                     </state>
+                                                                    <connections>
+                                                                        <action selector="like:" destination="A4T-0R-Ycs" eventType="touchUpInside" id="7J7-bU-dHi"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                         </stackView>
@@ -1515,6 +1518,9 @@
                                                         <state key="normal" image="chevron.left" catalog="system">
                                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="back:" destination="A4I-o3-N4Q" eventType="touchUpInside" id="3If-Lu-rmE"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p7K-VQ-Vja">
                                                         <rect key="frame" x="38.5" y="0.0" width="32" height="32"/>
