@@ -13,6 +13,7 @@ PODS:
   - GRDB.swift (4.14.0):
     - GRDB.swift/standard (= 4.14.0)
   - GRDB.swift/standard (4.14.0)
+  - GrowingTextView (0.7.2)
   - ImageSlideshow (1.9.2):
     - ImageSlideshow/Core (= 1.9.2)
   - ImageSlideshow/Core (1.9.2)
@@ -53,6 +54,7 @@ DEPENDENCIES:
   - CHTCollectionViewWaterfallLayout/Swift
   - DateToolsSwift
   - FaveButton
+  - GrowingTextView (= 0.7.2)
   - ImageSlideshow (~> 1.9.0)
   - ImageSlideshow/Kingfisher
   - JVerification
@@ -78,6 +80,7 @@ SPEC REPOS:
     - DynamicBlurView
     - FaveButton
     - GRDB.swift
+    - GrowingTextView
     - ImageSlideshow
     - JCore
     - JVerification
@@ -105,6 +108,7 @@ SPEC CHECKSUMS:
   DynamicBlurView: 58e18fae80bb614e34681a4486870e7d257b62e8
   FaveButton: 93cfebf6030336fa7653fad2068c3152ed668b39
   GRDB.swift: 8cc3ab7c8b8b4ac1761deb8dca4b51c1c9d429f8
+  GrowingTextView: 876bf42005b5e4a4fd740597db12caaf41f0fe6c
   ImageSlideshow: be305b54eaf2b2cfc7a7141c7c734605d44dc07d
   JCore: 0cb4fc5892bc97af4f27283875369ead3eaa3067
   JVerification: 6d0827cd8c4a50690372167397bd6c328dfe0357
@@ -121,6 +125,6 @@ SPEC CHECKSUMS:
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
   YPImagePicker: 15aed8bcaa4dad976e11b6114126d731a2f9f3c9
 
-PODFILE CHECKSUM: b8a0dd6501a5cedbd2c29d9c5aa4ae16c5567834
+PODFILE CHECKSUM: cd300cab032e14fc2e8acc2e78ca13074935ccc0
 
 COCOAPODS: 1.10.1

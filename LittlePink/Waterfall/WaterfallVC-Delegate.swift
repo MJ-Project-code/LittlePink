@@ -17,6 +17,7 @@ extension WaterfallVC{
                 
                 let photos = photosDataArr.map {UIImage($0)!}  //相当于for循环,data转uiimage
                 
+                //编辑完成或取消编辑后,需要删除
                 let videoURL =  FileManager.default.save(draftNote.video, to: "video", as: "\(UUID().uuidString).mp4")
                 
                 let vc = storyboard!.instantiateViewController(identifier: kNoteEditVCID) as! NoteEditVC
@@ -44,6 +45,14 @@ extension WaterfallVC{
             if let cell = collectionView.cellForItem(at: indexPath) as? WaterfallCell{
                 detailVC.isLikeFromWaterfallCell = cell.isLike
             }
+            detailVC.delNoteFinished = {
+                self.notes.remove(at: indexPath.item)
+                collectionView.performBatchUpdates {
+                    collectionView.deleteItems(at: [indexPath])
+                }
+
+            }
+            
             detailVC.modalPresentationStyle = .fullScreen
             present(detailVC, animated: true)
         }

@@ -14,14 +14,23 @@ extension NoteDetailVC{
         followBtn.layer.borderWidth = 1
         followBtn.layer.borderColor = mainColor.cgColor
         
+        if isReadMyNote{
+            followBtn.isHidden = true
+            shareOrMoreBtn.setImage(UIImage(systemName: "ellipsis"), for: .normal)
+        }
+        
         showNote()
         showLike()
     }
     
-    private func showNote(){
-        let authorAvatarURL = author?.getImageURL(from: kAvatarCol, .avatar)
-        authorAvatarBtn.kf.setImage(with: authorAvatarURL, for: .normal)
-        authorNickNameBtn.setTitle(author?.getExactStringVal(knickNameCol), for: .normal)
+    func showNote(_ isUpdatingNote: Bool = false){
+        
+        if !isUpdatingNote{
+            let authorAvatarURL = author?.getImageURL(from: kAvatarCol, .avatar)
+            authorAvatarBtn.kf.setImage(with: authorAvatarURL, for: .normal)
+            authorNickNameBtn.setTitle(author?.getExactStringVal(knickNameCol), for: .normal)
+        }
+
         
         //note图片
         let coverPhotoHeight = CGFloat(note.getExactDoubleVal(kCoverPhotoRatioCol)) * screenRect.width
@@ -71,7 +80,10 @@ extension NoteDetailVC{
         //底部bar的点赞数,收藏数,评论数
         likeCount = note.getExactIntVal(kLikeCountCol)
         currentLikeCount = likeCount
+        
         favCount = note.getExactIntVal(kFavCountCol)
+        currentFavCount = favCount
+        
         commentCount = note.getExactIntVal(kCommentCountCol)
     }
     

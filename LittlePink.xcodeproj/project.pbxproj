@@ -28,6 +28,10 @@
 		F254F65F25C40C0B00A02076 /* WaterfallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F254F65E25C40C0B00A02076 /* WaterfallCell.swift */; };
 		F25D6E07268483D900CFEA5A /* WaterfallCell-Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25D6E06268483D900CFEA5A /* WaterfallCell-Like.swift */; };
 		F25D6E0C2684867B00CFEA5A /* NoteDetailVC-Fav.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25D6E0B2684867B00CFEA5A /* NoteDetailVC-Fav.swift */; };
+		F25D6E0F268579DF00CFEA5A /* NoteDetailVC-ShareOrMore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25D6E0E268579DF00CFEA5A /* NoteDetailVC-ShareOrMore.swift */; };
+		F25D6E1226857A8E00CFEA5A /* NoteDetailVC-DelNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25D6E1126857A8E00CFEA5A /* NoteDetailVC-DelNote.swift */; };
+		F25D6E152685B3A800CFEA5A /* NoteDetailVC-Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25D6E142685B3A800CFEA5A /* NoteDetailVC-Helper.swift */; };
+		F25D6E182685C83300CFEA5A /* NoteDetailVC-EditNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25D6E172685C83300CFEA5A /* NoteDetailVC-EditNote.swift */; };
 		F273781325C7E02F00F4A6E8 /* TabBarC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273781225C7E02F00F4A6E8 /* TabBarC.swift */; };
 		F273781625C7E26100F4A6E8 /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273781525C7E26100F4A6E8 /* PostVC.swift */; };
 		F273781925C8E69E00F4A6E8 /* System-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273781825C8E69E00F4A6E8 /* System-Extensions.swift */; };
@@ -107,6 +111,10 @@
 		F254F65E25C40C0B00A02076 /* WaterfallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallCell.swift; sourceTree = "<group>"; };
 		F25D6E06268483D900CFEA5A /* WaterfallCell-Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WaterfallCell-Like.swift"; sourceTree = "<group>"; };
 		F25D6E0B2684867B00CFEA5A /* NoteDetailVC-Fav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteDetailVC-Fav.swift"; sourceTree = "<group>"; };
+		F25D6E0E268579DF00CFEA5A /* NoteDetailVC-ShareOrMore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteDetailVC-ShareOrMore.swift"; sourceTree = "<group>"; };
+		F25D6E1126857A8E00CFEA5A /* NoteDetailVC-DelNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteDetailVC-DelNote.swift"; sourceTree = "<group>"; };
+		F25D6E142685B3A800CFEA5A /* NoteDetailVC-Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteDetailVC-Helper.swift"; sourceTree = "<group>"; };
+		F25D6E172685C83300CFEA5A /* NoteDetailVC-EditNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteDetailVC-EditNote.swift"; sourceTree = "<group>"; };
 		F273780825C7D55000F4A6E8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		F273780925C7D55000F4A6E8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		F273781225C7E02F00F4A6E8 /* TabBarC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarC.swift; sourceTree = "<group>"; };
@@ -295,8 +303,12 @@
 				F22ED63426672EF90021956C /* NoteDetailVC.swift */,
 				F22ED63D266E69C70021956C /* NoteDetailVC-Config.swift */,
 				F22ED63A266E69A90021956C /* NoteDetailVC-UI.swift */,
+				F25D6E0E268579DF00CFEA5A /* NoteDetailVC-ShareOrMore.swift */,
+				F25D6E1126857A8E00CFEA5A /* NoteDetailVC-DelNote.swift */,
+				F25D6E172685C83300CFEA5A /* NoteDetailVC-EditNote.swift */,
 				F21AED06268074FD0022DEF2 /* NoteDetailVC-Like.swift */,
 				F25D6E0B2684867B00CFEA5A /* NoteDetailVC-Fav.swift */,
+				F25D6E142685B3A800CFEA5A /* NoteDetailVC-Helper.swift */,
 			);
 			path = NoteDetail;
 			sourceTree = "<group>";
@@ -708,6 +720,7 @@
 				F239A8E325C28C6A00D7414C /* NearByVC.swift in Sources */,
 				F27972D325DD1EC9008B2D08 /* PhotoCell.swift in Sources */,
 				F22ED63E266E69C70021956C /* NoteDetailVC-Config.swift in Sources */,
+				F25D6E182685C83300CFEA5A /* NoteDetailVC-EditNote.swift in Sources */,
 				F2FCC60D26502E120004C106 /* openssl_wrapper.m in Sources */,
 				F273781325C7E02F00F4A6E8 /* TabBarC.swift in Sources */,
 				F2F2EDCE2656AAA000097D55 /* CodeLoginVC.swift in Sources */,
@@ -727,6 +740,7 @@
 				F288A83025C160E1001B1D50 /* HomeVC.swift in Sources */,
 				F2B0FCBF26298A5D004E206B /* MeVC.swift in Sources */,
 				F273781625C7E26100F4A6E8 /* PostVC.swift in Sources */,
+				F25D6E0F268579DF00CFEA5A /* NoteDetailVC-ShareOrMore.swift in Sources */,
 				F22ED63526672EF90021956C /* NoteDetailVC.swift in Sources */,
 				F21AED07268074FD0022DEF2 /* NoteDetailVC-Like.swift in Sources */,
 				F2F2EDD12656ABE100097D55 /* PasswordLoginVC.swift in Sources */,
@@ -747,6 +761,8 @@
 				F2F2EDD4265CE58800097D55 /* LC-Extension.swift in Sources */,
 				F2F2EDD9265D3D7A00097D55 /* Login-Extension.swift in Sources */,
 				F2AC648125BEAE85000672E8 /* SceneDelegate.swift in Sources */,
+				F25D6E1226857A8E00CFEA5A /* NoteDetailVC-DelNote.swift in Sources */,
+				F25D6E152685B3A800CFEA5A /* NoteDetailVC-Helper.swift in Sources */,
 				F2E5B22A2601FB350005AF9A /* ChannelTableVC.swift in Sources */,
 				F2AC648925BEAE85000672E8 /* LittlePink.xcdatamodeld in Sources */,
 				F2B9EC6026088408001E74BA /* POVIC-Location.swift in Sources */,

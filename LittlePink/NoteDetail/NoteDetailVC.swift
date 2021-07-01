@@ -9,16 +9,18 @@ import UIKit
 import ImageSlideshow
 import LeanCloud
 import FaveButton
+import GrowingTextView
 
 class NoteDetailVC: UIViewController {
     
-    let note: LCObject
+    var note: LCObject
     var isLikeFromWaterfallCell = false
+    var delNoteFinished: (() -> ())?
     
     @IBOutlet weak var authorAvatarBtn: UIButton!
     @IBOutlet weak var authorNickNameBtn: UIButton!
     @IBOutlet weak var followBtn: UIButton!
-    @IBOutlet weak var shareBtn: UIButton!
+    @IBOutlet weak var shareOrMoreBtn: UIButton!
     
     @IBOutlet weak var tableHeaderView: UIView!
     @IBOutlet weak var imageSlideShow: ImageSlideshow!
@@ -38,6 +40,8 @@ class NoteDetailVC: UIViewController {
     @IBOutlet weak var favCountLabel: UILabel!
     @IBOutlet weak var commentCountBtn: UIButton!
     
+    @IBOutlet weak var textViewBarVIew: UIView!
+    @IBOutlet weak var textView: GrowingTextView!
     var likeCount = 0{
         didSet{
             likeCountLbael.text = likeCount == 0 ? "点赞" : likeCount.formattedStr
@@ -51,6 +55,8 @@ class NoteDetailVC: UIViewController {
         }
     }
     
+    var currentFavCount = 0;
+    
     var commentCount = 0{
         didSet{
             commentCountLabel.text = "\(commentCount)"
@@ -61,6 +67,15 @@ class NoteDetailVC: UIViewController {
     //计算属性
     var author:LCUser?{ note.get(kAuthorCol) as? LCUser}
     var isLike:Bool{ likeBtn.isSelected }
+    var isFav:Bool{ favBtn.isSelected }
+    var isReadMyNote: Bool{
+        if let user = LCApplication.default.currentUser , let author = author , user == author{
+            return true
+        }else{
+            return false
+        }
+    }
+    
     //依赖注入note
     init?(coder: NSCoder ,note :LCObject ) {
         self.note = note
@@ -104,8 +119,11 @@ class NoteDetailVC: UIViewController {
     @IBAction func back(_ sender: Any) {
         dismiss(animated: true)
     }
+    @IBAction func shareOrMore(_ sender: Any) { shareOrMore() }
+    //点赞
     @IBAction func like(_ sender: Any) { like() }
     
+    //收藏
     @IBAction func fav(_ sender: Any) { fav() }
     
 }

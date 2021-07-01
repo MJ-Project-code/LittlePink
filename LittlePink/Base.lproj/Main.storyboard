@@ -1568,6 +1568,9 @@
                                                         <color key="tintColor" systemColor="labelColor"/>
                                                         <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
                                                         <state key="normal" image="square.and.arrow.up" catalog="system"/>
+                                                        <connections>
+                                                            <action selector="shareOrMore:" destination="A4I-o3-N4Q" eventType="touchUpInside" id="1we-bT-OXr"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -1838,6 +1841,58 @@
                                     <constraint firstAttribute="height" constant="45" id="z2C-Lw-u4U"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b7O-L6-xyw">
+                                <rect key="frame" x="0.0" y="806" width="414" height="56"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CK0-qj-tbW" customClass="GrowingTextView" customModule="GrowingTextView">
+                                        <rect key="frame" x="16" y="8" width="311" height="40"/>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maxLength">
+                                                <integer key="value" value="200"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minHeight">
+                                                <real key="value" value="40"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maxHeight">
+                                                <real key="value" value="90"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value=" 请你评论"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RG2-Ee-WeN">
+                                        <rect key="frame" x="335" y="8" width="63" height="40"/>
+                                        <color key="backgroundColor" name="main"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="I9N-Ae-ZGD"/>
+                                        </constraints>
+                                        <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+                                        <state key="normal" title="发送">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="RG2-Ee-WeN" secondAttribute="trailing" constant="16" id="75F-hF-xH0"/>
+                                    <constraint firstItem="RG2-Ee-WeN" firstAttribute="centerY" secondItem="b7O-L6-xyw" secondAttribute="centerY" id="Ghs-mJ-7W2"/>
+                                    <constraint firstAttribute="bottom" secondItem="CK0-qj-tbW" secondAttribute="bottom" constant="8" id="HtG-XN-Z94"/>
+                                    <constraint firstItem="RG2-Ee-WeN" firstAttribute="leading" secondItem="CK0-qj-tbW" secondAttribute="trailing" constant="8" id="Ikq-eR-Qdr"/>
+                                    <constraint firstItem="CK0-qj-tbW" firstAttribute="top" secondItem="b7O-L6-xyw" secondAttribute="top" constant="8" id="QE6-Oi-vK7"/>
+                                    <constraint firstItem="CK0-qj-tbW" firstAttribute="leading" secondItem="b7O-L6-xyw" secondAttribute="leading" constant="16" id="aXt-OQ-B7n"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hRt-7f-Ve8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1845,6 +1900,7 @@
                             <constraint firstItem="AiP-ZZ-6qR" firstAttribute="centerY" secondItem="kQc-6m-iB4" secondAttribute="centerY" id="3zN-xS-ECA"/>
                             <constraint firstItem="giL-wN-s6T" firstAttribute="top" secondItem="jTe-fR-Wps" secondAttribute="bottom" id="4jJ-XX-D08"/>
                             <constraint firstItem="jTe-fR-Wps" firstAttribute="leading" secondItem="hRt-7f-Ve8" secondAttribute="leading" id="5B4-NR-Awd"/>
+                            <constraint firstItem="hRt-7f-Ve8" firstAttribute="trailing" secondItem="b7O-L6-xyw" secondAttribute="trailing" id="6uc-mB-M1L"/>
                             <constraint firstItem="6do-gV-0Wg" firstAttribute="leading" secondItem="hRt-7f-Ve8" secondAttribute="leading" id="FCk-u2-Zp7"/>
                             <constraint firstItem="AiP-ZZ-6qR" firstAttribute="centerX" secondItem="jTe-fR-Wps" secondAttribute="centerX" id="Lg6-4a-ypT"/>
                             <constraint firstItem="hRt-7f-Ve8" firstAttribute="trailing" secondItem="jTe-fR-Wps" secondAttribute="trailing" id="RsP-oW-wDT"/>
@@ -1852,9 +1908,11 @@
                             <constraint firstItem="6do-gV-0Wg" firstAttribute="top" secondItem="giL-wN-s6T" secondAttribute="bottom" id="T3E-9f-JhW"/>
                             <constraint firstItem="giL-wN-s6T" firstAttribute="leading" secondItem="hRt-7f-Ve8" secondAttribute="leading" id="Zb2-Wr-QPa"/>
                             <constraint firstItem="6do-gV-0Wg" firstAttribute="bottom" secondItem="hRt-7f-Ve8" secondAttribute="bottom" id="aL5-y0-nJE"/>
+                            <constraint firstItem="b7O-L6-xyw" firstAttribute="leading" secondItem="hRt-7f-Ve8" secondAttribute="leading" id="hff-Ui-qtF"/>
                             <constraint firstItem="AiP-ZZ-6qR" firstAttribute="leading" secondItem="kQc-6m-iB4" secondAttribute="leadingMargin" constant="-4" id="lt4-RC-UBX"/>
                             <constraint firstItem="hRt-7f-Ve8" firstAttribute="trailing" secondItem="giL-wN-s6T" secondAttribute="trailing" id="q99-Ya-yg0"/>
                             <constraint firstItem="hRt-7f-Ve8" firstAttribute="trailing" secondItem="6do-gV-0Wg" secondAttribute="trailing" id="rR3-XF-08T"/>
+                            <constraint firstItem="hRt-7f-Ve8" firstAttribute="bottom" secondItem="b7O-L6-xyw" secondAttribute="bottom" id="rew-Nf-Xbe"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1872,10 +1930,12 @@
                         <outlet property="imageSlideShowHeight" destination="x5H-Ge-zfp" id="IIL-oM-yRN"/>
                         <outlet property="likeBtn" destination="y78-nS-CGS" id="dKO-4l-obh"/>
                         <outlet property="likeCountLbael" destination="v9f-2w-bZ1" id="h3X-mV-3Ne"/>
-                        <outlet property="shareBtn" destination="rWR-ll-aMc" id="xvu-yg-MCg"/>
+                        <outlet property="shareOrMoreBtn" destination="rWR-ll-aMc" id="afY-40-bcA"/>
                         <outlet property="tableHeaderView" destination="ZMp-Hg-Qrl" id="jLK-lL-6Vp"/>
                         <outlet property="tableView" destination="giL-wN-s6T" id="OvM-do-z0C"/>
                         <outlet property="textLabel" destination="rT7-VN-7o3" id="dzf-VL-Bjb"/>
+                        <outlet property="textView" destination="CK0-qj-tbW" id="fgG-o3-ENo"/>
+                        <outlet property="textViewBarVIew" destination="b7O-L6-xyw" id="dhX-jd-is0"/>
                         <outlet property="titleLabel" destination="oTC-jJ-sQO" id="X9X-dZ-yIi"/>
                     </connections>
                 </viewController>
@@ -1887,6 +1947,9 @@
     <designables>
         <designable name="0cc-Hc-O2m">
             <size key="intrinsicContentSize" width="78" height="18"/>
+        </designable>
+        <designable name="CK0-qj-tbW">
+            <size key="intrinsicContentSize" width="-1" height="30"/>
         </designable>
         <designable name="eiQ-We-zcH">
             <size key="intrinsicContentSize" width="110.5" height="22"/>

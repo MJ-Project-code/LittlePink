@@ -9,12 +9,16 @@ import UIKit
 import YPImagePicker
 import SKPhotoBrowser
 import AVKit
+import LeanCloud
 
 class NoteEditVC: UIViewController, UITextViewDelegate {
     
     var draftNote:DraftNote?
     var updateDraftNoteFinished:(()->())?
     var postDraftNoteFinished:(()->())?
+    
+    var note: LCObject?
+    var updateNoteFinished: ((String)->())?
 
     var photos : [UIImage] = []
     
@@ -82,10 +86,12 @@ class NoteEditVC: UIViewController, UITextViewDelegate {
         
         if let draftNote = draftNote{
             postDraftNote(draftNote) //有个删除的操作
-        }else{
-            createNote()  //创建笔记,之后写入lc
+        }else if let note = note{
+                updateNote(note)  //如果note传过来有值的话,说明是在更新笔记
+            }else{
+                createNote()  //创建笔记,之后写入lc
+            }
 
-        }
     }
     
     //跳转 storyboard
