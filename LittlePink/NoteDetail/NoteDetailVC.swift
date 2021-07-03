@@ -42,6 +42,16 @@ class NoteDetailVC: UIViewController {
     
     @IBOutlet weak var textViewBarVIew: UIView!
     @IBOutlet weak var textView: GrowingTextView!
+    @IBOutlet weak var textViewBarButtomConstraint: NSLayoutConstraint!
+    
+    lazy var overlayView: UIView = {
+        let overlayView = UIView(frame: view.frame)
+        overlayView.backgroundColor = UIColor(white: 0, alpha: 0.1)
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        overlayView.addGestureRecognizer(tap)
+        return overlayView
+    }() //黑色透明遮罩,点击评论的时候,笔记会变黑
+    
     var likeCount = 0{
         didSet{
             likeCountLbael.text = likeCount == 0 ? "点赞" : likeCount.formattedStr
@@ -104,16 +114,8 @@ class NoteDetailVC: UIViewController {
     }
     
     override func viewDidLayoutSubviews() {
-        //为了解决图片导致的高度适配问题
-        //计算出tableHeaderView里面所有view的总高度,将总高度赋值给tableHeaderView
-        let height = tableHeaderView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
-        var frame = tableHeaderView.frame
-        
-        if frame.height != height{
-            frame.size.height = height
-            tableHeaderView .frame = frame
-        }
-        
+        super.viewDidLayoutSubviews()
+        adjustTableHeaderViewHeight()
     }
     
     @IBAction func back(_ sender: Any) {
@@ -125,5 +127,8 @@ class NoteDetailVC: UIViewController {
     
     //收藏
     @IBAction func fav(_ sender: Any) { fav() }
+    
+    
+    @IBAction func comment(_ sender: Any) { comment()}
     
 }

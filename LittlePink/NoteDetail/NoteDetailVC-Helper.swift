@@ -4,6 +4,7 @@
 //
 //  Created by 马俊 on 2021/6/25.
 //
+import LeanCloud
 
 extension NoteDetailVC{
     func showDelAlert(for name: String,confirmHandler: ((UIAlertAction) -> ())?){
@@ -13,5 +14,14 @@ extension NoteDetailVC{
         alert.addAction(alert1)
         alert.addAction(alert2)
         present(alert, animated: true)
+    }
+    
+    func comment(){
+        if let _ = LCApplication.default.currentUser{
+            textViewBarVIew.isHidden = false
+            textView.becomeFirstResponder()
+        }else{
+            showTextHUD("请先登录")
+        }
     }
 }
