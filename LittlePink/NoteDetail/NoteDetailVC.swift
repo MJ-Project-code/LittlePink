@@ -129,6 +129,30 @@ class NoteDetailVC: UIViewController {
     @IBAction func fav(_ sender: Any) { fav() }
     
     
-    @IBAction func comment(_ sender: Any) { comment()}
+    @IBAction func comment(_ sender: Any) { comment() }
+    
+    @IBAction func postComment(_ sender: Any) {
+        
+        if !textView.isBlank{
+            let user = LCApplication.default.currentUser!
+            do {
+                let comment = LCObject(className: kCommentTable)
+                try comment.set(kTextCol, value: textView.unwrappedText)
+                try comment.set(kUserCol, value: user)
+                try comment.set(kNoteCol, value: note)
+                
+                comment.save { res in
+                    if case .success = res{
+                        self.showTextHUD("评论已发布")
+                    }
+                }
+            } catch  {
+                print("comment赋值失败\(error)")
+            }
+            hideAndResetTextView()
+        }
+            
+    }
+
     
 }

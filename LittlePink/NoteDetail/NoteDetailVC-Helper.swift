@@ -24,4 +24,9 @@ extension NoteDetailVC{
             showTextHUD("请先登录")
         }
     }
+    
+    func hideAndResetTextView(){
+        textView.resignFirstResponder()
+        textView.text = ""
+    }
 }

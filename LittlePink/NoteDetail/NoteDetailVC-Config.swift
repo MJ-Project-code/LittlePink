@@ -29,6 +29,8 @@ extension NoteDetailVC{
         //selector函数是在第一个参数self里定义的
         //监听到键盘frame改变,做出#selector响应
         NotificationCenter.default.addObserver(self, selector: #selector(KeyboardWillChangeFrame), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        
+        tableView.register(UINib(nibName: "CommentView", bundle: nil), forHeaderFooterViewReuseIdentifier:kCommentViewID )
     }
     
     func adjustTableHeaderViewHeight(){

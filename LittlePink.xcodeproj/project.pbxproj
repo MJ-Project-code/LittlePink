@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		28DD14755C130CA0F7C94A7A /* Pods_LittlePink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1C2ECD820882225E9AFB38 /* Pods_LittlePink.framework */; };
+		F202D5F226920CDE006B6EE4 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F202D5F126920CDE006B6EE4 /* CommentView.swift */; };
+		F202D5F526920CFE006B6EE4 /* CommentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F202D5F426920CFE006B6EE4 /* CommentView.xib */; };
+		F202D5F826920E98006B6EE4 /* NoteDetailVC-TVDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F202D5F726920E98006B6EE4 /* NoteDetailVC-TVDelegate.swift */; };
+		F202D5FB26920EB1006B6EE4 /* NoteDetailVC-TVDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F202D5FA26920EB1006B6EE4 /* NoteDetailVC-TVDataSource.swift */; };
 		F2041B9C267648E800BBDE6C /* avatarPH.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F2041B9A267648E700BBDE6C /* avatarPH.jpeg */; };
 		F2041B9D267648E800BBDE6C /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F2041B9B267648E700BBDE6C /* logo.png */; };
 		F21AED07268074FD0022DEF2 /* NoteDetailVC-Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21AED06268074FD0022DEF2 /* NoteDetailVC-Like.swift */; };
@@ -87,6 +91,10 @@
 /* Begin PBXFileReference section */
 		AC1C2ECD820882225E9AFB38 /* Pods_LittlePink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LittlePink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1D380A29BBDC7C14672677 /* Pods-LittlePink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LittlePink.debug.xcconfig"; path = "Target Support Files/Pods-LittlePink/Pods-LittlePink.debug.xcconfig"; sourceTree = "<group>"; };
+		F202D5F126920CDE006B6EE4 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
+		F202D5F426920CFE006B6EE4 /* CommentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentView.xib; sourceTree = "<group>"; };
+		F202D5F726920E98006B6EE4 /* NoteDetailVC-TVDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteDetailVC-TVDelegate.swift"; sourceTree = "<group>"; };
+		F202D5FA26920EB1006B6EE4 /* NoteDetailVC-TVDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteDetailVC-TVDataSource.swift"; sourceTree = "<group>"; };
 		F2041B9A267648E700BBDE6C /* avatarPH.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avatarPH.jpeg; sourceTree = "<group>"; };
 		F2041B9B267648E700BBDE6C /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		F2111D8325CCF34100C0A4D7 /* ARC+循环引用.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "ARC+循环引用.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -308,7 +316,11 @@
 				F25D6E172685C83300CFEA5A /* NoteDetailVC-EditNote.swift */,
 				F21AED06268074FD0022DEF2 /* NoteDetailVC-Like.swift */,
 				F25D6E0B2684867B00CFEA5A /* NoteDetailVC-Fav.swift */,
+				F202D5F726920E98006B6EE4 /* NoteDetailVC-TVDelegate.swift */,
+				F202D5FA26920EB1006B6EE4 /* NoteDetailVC-TVDataSource.swift */,
 				F25D6E142685B3A800CFEA5A /* NoteDetailVC-Helper.swift */,
+				F202D5F126920CDE006B6EE4 /* CommentView.swift */,
+				F202D5F426920CFE006B6EE4 /* CommentView.xib */,
 			);
 			path = NoteDetail;
 			sourceTree = "<group>";
@@ -639,6 +651,7 @@
 				F2D1991C25FF6A3000DA1499 /* TextViewIAView.xib in Resources */,
 				F2D198F925F2044E00DA1499 /* TV.mp4 in Resources */,
 				F2041B9C267648E800BBDE6C /* avatarPH.jpeg in Resources */,
+				F202D5F526920CFE006B6EE4 /* CommentView.xib in Resources */,
 				F2AC648625BEAE85000672E8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -751,13 +764,16 @@
 				F2D1990E25FF2DC600DA1499 /* NoteEditVC-Config.swift in Sources */,
 				F292AE35261E9E03006B2C7C /* WaterfallVC-Config.swift in Sources */,
 				F239A8DD25C28BF700D7414C /* FollowVC.swift in Sources */,
+				F202D5FB26920EB1006B6EE4 /* NoteDetailVC-TVDataSource.swift in Sources */,
 				F22ED632266678A50021956C /* NoteEditVC-Note.swift in Sources */,
 				F2E5C39C26242DA6002E06FD /* WaterfallVC-Delegate.swift in Sources */,
+				F202D5F826920E98006B6EE4 /* NoteDetailVC-TVDelegate.swift in Sources */,
 				F292AE32261E9DAC006B2C7C /* WaterfallVC-LoadData.swift in Sources */,
 				F273781925C8E69E00F4A6E8 /* System-Extensions.swift in Sources */,
 				F21D403E266E720000D91828 /* CustomViews.swift in Sources */,
 				F25D6E07268483D900CFEA5A /* WaterfallCell-Like.swift in Sources */,
 				F239A8E725C28C8200D7414C /* DiscoveryVC.swift in Sources */,
+				F202D5F226920CDE006B6EE4 /* CommentView.swift in Sources */,
 				F2F2EDD4265CE58800097D55 /* LC-Extension.swift in Sources */,
 				F2F2EDD9265D3D7A00097D55 /* Login-Extension.swift in Sources */,
 				F2AC648125BEAE85000672E8 /* SceneDelegate.swift in Sources */,

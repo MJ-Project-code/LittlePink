@@ -149,16 +149,14 @@ extension UIImage{
 
 extension UITextField{
     var unwrappedText:String{ text ?? ""}
-    var exactText : String{
-        unwrappedText.isBlank ? "" : unwrappedText
-    }
+    var exactText : String{ unwrappedText.isBlank ? "" : unwrappedText }
+    var isBlank: Bool { unwrappedText.isBlank }
 }
 
 extension UITextView{
     var unwrappedText:String{ text ?? ""}
-    var exactText : String{
-        unwrappedText.isBlank ? "" : unwrappedText
-    }
+    var exactText : String{ unwrappedText.isBlank ? "" : unwrappedText }
+    var isBlank: Bool { unwrappedText.isBlank }
 }
 
 extension UIView{
