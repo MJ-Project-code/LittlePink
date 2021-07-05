@@ -6,6 +6,11 @@
 //
 
 extension NoteDetailVC: UITableViewDataSource{
+    //多段tableview
+    func numberOfSections(in tableView: UITableView) -> Int {
+        comments.count
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }

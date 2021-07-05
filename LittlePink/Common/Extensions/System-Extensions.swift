@@ -43,6 +43,24 @@ extension String{
         let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
         return  String((0..<length).map{ _ in letters.randomElement()! })
     }
+    
+    func spliceAttrStr(_ datastr: String) -> NSAttributedString{
+        
+        let attrText = self.toAttrStr()
+        let attrDate = " \(datastr)".toAttrStr(12, .secondaryLabel)
+        
+        attrText.append(attrDate)
+        return attrText
+    }
+    
+    func toAttrStr(_ fontSize: CGFloat = 14, _ color: UIColor = .label ) -> NSMutableAttributedString{
+        let attr: [NSAttributedString.Key: Any] = [
+            .font: UIFont.systemFont(ofSize: fontSize),
+            .foregroundColor: color
+        ]
+        return NSMutableAttributedString(string: self, attributes: attr)
+
+    }
 }
 
 extension NSRegularExpression{
@@ -166,6 +184,7 @@ extension UIView{
             layer.cornerRadius
         }
         set{
+            clipsToBounds = true
             layer.cornerRadius = newValue
         }
     }

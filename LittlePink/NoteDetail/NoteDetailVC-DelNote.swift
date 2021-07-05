@@ -23,7 +23,9 @@ extension NoteDetailVC{
         
         note.delete { res in
             if case .success = res{
-                self.showTextHUD("笔记已删除")
+                DispatchQueue.main.async {
+                    self.showTextHUD("笔记已删除")
+                }
             }
         }
         

@@ -17,6 +17,8 @@ class NoteDetailVC: UIViewController {
     var isLikeFromWaterfallCell = false
     var delNoteFinished: (() -> ())?
     
+    var comments: [LCObject] = []
+    
     @IBOutlet weak var authorAvatarBtn: UIButton!
     @IBOutlet weak var authorNickNameBtn: UIButton!
     @IBOutlet weak var followBtn: UIButton!
@@ -67,7 +69,7 @@ class NoteDetailVC: UIViewController {
     
     var currentFavCount = 0;
     
-    var commentCount = 0{
+    var     commentCount = 0{
         didSet{
             commentCountLabel.text = "\(commentCount)"
             commentCountBtn.setTitle(commentCount == 0 ? "评论" : commentCount.formattedStr, for: .normal)
@@ -110,7 +112,7 @@ class NoteDetailVC: UIViewController {
 //        let imageSize = UIImage(named: "1")!.size
 //        imageSlideShowHeight.constant = (imageSize.height / imageSize.width) * screenRect.width
         setUI()
-
+        getCommens()
     }
     
     override func viewDidLayoutSubviews() {
@@ -136,16 +138,26 @@ class NoteDetailVC: UIViewController {
         if !textView.isBlank{
             let user = LCApplication.default.currentUser!
             do {
+                //存入云端的数据
                 let comment = LCObject(className: kCommentTable)
                 try comment.set(kTextCol, value: textView.unwrappedText)
                 try comment.set(kUserCol, value: user)
                 try comment.set(kNoteCol, value: note)
                 
-                comment.save { res in
-                    if case .success = res{
-                        self.showTextHUD("评论已发布")
-                    }
+                comment.save { _ in }
+                
+                try? note.increase(kCommentCountCol)
+                
+                //内存数据
+                comments.insert(comment, at: 0)
+                
+                //UI
+                tableView.performBatchUpdates {
+                    tableView.insertSections(IndexSet(integer: 0), with: .automatic)
                 }
+                commentCount += 1
+
+                
             } catch  {
                 print("comment赋值失败\(error)")
             }

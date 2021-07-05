@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,7 +17,69 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j4P-ci-n4t">
                     <rect key="frame" x="0.0" y="0.0" width="1108" height="273"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Iel-SZ-7pE">
+                            <rect key="frame" x="16" y="16" width="1076" height="241"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatarPH3" translatesAutoresizingMaskIntoConstraints="NO" id="wg7-UY-ahW">
+                                    <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="36" id="8XS-tS-BKi"/>
+                                        <constraint firstAttribute="width" constant="36" id="fjP-yR-REF"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                            <real key="value" value="18"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </imageView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7gD-IN-OdB">
+                                    <rect key="frame" x="46" y="0.0" width="1030" height="38"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ZOM-Uy-0LR">
+                                            <rect key="frame" x="0.0" y="0.0" width="14.5" height="16"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mj" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ofc-qq-Rvu">
+                                                    <rect key="frame" x="0.0" y="0.0" width="14.5" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="作者" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fS6-aV-0h5">
+                                                    <rect key="frame" x="0.0" y="0.0" width="40" height="16"/>
+                                                    <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="nN2-7e-PAT"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                            <real key="value" value="8"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我是评论1" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bto-yY-rbj">
+                                            <rect key="frame" x="0.0" y="21" width="63.5" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
                     <color key="backgroundColor" name="main"/>
+                    <constraints>
+                        <constraint firstItem="Iel-SZ-7pE" firstAttribute="top" secondItem="j4P-ci-n4t" secondAttribute="top" constant="16" id="2Lc-Q3-5En"/>
+                        <constraint firstAttribute="bottom" secondItem="Iel-SZ-7pE" secondAttribute="bottom" constant="16" id="839-QG-laA"/>
+                        <constraint firstItem="Iel-SZ-7pE" firstAttribute="leading" secondItem="j4P-ci-n4t" secondAttribute="leading" constant="16" id="nI1-NF-34d"/>
+                        <constraint firstAttribute="trailing" secondItem="Iel-SZ-7pE" secondAttribute="trailing" constant="16" id="ylH-dg-Rbz"/>
+                    </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
@@ -27,12 +90,25 @@
                 <constraint firstAttribute="trailing" secondItem="j4P-ci-n4t" secondAttribute="trailing" id="tYD-eU-VDp"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="405.79710144927537" y="-389.39732142857139"/>
+            <connections>
+                <outlet property="authorLabel" destination="fS6-aV-0h5" id="EGm-Co-DKH"/>
+                <outlet property="avatarImageView" destination="wg7-UY-ahW" id="kgG-VU-xJW"/>
+                <outlet property="commentTextLabel" destination="bto-yY-rbj" id="lKe-4W-2w0"/>
+                <outlet property="nickNameLabel" destination="ofc-qq-Rvu" id="xHc-D9-VSF"/>
+            </connections>
+            <point key="canvasLocation" x="352" y="-480"/>
         </view>
     </objects>
     <resources>
+        <image name="avatarPH3" width="500" height="500"/>
         <namedColor name="main">
             <color red="0.92900002002716064" green="0.34099999070167542" blue="0.55699998140335083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
