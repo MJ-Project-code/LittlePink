@@ -88,6 +88,7 @@ class NoteDetailVC: UIViewController {
         }
     }
     
+    
     //依赖注入note
     init?(coder: NSCoder ,note :LCObject ) {
         self.note = note

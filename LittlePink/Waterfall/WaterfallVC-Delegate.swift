@@ -50,7 +50,6 @@ extension WaterfallVC{
                 collectionView.performBatchUpdates {
                     collectionView.deleteItems(at: [indexPath])
                 }
-
             }
             
             detailVC.modalPresentationStyle = .fullScreen

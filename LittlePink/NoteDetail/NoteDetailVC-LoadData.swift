@@ -11,12 +11,13 @@ extension NoteDetailVC{
     func getCommens(){
         showLoadHUD()
         
+        
         let query = LCQuery(className: kCommentTable)
         query.whereKey(kNoteCol, .equalTo(note))
         query.whereKey(kUserCol, .included)
         //query.whereKey("\(kUserCol).\(knickNameCol)", .selected)
         query.whereKey(kCreatedAtCol, .descending)
-        query.limit = kCommentOffset
+        query.limit = kCommentsOffset
 
         query.find { res in
             self.hideLoadHUD()

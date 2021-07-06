@@ -147,7 +147,7 @@ let kNoteCol = "note"
 
 //云端
 let kNotesOffset = 10
-let kCommentOffset = 10
+let kCommentsOffset = 10
 
 func largeIcon(_ iconName: String, with color:UIColor = .label) -> UIImage {
     let config = UIImage.SymbolConfiguration(scale: .large)

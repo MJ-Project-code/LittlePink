@@ -59,7 +59,7 @@ extension String{
             .foregroundColor: color
         ]
         return NSMutableAttributedString(string: self, attributes: attr)
-
+        
     }
 }
 
@@ -186,6 +186,22 @@ extension UIView{
         set{
             clipsToBounds = true
             layer.cornerRadius = newValue
+        }
+    }
+}
+
+extension UIAlertAction{
+    
+    //KVC
+    func setTitleColor(_ color: UIColor){
+        setValue(color, forKey: "titleTextColor")
+    }
+    
+    var titleTextColor: UIColor?{
+        get{
+            value(forKey: "titleTextColor") as? UIColor
+        } set{
+            setValue(newValue, forKey: "titleTextColor")
         }
     }
 }
