@@ -27,6 +27,7 @@
 		F239A8E325C28C6A00D7414C /* NearByVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F239A8E225C28C6A00D7414C /* NearByVC.swift */; };
 		F239A8E725C28C8200D7414C /* DiscoveryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F239A8E625C28C8200D7414C /* DiscoveryVC.swift */; };
 		F239A8EA25C28E3100D7414C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F239A8E925C28E3100D7414C /* Constants.swift */; };
+		F23B9C01269B41F800909386 /* CommentSectionFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23B9C00269B41F800909386 /* CommentSectionFooterView.swift */; };
 		F24DAEF025ECDCE7003E1043 /* PhotoFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24DAEEF25ECDCE7003E1043 /* PhotoFooter.swift */; };
 		F254F65325C4015700A02076 /* WaterfallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F254F65225C4015700A02076 /* WaterfallVC.swift */; };
 		F254F65F25C40C0B00A02076 /* WaterfallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F254F65E25C40C0B00A02076 /* WaterfallCell.swift */; };
@@ -53,6 +54,8 @@
 		F292AE35261E9E03006B2C7C /* WaterfallVC-Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F292AE34261E9E03006B2C7C /* WaterfallVC-Config.swift */; };
 		F29B9C31269346B800A4F619 /* NoteDetailVC-LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29B9C30269346B800A4F619 /* NoteDetailVC-LoadData.swift */; };
 		F29B9C342694AF3000A4F619 /* NoteDetailVC-DelComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29B9C332694AF3000A4F619 /* NoteDetailVC-DelComment.swift */; };
+		F29B9C382695C51400A4F619 /* NoteDetailVC-PostComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29B9C372695C51400A4F619 /* NoteDetailVC-PostComment.swift */; };
+		F29B9C3B2695C56000A4F619 /* NoteDetailVC-PostReply.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29B9C3A2695C56000A4F619 /* NoteDetailVC-PostReply.swift */; };
 		F2AC647F25BEAE85000672E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AC647E25BEAE85000672E8 /* AppDelegate.swift */; };
 		F2AC648125BEAE85000672E8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AC648025BEAE85000672E8 /* SceneDelegate.swift */; };
 		F2AC648625BEAE85000672E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2AC648425BEAE85000672E8 /* Main.storyboard */; };
@@ -115,6 +118,7 @@
 		F239A8E225C28C6A00D7414C /* NearByVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearByVC.swift; sourceTree = "<group>"; };
 		F239A8E625C28C8200D7414C /* DiscoveryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryVC.swift; sourceTree = "<group>"; };
 		F239A8E925C28E3100D7414C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F23B9C00269B41F800909386 /* CommentSectionFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentSectionFooterView.swift; sourceTree = "<group>"; };
 		F24DAEEF25ECDCE7003E1043 /* PhotoFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFooter.swift; sourceTree = "<group>"; };
 		F254D30725E63C0A0054FABC /* 代码实现collectionview.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "代码实现collectionview.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		F254F65225C4015700A02076 /* WaterfallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallVC.swift; sourceTree = "<group>"; };
@@ -146,6 +150,8 @@
 		F292AE34261E9E03006B2C7C /* WaterfallVC-Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WaterfallVC-Config.swift"; sourceTree = "<group>"; };
 		F29B9C30269346B800A4F619 /* NoteDetailVC-LoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteDetailVC-LoadData.swift"; sourceTree = "<group>"; };
 		F29B9C332694AF3000A4F619 /* NoteDetailVC-DelComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteDetailVC-DelComment.swift"; sourceTree = "<group>"; };
+		F29B9C372695C51400A4F619 /* NoteDetailVC-PostComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteDetailVC-PostComment.swift"; sourceTree = "<group>"; };
+		F29B9C3A2695C56000A4F619 /* NoteDetailVC-PostReply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteDetailVC-PostReply.swift"; sourceTree = "<group>"; };
 		F2AC647B25BEAE85000672E8 /* LittlePink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LittlePink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2AC647E25BEAE85000672E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2AC648025BEAE85000672E8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -323,10 +329,13 @@
 				F25D6E0B2684867B00CFEA5A /* NoteDetailVC-Fav.swift */,
 				F202D5FA26920EB1006B6EE4 /* NoteDetailVC-TVDataSource.swift */,
 				F202D5F726920E98006B6EE4 /* NoteDetailVC-TVDelegate.swift */,
+				F29B9C372695C51400A4F619 /* NoteDetailVC-PostComment.swift */,
 				F29B9C332694AF3000A4F619 /* NoteDetailVC-DelComment.swift */,
+				F29B9C3A2695C56000A4F619 /* NoteDetailVC-PostReply.swift */,
 				F25D6E142685B3A800CFEA5A /* NoteDetailVC-Helper.swift */,
 				F202D5F126920CDE006B6EE4 /* CommentView.swift */,
 				F202D5F426920CFE006B6EE4 /* CommentView.xib */,
+				F23B9C00269B41F800909386 /* CommentSectionFooterView.swift */,
 			);
 			path = NoteDetail;
 			sourceTree = "<group>";
@@ -729,6 +738,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2B9EC5A26086E59001E74BA /* POICell.swift in Sources */,
+				F29B9C382695C51400A4F619 /* NoteDetailVC-PostComment.swift in Sources */,
 				F2F2EDB42653BE6D00097D55 /* SocialLoginVC-Apple.swift in Sources */,
 				F2F2EDDD265EA2CD00097D55 /* LoginAndMeParentVC.swift in Sources */,
 				F2FCC57C264C20210004C106 /* SocialLoginVC-Alipay.swift in Sources */,
@@ -742,6 +752,7 @@
 				F25D6E182685C83300CFEA5A /* NoteDetailVC-EditNote.swift in Sources */,
 				F2FCC60D26502E120004C106 /* openssl_wrapper.m in Sources */,
 				F273781325C7E02F00F4A6E8 /* TabBarC.swift in Sources */,
+				F23B9C01269B41F800909386 /* CommentSectionFooterView.swift in Sources */,
 				F2F2EDCE2656AAA000097D55 /* CodeLoginVC.swift in Sources */,
 				F22ED63B266E69A90021956C /* NoteDetailVC-UI.swift in Sources */,
 				F25D6E0C2684867B00CFEA5A /* NoteDetailVC-Fav.swift in Sources */,
@@ -792,6 +803,7 @@
 				F2B9EC6026088408001E74BA /* POVIC-Location.swift in Sources */,
 				F27EBB1526329690003D5286 /* LocalLogin-Extension.swift in Sources */,
 				F239A8EA25C28E3100D7414C /* Constants.swift in Sources */,
+				F29B9C3B2695C56000A4F619 /* NoteDetailVC-PostReply.swift in Sources */,
 				F22E85D32604477000BF7EF9 /* POIVC.swift in Sources */,
 				F2B9EC5D2608833F001E74BA /* POIVC-Config.swift in Sources */,
 				F292AE1F261593CD006B2C7C /* DraftNoteWaterfallCell.swift in Sources */,

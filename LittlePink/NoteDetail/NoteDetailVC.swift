@@ -19,6 +19,14 @@ class NoteDetailVC: UIViewController {
     
     var comments: [LCObject] = []
     
+    var isReply = false
+    var commentSection = 0 //在用户准备回复的时候,赋值
+    
+    var replies = [
+        [],
+        []
+    ]
+    
     @IBOutlet weak var authorAvatarBtn: UIButton!
     @IBOutlet weak var authorNickNameBtn: UIButton!
     @IBOutlet weak var followBtn: UIButton!
@@ -105,13 +113,13 @@ class NoteDetailVC: UIViewController {
         
         config()
         
-//        imageSlideShow.setImageInputs([
-//            ImageSource(image: UIImage(named: "1")!),
-//            ImageSource(image: UIImage(named: "2")!),
-//            ImageSource(image: UIImage(named: "3")!),
-//        ])
-//        let imageSize = UIImage(named: "1")!.size
-//        imageSlideShowHeight.constant = (imageSize.height / imageSize.width) * screenRect.width
+        //        imageSlideShow.setImageInputs([
+        //            ImageSource(image: UIImage(named: "1")!),
+        //            ImageSource(image: UIImage(named: "2")!),
+        //            ImageSource(image: UIImage(named: "3")!),
+        //        ])
+        //        let imageSize = UIImage(named: "1")!.size
+        //        imageSlideShowHeight.constant = (imageSize.height / imageSize.width) * screenRect.width
         setUI()
         getCommens()
     }
@@ -134,38 +142,19 @@ class NoteDetailVC: UIViewController {
     
     @IBAction func comment(_ sender: Any) { comment() }
     
-    @IBAction func postComment(_ sender: Any) {
+    @IBAction func postCommentOrReply(_ sender: Any) {
         
         if !textView.isBlank{
-            let user = LCApplication.default.currentUser!
-            do {
-                //存入云端的数据
-                let comment = LCObject(className: kCommentTable)
-                try comment.set(kTextCol, value: textView.unwrappedText)
-                try comment.set(kUserCol, value: user)
-                try comment.set(kNoteCol, value: note)
-                
-                comment.save { _ in }
-                
-                try? note.increase(kCommentCountCol)
-                
-                //内存数据
-                comments.insert(comment, at: 0)
-                
-                //UI
-                tableView.performBatchUpdates {
-                    tableView.insertSections(IndexSet(integer: 0), with: .automatic)
-                }
-                commentCount += 1
-
-                
-            } catch  {
-                print("comment赋值失败\(error)")
+            
+            if !isReply{
+                postComment()
+            }else{
+                postReply()
             }
             hideAndResetTextView()
         }
-            
+        
     }
-
+    
     
 }

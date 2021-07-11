@@ -29,6 +29,7 @@ let kDraftNoteWaterfallCellID = "DraftNoteWaterfallCellID"
 let kLoginNaviID = "LoginNaviID"
 let kCommentViewID = "CommentViewID"
 let kReplyCellID = "ReplyCellID"
+let kCommentSectionFooterViewID = "CommentSectionFooterViewID"
 
 //资源相关
 let mainColor = UIColor(named: "main")!
@@ -64,6 +65,8 @@ let kSpacingBetweenItems:CGFloat = 2
 //label剩余可输入字符
 let kmaxNoteTitleCount = 20
 let kmaxNoteTextCount = 1000
+
+let kNoteCommentPH = "精彩评论优先展示"
 
 
 //话题
@@ -117,6 +120,7 @@ let kNoteTable = "Note"
 let kUserLikeTable = "userLike"
 let kUserFavTable = "userFav"
 let kCommentTable = "comment"
+let kReplyTable = "replyTable"
 
 //User表
 let knickNameCol = "nickName"
@@ -144,6 +148,9 @@ let kHasEidtCol = "hasEdit"
 //userLike 表
 let kUserCol = "user"
 let kNoteCol = "note"
+
+//Reply表
+let kCommentCol = "comment"
 
 //云端
 let kNotesOffset = 10
