@@ -1719,7 +1719,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ReplyCellID" rowHeight="93" id="MBs-dZ-dT1">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ReplyCellID" rowHeight="93" id="MBs-dZ-dT1" customClass="ReplyCell" customModule="LittlePink" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="478" width="414" height="93"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MBs-dZ-dT1" id="Gif-ys-1Cz">
@@ -1783,6 +1783,13 @@
                                                 <constraint firstItem="kV2-Me-OHT" firstAttribute="top" secondItem="Gif-ys-1Cz" secondAttribute="top" id="trW-hg-qIV"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="authorLabel" destination="NoO-XX-QIt" id="XcV-3j-Ibj"/>
+                                            <outlet property="avatarImageView" destination="dVt-cq-z94" id="6jL-R8-pX5"/>
+                                            <outlet property="nickNameLabel" destination="0vd-HW-NYV" id="8yL-qQ-NFK"/>
+                                            <outlet property="replyTextLabel" destination="65r-lW-bL6" id="t1K-Uc-E5x"/>
+                                            <outlet property="showAllReplyBtn" destination="iRy-KJ-xwO" id="t6s-sS-bve"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -2009,13 +2016,13 @@
     </scenes>
     <designables>
         <designable name="0cc-Hc-O2m">
-            <size key="intrinsicContentSize" width="78" height="18"/>
+            <size key="intrinsicContentSize" width="62" height="30"/>
         </designable>
         <designable name="CK0-qj-tbW">
             <size key="intrinsicContentSize" width="-1" height="30"/>
         </designable>
         <designable name="eiQ-We-zcH">
-            <size key="intrinsicContentSize" width="110.5" height="22"/>
+            <size key="intrinsicContentSize" width="94.5" height="22"/>
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
