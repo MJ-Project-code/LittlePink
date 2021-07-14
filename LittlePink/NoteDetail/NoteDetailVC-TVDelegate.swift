@@ -24,10 +24,44 @@ extension NoteDetailVC: UITableViewDelegate{
         
         return commentView
     }
-    
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let separatorLine = tableView.dequeueReusableCell(withIdentifier: kCommentSectionFooterViewID)
         return separatorLine
+    }
+    //用户按下评论的回复后,对这个回复进行回复,删除,再回复
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let user = LCApplication.default.currentUser{
+            let reply = replies[indexPath.section].replies[indexPath.row]
+            guard let replyAuthor = reply.get(kUserCol) as? LCUser else { return }
+            
+            if user == replyAuthor  {
+                let replyText = reply.getExactStringVal(kTextCol)
+                
+                let alert = UIAlertController(title: nil, message: "你的回复: \(replyText)", preferredStyle: .actionSheet)
+                let subReplyAction = UIAlertAction(title: "回复", style: .default) { _ in
+                    
+                }
+                let copyAction = UIAlertAction(title: "复制", style: .default) { _ in
+                    UIPasteboard.general.string = replyText
+                }
+                let deletelAction = UIAlertAction(title: "删除", style: .default) { _ in
+                    
+                }
+                subReplyAction.setTitleColor(mainColor)
+
+                let cancelAction = UIAlertAction(title: "取消", style: .cancel)
+                alert.addAction(subReplyAction)
+                alert.addAction(copyAction)
+                alert.addAction(deletelAction)
+                alert.addAction(cancelAction)
+                
+                present(alert, animated: true)
+            }
+            
+            
+        }else{
+            showTextHUD("请你登录")
+        }
     }
     
 }

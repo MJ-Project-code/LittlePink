@@ -22,7 +22,7 @@ class NoteDetailVC: UIViewController {
     var isReply = false
     var commentSection = 0 //在用户准备回复的时候,赋值
     
-    var replies: [[LCObject]] = []
+    var replies: [ExpandableReplies] = []
     
     @IBOutlet weak var authorAvatarBtn: UIButton!
     @IBOutlet weak var authorNickNameBtn: UIButton!

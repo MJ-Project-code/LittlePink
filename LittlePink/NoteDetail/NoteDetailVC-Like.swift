@@ -38,8 +38,11 @@ extension NoteDetailVC{
                 userLike.save{ _ in }
                 
                 try? note.increase(kLikeCountCol)
+                note.save{ _ in }
                 
                 try? author?.increase(kLikeCountCol)
+                author?.save{ _ in }
+
             }else{
                 let query = LCQuery(className: kUserLikeTable)
                 query.whereKey(kUserCol, .equalTo(user))

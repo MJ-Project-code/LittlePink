@@ -20,7 +20,8 @@ extension NoteDetailVC{
             
             comment.save { _ in }
             
-            try? note.increase(kCommentCountCol)
+            try note.increase(kCommentCountCol)
+            note.save { _ in }
             
             //内存数据
             comments.insert(comment, at: 0)

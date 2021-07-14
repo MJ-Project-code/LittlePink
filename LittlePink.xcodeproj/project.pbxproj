@@ -47,6 +47,7 @@
 		F275798A2600B88800109FB7 /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27579892600B88800109FB7 /* ChannelVC.swift */; };
 		F27972D325DD1EC9008B2D08 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27972D225DD1EC9008B2D08 /* PhotoCell.swift */; };
 		F279B0FC269C953A00C403A4 /* ReplyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279B0FB269C953A00C403A4 /* ReplyCell.swift */; };
+		F279B0FF269EB61F00C403A4 /* ExpandableReplies.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279B0FE269EB61F00C403A4 /* ExpandableReplies.swift */; };
 		F27EBB11263294F9003D5286 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EBB10263294F9003D5286 /* LoginVC.swift */; };
 		F27EBB1526329690003D5286 /* LocalLogin-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27EBB1426329690003D5286 /* LocalLogin-Extension.swift */; };
 		F288A83025C160E1001B1D50 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F288A82F25C160E1001B1D50 /* HomeVC.swift */; };
@@ -144,6 +145,7 @@
 		F27579892600B88800109FB7 /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
 		F27972D225DD1EC9008B2D08 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		F279B0FB269C953A00C403A4 /* ReplyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyCell.swift; sourceTree = "<group>"; };
+		F279B0FE269EB61F00C403A4 /* ExpandableReplies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableReplies.swift; sourceTree = "<group>"; };
 		F27EBB10263294F9003D5286 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		F27EBB1426329690003D5286 /* LocalLogin-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalLogin-Extension.swift"; sourceTree = "<group>"; };
 		F288A82F25C160E1001B1D50 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -431,6 +433,14 @@
 			path = "Demos+PH";
 			sourceTree = "<group>";
 		};
+		F279B101269F257900C403A4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F279B0FE269EB61F00C403A4 /* ExpandableReplies.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		F27EBB0F263294D1003D5286 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -470,6 +480,7 @@
 				F2AC648025BEAE85000672E8 /* SceneDelegate.swift */,
 				F2AC648425BEAE85000672E8 /* Main.storyboard */,
 				F273781225C7E02F00F4A6E8 /* TabBarC.swift */,
+				F279B101269F257900C403A4 /* Models */,
 				F239A8EC25C2900200D7414C /* Home */,
 				F2F2EDE2265EB2B300097D55 /* Me */,
 				F26EDB3425C6B57C0051E9E7 /* Waterfall */,
@@ -774,6 +785,7 @@
 				F2B0FCBF26298A5D004E206B /* MeVC.swift in Sources */,
 				F273781625C7E26100F4A6E8 /* PostVC.swift in Sources */,
 				F25D6E0F268579DF00CFEA5A /* NoteDetailVC-ShareOrMore.swift in Sources */,
+				F279B0FF269EB61F00C403A4 /* ExpandableReplies.swift in Sources */,
 				F22ED63526672EF90021956C /* NoteDetailVC.swift in Sources */,
 				F29B9C31269346B800A4F619 /* NoteDetailVC-LoadData.swift in Sources */,
 				F21AED07268074FD0022DEF2 /* NoteDetailVC-Like.swift in Sources */,

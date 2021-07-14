@@ -22,9 +22,9 @@ extension NoteDetailVC{
         query.find { res in
             self.hideLoadHUD()
             if case let .success(objects: comments) = res{
+                print("comment success")
                 self.comments = comments
                 self.getReplies()
-
             }
         }
     }
@@ -39,12 +39,14 @@ extension NoteDetailVC{
             let query = LCQuery(className: kReplyTable)
             query.whereKey(kCommentCol, .equalTo(comment))
             query.whereKey(kUserCol, .included)
-            query.whereKey(kCreatedAtCol, .descending)
+            query.whereKey(kCreatedAtCol, .ascending)
             
             query.find{ res in
                 if case let .success(objects: replies) = res{
+                    print("reply success")
                     repliesDic[index] = replies
                 }else{
+                    print("reply fail")
                     repliesDic[index] = []
                 }
                 group.leave()
@@ -52,11 +54,12 @@ extension NoteDetailVC{
         }
         
         group.notify(queue: .main) {
-            self.replies =  repliesDic.sorted { $0.key < $1.key }.map{ $0.value }
+            self.replies =  repliesDic.sorted { $0.key < $1.key }.map{ ExpandableReplies(replies: $0.value) }
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
         }
+        
         
     }
 }

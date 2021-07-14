@@ -29,6 +29,7 @@ class ReplyCell: UITableViewCell {
             let dateText = createdAt == nil ? "刚刚" : createdAt!.formattedDate
             
             replyTextLabel.attributedText = replyText.spliceAttrStr(dateText)
+            
         }
     }
 
