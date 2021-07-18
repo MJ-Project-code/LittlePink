@@ -23,6 +23,7 @@ class NoteDetailVC: UIViewController {
     var commentSection = 0 //在用户准备回复的时候,赋值
     
     var replies: [ExpandableReplies] = []
+    var replyToUser: LCUser?
     
     @IBOutlet weak var authorAvatarBtn: UIButton!
     @IBOutlet weak var authorNickNameBtn: UIButton!
@@ -74,7 +75,7 @@ class NoteDetailVC: UIViewController {
     
     var currentFavCount = 0;
     
-    var     commentCount = 0{
+    var commentCount = 0{
         didSet{
             commentCountLabel.text = "\(commentCount)"
             commentCountBtn.setTitle(commentCount == 0 ? "评论" : commentCount.formattedStr, for: .normal)
@@ -118,7 +119,7 @@ class NoteDetailVC: UIViewController {
         //        let imageSize = UIImage(named: "1")!.size
         //        imageSlideShowHeight.constant = (imageSize.height / imageSize.width) * screenRect.width
         setUI()
-        getCommens()
+        getComments()
     }
     
     override func viewDidLayoutSubviews() {
@@ -146,6 +147,7 @@ class NoteDetailVC: UIViewController {
             if !isReply{
                 postComment()
             }else{
+                //还需要判断是回复还是子回复
                 postReply()
             }
             hideAndResetTextView()

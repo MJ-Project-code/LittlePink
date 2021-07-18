@@ -44,7 +44,7 @@ extension String{
         return  String((0..<length).map{ _ in letters.randomElement()! })
     }
     
-    func spliceAttrStr(_ datastr: String) -> NSAttributedString{
+    func spliceAttrStr(_ datastr: String) -> NSMutableAttributedString{
         
         let attrText = self.toAttrStr()
         let attrDate = " \(datastr)".toAttrStr(12, .secondaryLabel)

@@ -149,8 +149,12 @@ let kHasEidtCol = "hasEdit"
 let kUserCol = "user"
 let kNoteCol = "note"
 
+//comment表
+let kHasReplyCol = "hasReply"
+
 //Reply表
 let kCommentCol = "comment"
+let kReplyToUserCol = "replyToUserCol"
 
 //云端
 let kNotesOffset = 10

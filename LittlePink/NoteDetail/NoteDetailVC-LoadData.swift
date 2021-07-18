@@ -8,17 +8,16 @@
 import LeanCloud
 
 extension NoteDetailVC{
-    func getCommens(){
+    func getComments(){
         showLoadHUD()
         
         
         let query = LCQuery(className: kCommentTable)
         query.whereKey(kNoteCol, .equalTo(note))
         query.whereKey(kUserCol, .included)
-        //query.whereKey("\(kUserCol).\(knickNameCol)", .selected)
         query.whereKey(kCreatedAtCol, .descending)
         query.limit = kCommentsOffset
-
+        
         query.find { res in
             self.hideLoadHUD()
             if case let .success(objects: comments) = res{
@@ -35,22 +34,31 @@ extension NoteDetailVC{
         
         let group = DispatchGroup()
         for (index, comment) in comments.enumerated(){
-            group.enter()
-            let query = LCQuery(className: kReplyTable)
-            query.whereKey(kCommentCol, .equalTo(comment))
-            query.whereKey(kUserCol, .included)
-            query.whereKey(kCreatedAtCol, .ascending)
-            
-            query.find{ res in
-                if case let .success(objects: replies) = res{
-                    print("reply success")
-                    repliesDic[index] = replies
-                }else{
-                    print("reply fail")
-                    repliesDic[index] = []
+            if comment.getExactBoolValDefaultT(kHasReplyCol){
+                group.enter()
+                let query = LCQuery(className: kReplyTable)
+                query.whereKey(kCommentCol, .equalTo(comment))
+                query.whereKey(kUserCol, .included)
+                query.whereKey(kCreatedAtCol, .ascending)
+                query.whereKey(kReplyToUserCol, .included)
+                
+                query.find{ res in
+                    if case let .success(objects: replies) = res{
+                        if replies.isEmpty{
+                            try? comment.set(kHasReplyCol, value: true)
+                            comment.save { _ in }
+                        }
+                        repliesDic[index] = replies
+                    }else{
+                        print("reply fail")
+                        repliesDic[index] = []
+                    }
+                    group.leave()
                 }
-                group.leave()
+            }else{
+                repliesDic[index] = []
             }
+            
         }
         
         group.notify(queue: .main) {

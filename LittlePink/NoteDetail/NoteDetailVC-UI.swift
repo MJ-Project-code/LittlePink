@@ -68,7 +68,7 @@ extension NoteDetailVC{
         
         //note发表或编辑时间
         if let updatedAt = note.updatedAt?.value{
-            dateLabel.text = "\(note.getExactBoolVal(kHasEidtCol) ? "编辑于 " : "")\(updatedAt.formattedDate)"
+            dateLabel.text = "\(note.getExactBoolValDefaultF(kHasEidtCol) ? "编辑于 " : "")\(updatedAt.formattedDate)"
             
         }
         //当前用户头像
