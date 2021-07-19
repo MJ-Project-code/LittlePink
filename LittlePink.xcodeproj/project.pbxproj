@@ -16,6 +16,7 @@
 		F2041B9D267648E800BBDE6C /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F2041B9B267648E700BBDE6C /* logo.png */; };
 		F21AED07268074FD0022DEF2 /* NoteDetailVC-Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21AED06268074FD0022DEF2 /* NoteDetailVC-Like.swift */; };
 		F21D403E266E720000D91828 /* CustomViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21D403D266E720000D91828 /* CustomViews.swift */; };
+		F22E4D2026A5BA2F0035EB16 /* Other-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22E4D1F26A5BA2F0035EB16 /* Other-Extensions.swift */; };
 		F22E85D02603496600BF7EF9 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22E85CF2603496600BF7EF9 /* Protocols.swift */; };
 		F22E85D32604477000BF7EF9 /* POIVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22E85D22604477000BF7EF9 /* POIVC.swift */; };
 		F22E85E42604B4F600BF7EF9 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F22E85E32604B4F600BF7EF9 /* ExternalAccessory.framework */; };
@@ -109,6 +110,7 @@
 		F21AED06268074FD0022DEF2 /* NoteDetailVC-Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteDetailVC-Like.swift"; sourceTree = "<group>"; };
 		F21D403D266E720000D91828 /* CustomViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViews.swift; sourceTree = "<group>"; };
 		F22ABCA425D11A9300ACECE5 /* 枚举.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "枚举.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		F22E4D1F26A5BA2F0035EB16 /* Other-Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Other-Extensions.swift"; sourceTree = "<group>"; };
 		F22E85CF2603496600BF7EF9 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		F22E85D22604477000BF7EF9 /* POIVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIVC.swift; sourceTree = "<group>"; };
 		F22E85E32604B4F600BF7EF9 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
@@ -392,6 +394,7 @@
 				F27EBB1426329690003D5286 /* LocalLogin-Extension.swift */,
 				F2F2EDD8265D3D7A00097D55 /* Login-Extension.swift */,
 				F2F2EDD3265CE58800097D55 /* LC-Extension.swift */,
+				F22E4D1F26A5BA2F0035EB16 /* Other-Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -792,6 +795,7 @@
 				F22ED63526672EF90021956C /* NoteDetailVC.swift in Sources */,
 				F29B9C31269346B800A4F619 /* NoteDetailVC-LoadData.swift in Sources */,
 				F21AED07268074FD0022DEF2 /* NoteDetailVC-Like.swift in Sources */,
+				F22E4D2026A5BA2F0035EB16 /* Other-Extensions.swift in Sources */,
 				F2F2EDD12656ABE100097D55 /* PasswordLoginVC.swift in Sources */,
 				F29B9C342694AF3000A4F619 /* NoteDetailVC-DelComment.swift in Sources */,
 				F2750EA126256F180021989A /* NoteEditVC-UI.swift in Sources */,

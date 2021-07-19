@@ -1703,7 +1703,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="195.5"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="195.5" id="x5H-Ge-zfp"/>
+                                                <constraint firstAttribute="height" priority="750" constant="195.5" id="x5H-Ge-zfp"/>
                                             </constraints>
                                         </view>
                                     </subviews>
@@ -1716,6 +1716,23 @@
                                         <constraint firstItem="QxU-py-Cag" firstAttribute="top" secondItem="zzA-nk-RIW" secondAttribute="bottom" constant="16" id="idi-rq-4FZ"/>
                                         <constraint firstItem="zzA-nk-RIW" firstAttribute="top" secondItem="ZMp-Hg-Qrl" secondAttribute="top" id="rxB-Ns-UhQ"/>
                                         <constraint firstItem="QxU-py-Cag" firstAttribute="leading" secondItem="ZMp-Hg-Qrl" secondAttribute="leading" constant="16" id="t92-fh-XJc"/>
+                                    </constraints>
+                                </view>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="IE7-9G-pIP">
+                                    <rect key="frame" x="0.0" y="599" width="414" height="100"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-THE END-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="add-Lp-X92">
+                                            <rect key="frame" x="171.5" y="41.5" width="71.5" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="add-Lp-X92" firstAttribute="centerX" secondItem="IE7-9G-pIP" secondAttribute="centerX" id="0Y8-Lu-MQe"/>
+                                        <constraint firstItem="add-Lp-X92" firstAttribute="centerY" secondItem="IE7-9G-pIP" secondAttribute="centerY" id="UbE-WV-SIV"/>
                                     </constraints>
                                 </view>
                                 <prototypes>
@@ -1737,7 +1754,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="oWx-My-Ozj">
-                                                            <rect key="frame" x="31" y="0.0" width="305" height="64"/>
+                                                            <rect key="frame" x="31" y="0.0" width="305" height="65"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dEY-l6-B3B">
                                                                     <rect key="frame" x="0.0" y="0.0" width="27" height="16"/>
@@ -1765,11 +1782,13 @@
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRy-KJ-xwO">
-                                                                    <rect key="frame" x="0.0" y="43" width="76" height="21"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRy-KJ-xwO">
+                                                                    <rect key="frame" x="0.0" y="43" width="82" height="22"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                                     <inset key="contentEdgeInsets" minX="0.0" minY="3" maxX="0.0" maxY="3"/>
-                                                                    <state key="normal" title="展开 9 条回复"/>
+                                                                    <state key="normal" title="展开 9 条回复">
+                                                                        <color key="titleColor" name="blue"/>
+                                                                    </state>
                                                                 </button>
                                                             </subviews>
                                                         </stackView>
@@ -1910,11 +1929,11 @@
                                     <constraint firstAttribute="height" constant="45" id="z2C-Lw-u4U"/>
                                 </constraints>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b7O-L6-xyw">
-                                <rect key="frame" x="0.0" y="850" width="414" height="46"/>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b7O-L6-xyw">
+                                <rect key="frame" x="0.0" y="840" width="414" height="56"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CK0-qj-tbW" customClass="GrowingTextView" customModule="GrowingTextView">
-                                        <rect key="frame" x="16" y="8" width="311" height="30"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CK0-qj-tbW" customClass="GrowingTextView" customModule="GrowingTextView">
+                                        <rect key="frame" x="16" y="8" width="311" height="40"/>
                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -1935,8 +1954,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RG2-Ee-WeN">
-                                        <rect key="frame" x="335" y="3" width="63" height="40"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RG2-Ee-WeN">
+                                        <rect key="frame" x="335" y="8" width="63" height="40"/>
                                         <color key="backgroundColor" name="main"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="I9N-Ae-ZGD"/>
@@ -2016,10 +2035,13 @@
     </scenes>
     <designables>
         <designable name="0cc-Hc-O2m">
-            <size key="intrinsicContentSize" width="62" height="30"/>
+            <size key="intrinsicContentSize" width="78" height="18"/>
+        </designable>
+        <designable name="CK0-qj-tbW">
+            <size key="intrinsicContentSize" width="-1" height="30"/>
         </designable>
         <designable name="eiQ-We-zcH">
-            <size key="intrinsicContentSize" width="94.5" height="22"/>
+            <size key="intrinsicContentSize" width="110.5" height="22"/>
         </designable>
     </designables>
     <inferredMetricsTieBreakers>

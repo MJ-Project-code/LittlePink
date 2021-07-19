@@ -7,6 +7,7 @@
 
 import ImageSlideshow
 import GrowingTextView
+import LeanCloud
 
 extension NoteDetailVC{
     func config(){
@@ -21,6 +22,18 @@ extension NoteDetailVC{
         pageControl.currentPageIndicatorTintColor = mainColor  //选中颜色
         pageControl.pageIndicatorTintColor = .systemGray
         imageSlideShow.pageIndicator = pageControl
+        
+        if  LCApplication.default.currentUser == nil {
+            likeBtn.setToNormal()
+            favBtn.setToNormal()
+        }
+        
+        //为tableview设置上拉刷新
+        let refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: "上拉刷新")
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        tableView.addSubview(refreshControl)
+
         
         //textView
         textView.textContainerInset = UIEdgeInsets(top: 8, left: 16, bottom: 8, right: 16)

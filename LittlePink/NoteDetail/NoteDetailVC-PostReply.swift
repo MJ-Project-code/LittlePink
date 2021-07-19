@@ -36,7 +36,6 @@ extension NoteDetailVC{
             
             //note表数据
             try note.increase(kCommentCountCol)
-            note.save{ _ in }
             
             //内存数据
             replies[commentSection].replies.append(reply)

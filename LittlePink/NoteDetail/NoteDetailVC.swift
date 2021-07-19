@@ -108,18 +108,10 @@ class NoteDetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         config()
-        
-        //        imageSlideShow.setImageInputs([
-        //            ImageSource(image: UIImage(named: "1")!),
-        //            ImageSource(image: UIImage(named: "2")!),
-        //            ImageSource(image: UIImage(named: "3")!),
-        //        ])
-        //        let imageSize = UIImage(named: "1")!.size
-        //        imageSlideShowHeight.constant = (imageSize.height / imageSize.width) * screenRect.width
         setUI()
-        getComments()
+        getCommentsAndReplies()
+        getFav()
     }
     
     override func viewDidLayoutSubviews() {
@@ -156,4 +148,10 @@ class NoteDetailVC: UIViewController {
     }
     
     
+}
+
+extension NoteDetailVC{
+    @objc func refresh(_ sender: AnyObject) {
+        tableView.reloadData()
+    }
 }
