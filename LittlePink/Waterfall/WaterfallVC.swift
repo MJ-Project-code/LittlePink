@@ -9,9 +9,11 @@ import UIKit
 import CHTCollectionViewWaterfallLayout
 import XLPagerTabStrip
 import LeanCloud
+import SegementSlide
 
-class WaterfallVC: UICollectionViewController {
+class WaterfallVC: UICollectionViewController , SegementSlideContentScrollViewDelegate{
     var channel = ""
+    @objc var scrollView: UIScrollView { collectionView }
     
     //当用户在 我的 页面点击,会传一个isMyDraft数据
     //"我的"页面用到的变量

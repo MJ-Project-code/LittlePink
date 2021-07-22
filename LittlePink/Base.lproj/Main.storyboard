@@ -1300,26 +1300,6 @@
                     <view key="view" contentMode="scaleToFill" id="ps6-nY-Lnr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GgU-f0-K6J">
-                                <rect key="frame" x="84" y="430" width="255" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="个人页面(退出登录)"/>
-                                <connections>
-                                    <action selector="LogoutTest:" destination="ZQ0-u5-Rjm" eventType="touchUpInside" id="AZT-bk-zuW"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtT-R5-4bP">
-                                <rect key="frame" x="150" y="287" width="114" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="本地草稿"/>
-                                <connections>
-                                    <action selector="showDraftNotes:" destination="ZQ0-u5-Rjm" eventType="touchUpInside" id="bwR-P2-imG"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="HuM-8R-NrJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>

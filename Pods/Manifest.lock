@@ -38,6 +38,7 @@ PODS:
   - PopupDialog (1.1.1):
     - DynamicBlurView (~> 4.0)
   - PryntTrimmerView (4.0.2)
+  - SegementSlide (3.0.1)
   - SKPhotoBrowser (6.1.0)
   - SteviaLayout (4.7.3)
   - SwiftProtobuf (1.17.0)
@@ -64,6 +65,7 @@ DEPENDENCIES:
   - MBProgressHUD (~> 1.2.0)
   - MJRefresh
   - PopupDialog (~> 1.1)
+  - SegementSlide (= 3.0.1)
   - SKPhotoBrowser
   - XLPagerTabStrip (~> 9.0)
   - YPImagePicker
@@ -91,6 +93,7 @@ SPEC REPOS:
     - MJRefresh
     - PopupDialog
     - PryntTrimmerView
+    - SegementSlide
     - SKPhotoBrowser
     - SteviaLayout
     - SwiftProtobuf
@@ -119,12 +122,13 @@ SPEC CHECKSUMS:
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   PopupDialog: 720c92befd8bc23c13442254945213db5612f149
   PryntTrimmerView: 6a43cc90df5d99addeabd33d4ba09b1365322130
+  SegementSlide: 83b56ffb66b9c0edc4e4f2a74229309c62915db3
   SKPhotoBrowser: 343de95d89dc7913763c5dda243cc6e606e4a168
   SteviaLayout: c2ecdcff57d44e38fd2f65e54ad52aeae28ca0c4
   SwiftProtobuf: 9c85136c6ba74b0a1b84279dbf0f6db8efb714e0
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
   YPImagePicker: 15aed8bcaa4dad976e11b6114126d731a2f9f3c9
 
-PODFILE CHECKSUM: cd300cab032e14fc2e8acc2e78ca13074935ccc0
+PODFILE CHECKSUM: b7aa9e0abc8ff0719a2918a4b9d5402570b5be5b
 
 COCOAPODS: 1.10.1

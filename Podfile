@@ -26,5 +26,6 @@ target 'LittlePink' do
   pod 'Kingfisher', '~> 6.0'
   pod "ImageSlideshow/Kingfisher"
   pod 'GrowingTextView', '0.7.2'
+  pod 'SegementSlide', '3.0.1'
   
 end

@@ -87,6 +87,9 @@
 		F2F2EDD4265CE58800097D55 /* LC-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F2EDD3265CE58800097D55 /* LC-Extension.swift */; };
 		F2F2EDD9265D3D7A00097D55 /* Login-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F2EDD8265D3D7A00097D55 /* Login-Extension.swift */; };
 		F2F2EDDD265EA2CD00097D55 /* LoginAndMeParentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F2EDDC265EA2CD00097D55 /* LoginAndMeParentVC.swift */; };
+		F2FAABEF26A8700C00A08DC3 /* MeVC-UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FAABEE26A8700C00A08DC3 /* MeVC-UI.swift */; };
+		F2FAABF226A8747B00A08DC3 /* MeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FAABF126A8747B00A08DC3 /* MeHeaderView.swift */; };
+		F2FAABF526A875BA00A08DC3 /* MeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2FAABF426A875BA00A08DC3 /* MeHeaderView.xib */; };
 		F2FCC579264C1E8D0004C106 /* SocialLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FCC578264C1E8D0004C106 /* SocialLoginVC.swift */; };
 		F2FCC57C264C20210004C106 /* SocialLoginVC-Alipay.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FCC57B264C20210004C106 /* SocialLoginVC-Alipay.swift */; };
 		F2FCC5B226502D620004C106 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2FCC5B126502D620004C106 /* libssl.a */; };
@@ -189,6 +192,9 @@
 		F2F2EDD3265CE58800097D55 /* LC-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LC-Extension.swift"; sourceTree = "<group>"; };
 		F2F2EDD8265D3D7A00097D55 /* Login-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Login-Extension.swift"; sourceTree = "<group>"; };
 		F2F2EDDC265EA2CD00097D55 /* LoginAndMeParentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAndMeParentVC.swift; sourceTree = "<group>"; };
+		F2FAABEE26A8700C00A08DC3 /* MeVC-UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MeVC-UI.swift"; sourceTree = "<group>"; };
+		F2FAABF126A8747B00A08DC3 /* MeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeHeaderView.swift; sourceTree = "<group>"; };
+		F2FAABF426A875BA00A08DC3 /* MeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeHeaderView.xib; sourceTree = "<group>"; };
 		F2FCC578264C1E8D0004C106 /* SocialLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginVC.swift; sourceTree = "<group>"; };
 		F2FCC57B264C20210004C106 /* SocialLoginVC-Alipay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SocialLoginVC-Alipay.swift"; sourceTree = "<group>"; };
 		F2FCC5B126502D620004C106 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = AliSDKDemo/libssl.a; sourceTree = "<group>"; };
@@ -511,6 +517,9 @@
 			children = (
 				F2F2EDDC265EA2CD00097D55 /* LoginAndMeParentVC.swift */,
 				F2B0FCBE26298A5D004E206B /* MeVC.swift */,
+				F2FAABEE26A8700C00A08DC3 /* MeVC-UI.swift */,
+				F2FAABF126A8747B00A08DC3 /* MeHeaderView.swift */,
+				F2FAABF426A875BA00A08DC3 /* MeHeaderView.xib */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -686,6 +695,7 @@
 				F2D1991C25FF6A3000DA1499 /* TextViewIAView.xib in Resources */,
 				F2D198F925F2044E00DA1499 /* TV.mp4 in Resources */,
 				F2041B9C267648E800BBDE6C /* avatarPH.jpeg in Resources */,
+				F2FAABF526A875BA00A08DC3 /* MeHeaderView.xib in Resources */,
 				F202D5F526920CFE006B6EE4 /* CommentView.xib in Resources */,
 				F2AC648625BEAE85000672E8 /* Main.storyboard in Resources */,
 			);
@@ -772,6 +782,7 @@
 				F25D6E182685C83300CFEA5A /* NoteDetailVC-EditNote.swift in Sources */,
 				F2FCC60D26502E120004C106 /* openssl_wrapper.m in Sources */,
 				F273781325C7E02F00F4A6E8 /* TabBarC.swift in Sources */,
+				F2FAABF226A8747B00A08DC3 /* MeHeaderView.swift in Sources */,
 				F23B9C01269B41F800909386 /* CommentSectionFooterView.swift in Sources */,
 				F2F2EDCE2656AAA000097D55 /* CodeLoginVC.swift in Sources */,
 				F22ED63B266E69A90021956C /* NoteDetailVC-UI.swift in Sources */,
@@ -797,6 +808,7 @@
 				F21AED07268074FD0022DEF2 /* NoteDetailVC-Like.swift in Sources */,
 				F22E4D2026A5BA2F0035EB16 /* Other-Extensions.swift in Sources */,
 				F2F2EDD12656ABE100097D55 /* PasswordLoginVC.swift in Sources */,
+				F2FAABEF26A8700C00A08DC3 /* MeVC-UI.swift in Sources */,
 				F29B9C342694AF3000A4F619 /* NoteDetailVC-DelComment.swift in Sources */,
 				F2750EA126256F180021989A /* NoteEditVC-UI.swift in Sources */,
 				F279B10426A00C0D00C403A4 /* NoteDetailVC-DelReply.swift in Sources */,
