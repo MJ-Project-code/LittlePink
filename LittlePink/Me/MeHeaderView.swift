@@ -8,13 +8,12 @@
 import UIKit
 
 class MeHeaderView: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    @IBOutlet weak var editOrFollowBtn: UIButton!
+    @IBOutlet weak var settingOrChatBtn: UIButton!
+    @IBOutlet weak var rootStackView: UIStackView!
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        editOrFollowBtn.makeCapsule()
+        settingOrChatBtn.makeCapsule()
     }
-    */
-
 }

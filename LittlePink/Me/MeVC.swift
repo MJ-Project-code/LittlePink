@@ -19,17 +19,16 @@ class MeVC: SegementSlideDefaultViewController {
         reloadData()
     }
     
+    override var bouncesType: BouncesType { .child }
+    
     override func segementSlideHeaderView() -> UIView? {
-        let headerView = UIView()
+        let headerView = Bundle.loadView(fromNib: "MeHeaderView", with: MeHeaderView.self)
         headerView.translatesAutoresizingMaskIntoConstraints = false
-        headerView.backgroundColor = mainColor
-        headerView.heightAnchor.constraint(equalToConstant: view.bounds.height/4).isActive = true
+        headerView.heightAnchor.constraint(equalToConstant: headerView.rootStackView.frame.height + 16).isActive = true
         return headerView
     }
     
-    override var titlesInSwitcher: [String] {
-        return ["笔记", "收藏", "赞过"]
-    }
+    override var titlesInSwitcher: [String] { ["笔记", "收藏", "赞过"] }
     override var switcherConfig: SegementSlideDefaultSwitcherConfig{
         var config = super.switcherConfig
         config.type = .tab

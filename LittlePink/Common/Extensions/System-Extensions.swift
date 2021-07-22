@@ -140,6 +140,12 @@ extension UIButton{
         isEnabled = false
         backgroundColor = mainLightColor
     }
+    
+    func makeCapsule(_ color:UIColor = .label){
+        layer.borderWidth = 1
+        layer.borderColor = color.cgColor
+        layer.cornerRadius = frame.height / 2
+    }
 }
 
 extension UIImage{
