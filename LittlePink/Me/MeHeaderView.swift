@@ -5,15 +5,42 @@
 //  Created by 马俊 on 2021/7/21.
 //
 
-import UIKit
+import LeanCloud
+import Kingfisher
 
 class MeHeaderView: UIView {
+    @IBOutlet weak var rootStackView: UIStackView!
+
+    @IBOutlet weak var backOrSlideBtn: UIButton!
+    @IBOutlet weak var shareBtn: UIButton!
+    
+    @IBOutlet weak var avatarImageView: UIImageView!
+    @IBOutlet weak var nickNameLabel: UILabel!
+    @IBOutlet weak var genderLabel: UILabel!
+    @IBOutlet weak var idLabel: UILabel!
+    @IBOutlet weak var introLabel: UILabel!
+    @IBOutlet weak var likedAndFavedLabel: UILabel!
     @IBOutlet weak var editOrFollowBtn: UIButton!
     @IBOutlet weak var settingOrChatBtn: UIButton!
-    @IBOutlet weak var rootStackView: UIStackView!
     override func awakeFromNib() {
         super.awakeFromNib()
         editOrFollowBtn.makeCapsule()
         settingOrChatBtn.makeCapsule()
+    }
+    
+    var user: LCUser!{
+        didSet{
+            avatarImageView.kf.setImage(with: user.getImageURL(from: kAvatarCol, .avatar))
+            nickNameLabel.text = user.getExactStringVal(knickNameCol)
+            let gender =  user.getExactBoolValDefaultF(kGenderCol)
+            genderLabel.text = gender ? "♂" : "♀"
+            genderLabel.textColor = gender ? blueColor : mainColor
+            
+            idLabel.text = "\(user.getExactIntVal(kIdCok))"
+            let intro = user.getExactStringVal(kIntroCol)
+            introLabel.text = intro.isEmpty ? "请你填写个人简介" : intro
+            
+            
+        }
     }
 }

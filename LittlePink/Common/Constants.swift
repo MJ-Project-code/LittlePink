@@ -121,12 +121,14 @@ let kUserLikeTable = "userLike"
 let kUserFavTable = "userFav"
 let kCommentTable = "comment"
 let kReplyTable = "replyTable"
+let kUserInfoTable = "UserInfo"
 
 //User表
 let knickNameCol = "nickName"
 let kAvatarCol = "avatar"
 let kGenderCol = "gender"
 let kIntroCol = "intro"
+let kIdCok = "id"
 
 //Note表
 let kCoverPhotoCol = "coverPhoto"
@@ -155,6 +157,10 @@ let kHasReplyCol = "hasReply"
 //Reply表
 let kCommentCol = "comment"
 let kReplyToUserCol = "replyToUserCol"
+
+//UserInfo表
+let kUserObjectIdCol = "userObjectId"
+let kNoteCountCol = "noteCount"
 
 //云端
 let kNotesOffset = 10

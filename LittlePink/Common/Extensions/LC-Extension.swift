@@ -68,5 +68,26 @@ extension LCObject{
             }
         }
     }
+
+    static func userInfo(where userObjectId: String , increase col: String  ){
+        let query = LCQuery(className: kUserInfoTable)
+        query.whereKey(kUserObjectIdCol, .equalTo(userObjectId))
+        query.getFirst{ res in
+            if case let .success(object: userInfo) = res{
+                try? userInfo.increase(col)
+            }
+        }
+    }
+
+    static func userInfo(where userObjectId: String , decrease col: String , to: Int ){
+        let query = LCQuery(className: kUserInfoTable)
+        query.whereKey(kUserObjectIdCol, .equalTo(userObjectId))
+        query.getFirst{ res in
+            if case let .success(object: userInfo) = res{
+                try? userInfo.set(col, value: to)
+                userInfo.save{ _ in  }
+            }
+        }
+    }
 }
 

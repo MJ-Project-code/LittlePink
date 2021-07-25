@@ -200,9 +200,17 @@
                 <constraint firstItem="tHo-gE-Wi8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="qwG-KN-qSg"/>
             </constraints>
             <connections>
+                <outlet property="avatarImageView" destination="2kR-IM-914" id="Uxz-Rh-SlU"/>
+                <outlet property="backOrSlideBtn" destination="YeY-cu-PON" id="oKl-GA-kRM"/>
                 <outlet property="editOrFollowBtn" destination="hpy-DC-iEs" id="97o-vL-CM1"/>
+                <outlet property="genderLabel" destination="ymd-dt-tCA" id="kQN-hz-vPe"/>
+                <outlet property="idLabel" destination="bA4-Mp-Mm4" id="nH3-dh-m8g"/>
+                <outlet property="introLabel" destination="xjn-eq-Zf4" id="yYq-ZH-0lD"/>
+                <outlet property="likedAndFavedLabel" destination="eh5-rG-hIV" id="U5r-he-gNo"/>
+                <outlet property="nickNameLabel" destination="M1c-ue-6th" id="og0-p9-6Uj"/>
                 <outlet property="rootStackView" destination="tHo-gE-Wi8" id="gtO-al-3hh"/>
                 <outlet property="settingOrChatBtn" destination="xSH-yO-jwL" id="GH1-Ni-Uww"/>
+                <outlet property="shareBtn" destination="wSf-sX-13I" id="MvS-s3-zBX"/>
             </connections>
             <point key="canvasLocation" x="221.73913043478262" y="-125.22321428571428"/>
         </view>
