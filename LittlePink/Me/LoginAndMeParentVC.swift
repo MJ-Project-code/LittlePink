@@ -14,7 +14,9 @@ class LoginAndMeParentVC: UIViewController {
         super.viewDidLoad()
 
         if let user  = LCApplication.default.currentUser {
-            let meVC = storyboard!.instantiateViewController(identifier: kMeVCID)
+            let meVC =  storyboard!.instantiateViewController(identifier: kMeVCID){ coder in
+                MeVC(coder: coder, user: user)
+            }
             add(child: meVC)
         }else{
             let loginVC = storyboard!.instantiateViewController(identifier: kLoginVCID)

@@ -9,23 +9,32 @@ import LeanCloud
 extension NoteDetailVC: UITableViewDelegate{
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let commentView = tableView.dequeueReusableHeaderFooterView(withIdentifier: kCommentViewID) as! CommentView
+        //单个的评论对象
         let comment = comments[section]
         commentView.comment = comment
         
-        if let commentAuthor = comment.get(kUserCol) as? LCUser,
+        //评论人对象
+        let commentAuthor = comment.get(kUserCol) as? LCUser
+        
+        if let commentAuthor = commentAuthor ,
            let noteAuthor = author ,
            commentAuthor == noteAuthor{
             commentView.authorLabel.isHidden = false
         }else{
             commentView.authorLabel.isHidden = true
         }
-        
-        let commentTap = UITapGestureRecognizer(target: self, action: #selector(commentTapped))
+        //轻触评论
+        let commentTap = UIPassableTapGestureRecognizer(target: self, action: #selector(commentTapped))
         commentView.tag = section
         commentView.addGestureRecognizer(commentTap)
         
+        let avatarTap = UIPassableTapGestureRecognizer(target: self, action: #selector(goToMeVC))
+        avatarTap.passObj = commentAuthor
+        commentView.avatarImageView.addGestureRecognizer(avatarTap)
+        
         return commentView
     }
+    
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let separatorLine = tableView.dequeueReusableCell(withIdentifier: kCommentSectionFooterViewID)
         return separatorLine

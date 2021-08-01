@@ -16,7 +16,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="tHo-gE-Wi8">
-                    <rect key="frame" x="16" y="60" width="382" height="211"/>
+                    <rect key="frame" x="16" y="60" width="382" height="223"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="y0j-eG-AYL">
                             <rect key="frame" x="0.0" y="0.0" width="382" height="26"/>
@@ -40,7 +40,7 @@
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="epR-Jk-uYG">
-                            <rect key="frame" x="0.0" y="42" width="382" height="169"/>
+                            <rect key="frame" x="0.0" y="42" width="382" height="181"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="nKY-ug-h3u">
                                     <rect key="frame" x="0.0" y="0.0" width="382" height="80"/>
@@ -104,84 +104,91 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="9d8-Ce-PE5">
-                                    <rect key="frame" x="0.0" y="130" width="382" height="39"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9d8-Ce-PE5">
+                                    <rect key="frame" x="0.0" y="130" width="382" height="51"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="4Ke-78-LhD">
-                                            <rect key="frame" x="0.0" y="0.0" width="156" height="39"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="4Ke-78-LhD">
+                                            <rect key="frame" x="0.0" y="0.0" width="191" height="51"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="nmU-3R-3mo">
-                                                    <rect key="frame" x="0.0" y="0.0" width="27" height="39"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="62" height="51"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3o-mw-jIb">
-                                                            <rect key="frame" x="9" y="0.0" width="9.5" height="18"/>
+                                                            <rect key="frame" x="26.5" y="0.0" width="9.5" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="关注" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ja-aj-0ZO">
-                                                            <rect key="frame" x="0.0" y="23" width="27" height="16"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="9Ti-JY-8Oc">
+                                                            <rect key="frame" x="16" y="23" width="30" height="28"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                            <color key="textColor" systemColor="secondaryLabelColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                            <state key="normal" title="关注">
+                                                                <color key="titleColor" systemColor="secondaryLabelColor"/>
+                                                            </state>
+                                                        </button>
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="IcQ-7p-erz">
-                                                    <rect key="frame" x="43" y="0.0" width="27" height="39"/>
+                                                    <rect key="frame" x="78" y="0.0" width="30" height="51"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0y-95-Kqx">
-                                                            <rect key="frame" x="10" y="0.0" width="7" height="18"/>
+                                                            <rect key="frame" x="11.5" y="0.0" width="7" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="粉丝" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcU-RQ-BV2">
-                                                            <rect key="frame" x="0.0" y="23" width="27" height="16"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUa-ef-7da">
+                                                            <rect key="frame" x="0.0" y="23" width="30" height="28"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                            <color key="textColor" systemColor="secondaryLabelColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                            <state key="normal" title="粉丝">
+                                                                <color key="titleColor" systemColor="secondaryLabelColor"/>
+                                                            </state>
+                                                        </button>
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Xcw-78-ydK">
-                                                    <rect key="frame" x="86" y="0.0" width="70" height="39"/>
+                                                    <rect key="frame" x="124" y="0.0" width="67" height="51"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eh5-rG-hIV">
-                                                            <rect key="frame" x="27" y="0.0" width="16" height="18"/>
+                                                            <rect key="frame" x="25.5" y="0.0" width="16" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 获赞与收藏" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50z-X0-ufz">
-                                                            <rect key="frame" x="0.0" y="23" width="70" height="16"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xxP-V3-Zn3">
+                                                            <rect key="frame" x="0.0" y="23" width="67" height="28"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                            <color key="textColor" systemColor="secondaryLabelColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                            <state key="normal" title="获赞与收藏">
+                                                                <color key="titleColor" systemColor="secondaryLabelColor"/>
+                                                            </state>
+                                                        </button>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dX2-ES-laW">
-                                            <rect key="frame" x="240" y="0.0" width="142" height="39"/>
+                                            <rect key="frame" x="191" y="12.5" width="191" height="26"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpy-DC-iEs">
-                                                    <rect key="frame" x="0.0" y="6.5" width="86" height="26"/>
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpy-DC-iEs">
+                                                    <rect key="frame" x="0.0" y="0.0" width="135" height="26"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <inset key="contentEdgeInsets" minX="16" minY="5" maxX="16" maxY="5"/>
                                                     <state key="normal" title="编辑资料">
                                                         <color key="titleColor" systemColor="labelColor"/>
                                                     </state>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSH-yO-jwL">
-                                                    <rect key="frame" x="106" y="6.5" width="36" height="26"/>
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSH-yO-jwL">
+                                                    <rect key="frame" x="155" y="0.0" width="36" height="26"/>
                                                     <inset key="contentEdgeInsets" minX="10" minY="2" maxX="10" maxY="2"/>
                                                     <state key="normal" image="gearshape" catalog="system">
                                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="default">
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                                         </preferredSymbolConfiguration>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="logouttest:" destination="iN0-l3-epB" eventType="touchUpInside" id="Z5E-wN-ebm"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </stackView>
@@ -211,6 +218,7 @@
                 <outlet property="rootStackView" destination="tHo-gE-Wi8" id="gtO-al-3hh"/>
                 <outlet property="settingOrChatBtn" destination="xSH-yO-jwL" id="GH1-Ni-Uww"/>
                 <outlet property="shareBtn" destination="wSf-sX-13I" id="MvS-s3-zBX"/>
+                <outlet property="showLikedAndFavedBtn" destination="xxP-V3-Zn3" id="tUS-em-vuq"/>
             </connections>
             <point key="canvasLocation" x="221.73913043478262" y="-125.22321428571428"/>
         </view>

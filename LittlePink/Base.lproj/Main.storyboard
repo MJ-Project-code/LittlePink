@@ -1514,6 +1514,9 @@
                                                                 <real key="value" value="16"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="goToAuthorMeVC:" destination="A4I-o3-N4Q" eventType="touchUpInside" id="mgF-y8-dEc"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GK0-5v-oln">
                                                         <rect key="frame" x="78.5" y="0.0" width="58" height="32"/>
@@ -1521,6 +1524,9 @@
                                                         <state key="normal" title="作者昵称">
                                                             <color key="titleColor" systemColor="labelColor"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="goToAuthorMeVC:" destination="A4I-o3-N4Q" eventType="touchUpInside" id="Mtb-8b-neN"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>

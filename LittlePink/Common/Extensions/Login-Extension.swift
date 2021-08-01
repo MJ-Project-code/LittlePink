@@ -10,7 +10,7 @@ import LeanCloud
 extension UIViewController{
     func configAfterLogin(_ user: LCUser,_ nickName: String,_ email: String = ""){
         if let _ = user.get(knickNameCol){
-            dismissAndShowMeVC()
+            dismissAndShowMeVC(user)
         }else{//首次登录(注册动作)
             let group = DispatchGroup()
             
@@ -40,17 +40,19 @@ extension UIViewController{
             userInfo.save{ _ in group.leave() }
             
             group.notify(queue: .main) {
-                self.dismissAndShowMeVC()
+                self.dismissAndShowMeVC(user)
             }
             
         }
 
     }
-    func  dismissAndShowMeVC(){
+    func  dismissAndShowMeVC(_ user: LCUser){
         self.hideLoadHUD()
         DispatchQueue.main.async {
             let mainSB = UIStoryboard(name:"Main", bundle: nil)
-            let meVC =  mainSB.instantiateViewController(identifier: kMeVCID)
+            let meVC =  mainSB.instantiateViewController(identifier: kMeVCID){ coder in
+                MeVC(coder: coder, user: user)
+            }
             loginAndMeParentVC.removeChildren()
             loginAndMeParentVC.add(child: meVC)
             

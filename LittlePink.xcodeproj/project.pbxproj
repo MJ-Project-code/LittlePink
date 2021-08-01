@@ -38,6 +38,9 @@
 		F25D6E1226857A8E00CFEA5A /* NoteDetailVC-DelNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25D6E1126857A8E00CFEA5A /* NoteDetailVC-DelNote.swift */; };
 		F25D6E152685B3A800CFEA5A /* NoteDetailVC-Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25D6E142685B3A800CFEA5A /* NoteDetailVC-Helper.swift */; };
 		F25D6E182685C83300CFEA5A /* NoteDetailVC-EditNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25D6E172685C83300CFEA5A /* NoteDetailVC-EditNote.swift */; };
+		F26BA6F626B6E8D300F6A217 /* NoteDetailVC-MeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26BA6F526B6E8D300F6A217 /* NoteDetailVC-MeVC.swift */; };
+		F26BA6F926B6EBF800F6A217 /* MeVC-BackOrDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26BA6F826B6EBF800F6A217 /* MeVC-BackOrDrawer.swift */; };
+		F26BA6FC26B6EF2D00F6A217 /* CustomClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26BA6FB26B6EF2D00F6A217 /* CustomClasses.swift */; };
 		F273781325C7E02F00F4A6E8 /* TabBarC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273781225C7E02F00F4A6E8 /* TabBarC.swift */; };
 		F273781625C7E26100F4A6E8 /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273781525C7E26100F4A6E8 /* PostVC.swift */; };
 		F273781925C8E69E00F4A6E8 /* System-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F273781825C8E69E00F4A6E8 /* System-Extensions.swift */; };
@@ -137,6 +140,9 @@
 		F25D6E1126857A8E00CFEA5A /* NoteDetailVC-DelNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteDetailVC-DelNote.swift"; sourceTree = "<group>"; };
 		F25D6E142685B3A800CFEA5A /* NoteDetailVC-Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteDetailVC-Helper.swift"; sourceTree = "<group>"; };
 		F25D6E172685C83300CFEA5A /* NoteDetailVC-EditNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteDetailVC-EditNote.swift"; sourceTree = "<group>"; };
+		F26BA6F526B6E8D300F6A217 /* NoteDetailVC-MeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteDetailVC-MeVC.swift"; sourceTree = "<group>"; };
+		F26BA6F826B6EBF800F6A217 /* MeVC-BackOrDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MeVC-BackOrDrawer.swift"; sourceTree = "<group>"; };
+		F26BA6FB26B6EF2D00F6A217 /* CustomClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomClasses.swift; sourceTree = "<group>"; };
 		F273780825C7D55000F4A6E8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		F273780925C7D55000F4A6E8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		F273781225C7E02F00F4A6E8 /* TabBarC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarC.swift; sourceTree = "<group>"; };
@@ -347,6 +353,7 @@
 				F29B9C332694AF3000A4F619 /* NoteDetailVC-DelComment.swift */,
 				F29B9C3A2695C56000A4F619 /* NoteDetailVC-PostReply.swift */,
 				F279B10326A00C0D00C403A4 /* NoteDetailVC-DelReply.swift */,
+				F26BA6F526B6E8D300F6A217 /* NoteDetailVC-MeVC.swift */,
 				F25D6E142685B3A800CFEA5A /* NoteDetailVC-Helper.swift */,
 				F202D5F126920CDE006B6EE4 /* CommentView.swift */,
 				F202D5F426920CFE006B6EE4 /* CommentView.xib */,
@@ -427,6 +434,7 @@
 				F239A8E925C28E3100D7414C /* Constants.swift */,
 				F22E85CF2603496600BF7EF9 /* Protocols.swift */,
 				F21D403D266E720000D91828 /* CustomViews.swift */,
+				F26BA6FB26B6EF2D00F6A217 /* CustomClasses.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -518,6 +526,7 @@
 				F2F2EDDC265EA2CD00097D55 /* LoginAndMeParentVC.swift */,
 				F2B0FCBE26298A5D004E206B /* MeVC.swift */,
 				F2FAABEE26A8700C00A08DC3 /* MeVC-UI.swift */,
+				F26BA6F826B6EBF800F6A217 /* MeVC-BackOrDrawer.swift */,
 				F2FAABF126A8747B00A08DC3 /* MeHeaderView.swift */,
 				F2FAABF426A875BA00A08DC3 /* MeHeaderView.xib */,
 			);
@@ -780,6 +789,7 @@
 				F27972D325DD1EC9008B2D08 /* PhotoCell.swift in Sources */,
 				F22ED63E266E69C70021956C /* NoteDetailVC-Config.swift in Sources */,
 				F25D6E182685C83300CFEA5A /* NoteDetailVC-EditNote.swift in Sources */,
+				F26BA6FC26B6EF2D00F6A217 /* CustomClasses.swift in Sources */,
 				F2FCC60D26502E120004C106 /* openssl_wrapper.m in Sources */,
 				F273781325C7E02F00F4A6E8 /* TabBarC.swift in Sources */,
 				F2FAABF226A8747B00A08DC3 /* MeHeaderView.swift in Sources */,
@@ -818,6 +828,7 @@
 				F2D1990E25FF2DC600DA1499 /* NoteEditVC-Config.swift in Sources */,
 				F292AE35261E9E03006B2C7C /* WaterfallVC-Config.swift in Sources */,
 				F239A8DD25C28BF700D7414C /* FollowVC.swift in Sources */,
+				F26BA6F926B6EBF800F6A217 /* MeVC-BackOrDrawer.swift in Sources */,
 				F202D5FB26920EB1006B6EE4 /* NoteDetailVC-TVDataSource.swift in Sources */,
 				F22ED632266678A50021956C /* NoteEditVC-Note.swift in Sources */,
 				F2E5C39C26242DA6002E06FD /* WaterfallVC-Delegate.swift in Sources */,
@@ -827,6 +838,7 @@
 				F21D403E266E720000D91828 /* CustomViews.swift in Sources */,
 				F279B0FC269C953A00C403A4 /* ReplyCell.swift in Sources */,
 				F25D6E07268483D900CFEA5A /* WaterfallCell-Like.swift in Sources */,
+				F26BA6F626B6E8D300F6A217 /* NoteDetailVC-MeVC.swift in Sources */,
 				F239A8E725C28C8200D7414C /* DiscoveryVC.swift in Sources */,
 				F202D5F226920CDE006B6EE4 /* CommentView.swift in Sources */,
 				F2F2EDD4265CE58800097D55 /* LC-Extension.swift in Sources */,

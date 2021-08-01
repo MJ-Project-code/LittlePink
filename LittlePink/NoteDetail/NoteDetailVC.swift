@@ -122,6 +122,7 @@ class NoteDetailVC: UIViewController {
     @IBAction func back(_ sender: Any) {
         dismiss(animated: true)
     }
+    @IBAction func goToAuthorMeVC(_ sender: Any) { noteToMeVC(author) }
     @IBAction func shareOrMore(_ sender: Any) { shareOrMore() }
     //点赞
     @IBAction func like(_ sender: Any) { like() }

@@ -44,6 +44,7 @@ class WaterfallCell: UICollectionViewCell {
             likeCount = note.getExactIntVal(kLikeCountCol)
             currentLikeCount = likeCount
             
+            nickNameLabel.text = author.getExactStringVal(knickNameCol)
             
             //点赞功能+判断是否点赞
             if let user = LCApplication.default.currentUser{
