@@ -21,15 +21,17 @@ extension NoteDetailVC{
             comment.save { _ in }
             
             try note.increase(kCommentCountCol)
+            note.save{ _ in }
             
             //内存数据
             comments.insert(comment, at: 0)
+            commentCount += 1
+            replies.insert(ExpandableReplies(replies: []), at: 0)
             
             //UI
             tableView.performBatchUpdates {
                 tableView.insertSections(IndexSet(integer: 0), with: .automatic)
             }
-            commentCount += 1
             
             
         } catch  {

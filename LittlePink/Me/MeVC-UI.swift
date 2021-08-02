@@ -16,5 +16,8 @@ extension MeVC{
         let statusBarOverlayView = UIView(frame: CGRect(x: 0, y: 0, width: screenRect.width, height: kStatusBarH))
         statusBarOverlayView.backgroundColor = .systemBackground
         view.addSubview(statusBarOverlayView)
+        
+        defaultSelectedIndex = 0
+        reloadData()
     }
 }

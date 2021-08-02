@@ -32,6 +32,12 @@ extension NoteDetailVC: UITableViewDelegate{
         avatarTap.passObj = commentAuthor
         commentView.avatarImageView.addGestureRecognizer(avatarTap)
         
+        let nickNameTap = UIPassableTapGestureRecognizer(target: self, action: #selector(goToMeVC))
+        nickNameTap.passObj = commentAuthor
+        commentView.nickNameLabel.addGestureRecognizer(nickNameTap)
+        
+        
+        
         return commentView
     }
     

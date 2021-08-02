@@ -12,8 +12,11 @@ import SegementSlide
 class MeVC: SegementSlideDefaultViewController {
     
     var user:LCUser
-    
+    //判断来源
     var isFromNote = false
+    //本人已登录,查看自己的页面,可以修改资料和简介,显示'编辑资料'和 '设置' 按钮
+    //本人已登录,查看他人页面||本人未登录,查看别人或自己页面,点击个人简介不可修改,显示 '关注','聊天' 按钮
+    var isMySelf = false
     
     init?(coder: NSCoder , user: LCUser) {
         self.user = user
@@ -26,30 +29,14 @@ class MeVC: SegementSlideDefaultViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.backButtonDisplayMode = .minimal
+        config()
         setUI()
-        defaultSelectedIndex = 0
-        reloadData()
+
     }
     
     override var bouncesType: BouncesType { .child }
     
-    override func segementSlideHeaderView() -> UIView? {
-        let headerView = Bundle.loadView(fromNib: "MeHeaderView", with: MeHeaderView.self)
-
-        headerView.translatesAutoresizingMaskIntoConstraints = false
-        headerView.heightAnchor.constraint(equalToConstant: headerView.rootStackView.frame.height + 16).isActive = true
-        
-        headerView.user = user
-
-        if isFromNote{
-            headerView.backOrSlideBtn.setImage(largeIcon("chevron.left"), for: .normal)
-        }
-        
-        headerView.backOrSlideBtn.addTarget(self, action: #selector(backOrSlide), for: .touchUpInside)
-        
-        return headerView
-    }
+    override func segementSlideHeaderView() -> UIView? { setHeaderView() }
     
     override var titlesInSwitcher: [String] { ["笔记", "收藏", "赞过"] }
     override var switcherConfig: SegementSlideDefaultSwitcherConfig{

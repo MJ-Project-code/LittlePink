@@ -24,6 +24,8 @@
 		F22ED63526672EF90021956C /* NoteDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22ED63426672EF90021956C /* NoteDetailVC.swift */; };
 		F22ED63B266E69A90021956C /* NoteDetailVC-UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22ED63A266E69A90021956C /* NoteDetailVC-UI.swift */; };
 		F22ED63E266E69C70021956C /* NoteDetailVC-Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22ED63D266E69C70021956C /* NoteDetailVC-Config.swift */; };
+		F22EF00826B7C864005C9844 /* MeVC-Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22EF00726B7C864005C9844 /* MeVC-Config.swift */; };
+		F22EF00B26B7C913005C9844 /* MeVC-HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22EF00A26B7C913005C9844 /* MeVC-HeaderView.swift */; };
 		F239A8DD25C28BF700D7414C /* FollowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F239A8DC25C28BF700D7414C /* FollowVC.swift */; };
 		F239A8E325C28C6A00D7414C /* NearByVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F239A8E225C28C6A00D7414C /* NearByVC.swift */; };
 		F239A8E725C28C8200D7414C /* DiscoveryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F239A8E625C28C8200D7414C /* DiscoveryVC.swift */; };
@@ -124,6 +126,8 @@
 		F22ED63426672EF90021956C /* NoteDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailVC.swift; sourceTree = "<group>"; };
 		F22ED63A266E69A90021956C /* NoteDetailVC-UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteDetailVC-UI.swift"; sourceTree = "<group>"; };
 		F22ED63D266E69C70021956C /* NoteDetailVC-Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteDetailVC-Config.swift"; sourceTree = "<group>"; };
+		F22EF00726B7C864005C9844 /* MeVC-Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MeVC-Config.swift"; sourceTree = "<group>"; };
+		F22EF00A26B7C913005C9844 /* MeVC-HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MeVC-HeaderView.swift"; sourceTree = "<group>"; };
 		F22F5DA525CCE7DF005A1AEF /* 值类型+引用类型.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "值类型+引用类型.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		F239A8DC25C28BF700D7414C /* FollowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowVC.swift; sourceTree = "<group>"; };
 		F239A8E225C28C6A00D7414C /* NearByVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearByVC.swift; sourceTree = "<group>"; };
@@ -525,7 +529,9 @@
 			children = (
 				F2F2EDDC265EA2CD00097D55 /* LoginAndMeParentVC.swift */,
 				F2B0FCBE26298A5D004E206B /* MeVC.swift */,
+				F22EF00726B7C864005C9844 /* MeVC-Config.swift */,
 				F2FAABEE26A8700C00A08DC3 /* MeVC-UI.swift */,
+				F22EF00A26B7C913005C9844 /* MeVC-HeaderView.swift */,
 				F26BA6F826B6EBF800F6A217 /* MeVC-BackOrDrawer.swift */,
 				F2FAABF126A8747B00A08DC3 /* MeHeaderView.swift */,
 				F2FAABF426A875BA00A08DC3 /* MeHeaderView.xib */,
@@ -809,6 +815,7 @@
 				F2750EA42626D5E30021989A /* NoteEditVC-DraftNote.swift in Sources */,
 				F2AC647F25BEAE85000672E8 /* AppDelegate.swift in Sources */,
 				F288A83025C160E1001B1D50 /* HomeVC.swift in Sources */,
+				F22EF00B26B7C913005C9844 /* MeVC-HeaderView.swift in Sources */,
 				F2B0FCBF26298A5D004E206B /* MeVC.swift in Sources */,
 				F273781625C7E26100F4A6E8 /* PostVC.swift in Sources */,
 				F25D6E0F268579DF00CFEA5A /* NoteDetailVC-ShareOrMore.swift in Sources */,
@@ -850,6 +857,7 @@
 				F2AC648925BEAE85000672E8 /* LittlePink.xcdatamodeld in Sources */,
 				F2B9EC6026088408001E74BA /* POVIC-Location.swift in Sources */,
 				F27EBB1526329690003D5286 /* LocalLogin-Extension.swift in Sources */,
+				F22EF00826B7C864005C9844 /* MeVC-Config.swift in Sources */,
 				F239A8EA25C28E3100D7414C /* Constants.swift in Sources */,
 				F29B9C3B2695C56000A4F619 /* NoteDetailVC-PostReply.swift in Sources */,
 				F22E85D32604477000BF7EF9 /* POIVC.swift in Sources */,

@@ -122,6 +122,7 @@ let kUserFavTable = "userFav"
 let kCommentTable = "comment"
 let kReplyTable = "replyTable"
 let kUserInfoTable = "UserInfo"
+let kFollower = "_Follower"
 
 //User表
 let knickNameCol = "nickName"
@@ -169,9 +170,15 @@ let kCommentsOffset = 10
 func largeIcon(_ iconName: String, with color:UIColor = .label) -> UIImage {
     let config = UIImage.SymbolConfiguration(scale: .large)
     let icon = UIImage(systemName: iconName,withConfiguration: config)!
-    
     return icon.withTintColor(color)
 }
+
+func fontIcon(_ iconName: String, fontSize: CGFloat , with color:UIColor = .label) -> UIImage {
+    let config = UIImage.SymbolConfiguration(font: .systemFont(ofSize: fontSize))
+    let icon = UIImage(systemName: iconName,withConfiguration: config)!
+    return icon.withTintColor(color)
+}
+
 
 func showGlobalTextHUD(_ title:String){
     let window = UIApplication.shared.windows.last!
@@ -180,3 +187,4 @@ func showGlobalTextHUD(_ title:String){
     hud.label.text = title
     hud.hide(animated: true ,afterDelay: 2)
 }
+
