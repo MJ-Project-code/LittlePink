@@ -241,6 +241,9 @@ extension UIViewController{
         hud.detailsLabel.text = subTitle
         hud.hide(animated: true, afterDelay: 2)
     }
+    func showLoginHUD(){
+        showTextHUD("请你登录")
+    }
     
     func showTextHUD(_ title:String, in view: UIView, _ subTitle:String? = nil ){
         let hud = MBProgressHUD.showAdded(to: view, animated: true)
@@ -325,3 +328,13 @@ extension FileManager{
         return fileURL
     }
 }
+
+extension UserDefaults{
+    static func increase(_ key: String , by val: Int = 1){
+        standard.set(standard.integer(forKey: key) + val, forKey: key)
+    }
+    static func decrease(_ key: String , by val: Int = 1){
+        standard.set(standard.integer(forKey: key) - val, forKey: key)
+    }
+}
+

@@ -20,8 +20,7 @@ extension NoteDetailVC{
 
             
         }else{
-            showTextHUD("请先登录")
-        }
+            showLoginHUD()        }
     }
     
     @objc func likeBtnTappedWhenLogin(){

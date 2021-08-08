@@ -16,9 +16,11 @@ extension WaterfallVC{
         layout.minimumInteritemSpacing = kWaterfallPadding
         layout.sectionInset = UIEdgeInsets(top: 0, left: kWaterfallPadding, bottom: kWaterfallPadding, right: kWaterfallPadding)
         
-        if isMyDraft{
+        if isDraft{
             navigationItem.title = "本地草稿"
-            
         }
+        
+        //注册 '我的草稿cell'
+        collectionView.register(UINib(nibName: "MyDraftNoteWaterfallCell", bundle: nil), forCellWithReuseIdentifier: kMyDraftNoteWaterfallCellID)
     }
 }

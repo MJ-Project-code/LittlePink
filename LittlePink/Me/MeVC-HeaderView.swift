@@ -24,7 +24,8 @@ extension MeVC{
         
         if isMySelf{
             //登录并且看自己
-            
+            //简介添加手势
+            headerView.introLabel.addGestureRecognizer(UIPassableTapGestureRecognizer(target: self, action: #selector(editorIntro)))
         }else{
             if user.getExactStringVal(kIntroCol).isEmpty{
                 headerView.introLabel.isHidden = true
@@ -38,6 +39,9 @@ extension MeVC{
                 headerView.editOrFollowBtn.backgroundColor = mainColor
                 headerView.settingOrChatBtn.setImage(fontIcon("ellipsis.bubble", fontSize: 13), for: .normal)
             }
+
+            headerView.editOrFollowBtn.addTarget(self, action: #selector(editOrFollow), for: .touchUpInside)
+            headerView.settingOrChatBtn.addTarget(self, action: #selector(settingOrChat), for: .touchUpInside)
             
         }
         

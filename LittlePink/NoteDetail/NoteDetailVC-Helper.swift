@@ -13,8 +13,7 @@ extension NoteDetailVC{
             //UI
             showTextView()
         }else{
-            showTextHUD("请先登录")
-        }
+            showLoginHUD()        }
     }
     
     func showTextView(_ isReply: Bool = false,_ textViewPH: String = kNoteCommentPH , _ replyToUser:LCUser? = nil){

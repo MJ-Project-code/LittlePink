@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		28DD14755C130CA0F7C94A7A /* Pods_LittlePink.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1C2ECD820882225E9AFB38 /* Pods_LittlePink.framework */; };
+		62DB65A4A9EF2E8F1FF4045C /* MeVC-SettingOrChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB6B8E06A44C38B07B452C /* MeVC-SettingOrChat.swift */; };
+		62DB67A14CFE4639C92B892C /* MeVC-EditOrFollow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB6D95E13668A1A8F91C00 /* MeVC-EditOrFollow.swift */; };
+		62DB6D74BDDE42B8C44D531C /* MeVC-EditIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DB6A9B625D29495A42880E /* MeVC-EditIntro.swift */; };
 		F202D5F226920CDE006B6EE4 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F202D5F126920CDE006B6EE4 /* CommentView.swift */; };
 		F202D5F526920CFE006B6EE4 /* CommentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F202D5F426920CFE006B6EE4 /* CommentView.xib */; };
 		F202D5F826920E98006B6EE4 /* NoteDetailVC-TVDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F202D5F726920E98006B6EE4 /* NoteDetailVC-TVDelegate.swift */; };
@@ -83,6 +86,9 @@
 		F2D1991C25FF6A3000DA1499 /* TextViewIAView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2D1991B25FF6A3000DA1499 /* TextViewIAView.xib */; };
 		F2D1991F25FF6C5200DA1499 /* TextViewIAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D1991E25FF6C5200DA1499 /* TextViewIAView.swift */; };
 		F2D7AF9C264ADAD900809FFB /* Iterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D7AF9B264ADAD900809FFB /* Iterator.swift */; };
+		F2E4BFF326BCF5F90057BD37 /* MyDraftNoteWaterfallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E4BFF126BCF5F90057BD37 /* MyDraftNoteWaterfallCell.swift */; };
+		F2E4BFF426BCF5FA0057BD37 /* MyDraftNoteWaterfallCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2E4BFF226BCF5F90057BD37 /* MyDraftNoteWaterfallCell.xib */; };
+		F2E4BFF726BFAB910057BD37 /* WaterfallVC-Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E4BFF626BFAB910057BD37 /* WaterfallVC-Layout.swift */; };
 		F2E5B22A2601FB350005AF9A /* ChannelTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E5B2292601FB350005AF9A /* ChannelTableVC.swift */; };
 		F2E5C3992623DF7C002E06FD /* WaterfallVC-DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E5C3982623DF7C002E06FD /* WaterfallVC-DataSource.swift */; };
 		F2E5C39C26242DA6002E06FD /* WaterfallVC-Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E5C39B26242DA6002E06FD /* WaterfallVC-Delegate.swift */; };
@@ -106,6 +112,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		62DB6A9B625D29495A42880E /* MeVC-EditIntro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MeVC-EditIntro.swift"; sourceTree = "<group>"; };
+		62DB6B8E06A44C38B07B452C /* MeVC-SettingOrChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MeVC-SettingOrChat.swift"; sourceTree = "<group>"; };
+		62DB6D95E13668A1A8F91C00 /* MeVC-EditOrFollow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MeVC-EditOrFollow.swift"; sourceTree = "<group>"; };
 		AC1C2ECD820882225E9AFB38 /* Pods_LittlePink.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LittlePink.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1D380A29BBDC7C14672677 /* Pods-LittlePink.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LittlePink.debug.xcconfig"; path = "Target Support Files/Pods-LittlePink/Pods-LittlePink.debug.xcconfig"; sourceTree = "<group>"; };
 		F202D5F126920CDE006B6EE4 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
@@ -193,6 +202,9 @@
 		F2D1991B25FF6A3000DA1499 /* TextViewIAView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextViewIAView.xib; sourceTree = "<group>"; };
 		F2D1991E25FF6C5200DA1499 /* TextViewIAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewIAView.swift; sourceTree = "<group>"; };
 		F2D7AF9B264ADAD900809FFB /* Iterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Iterator.swift; sourceTree = "<group>"; };
+		F2E4BFF126BCF5F90057BD37 /* MyDraftNoteWaterfallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDraftNoteWaterfallCell.swift; sourceTree = "<group>"; };
+		F2E4BFF226BCF5F90057BD37 /* MyDraftNoteWaterfallCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyDraftNoteWaterfallCell.xib; sourceTree = "<group>"; };
+		F2E4BFF626BFAB910057BD37 /* WaterfallVC-Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WaterfallVC-Layout.swift"; sourceTree = "<group>"; };
 		F2E5B2292601FB350005AF9A /* ChannelTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTableVC.swift; sourceTree = "<group>"; };
 		F2E5C3982623DF7C002E06FD /* WaterfallVC-DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WaterfallVC-DataSource.swift"; sourceTree = "<group>"; };
 		F2E5C39B26242DA6002E06FD /* WaterfallVC-Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WaterfallVC-Delegate.swift"; sourceTree = "<group>"; };
@@ -424,9 +436,12 @@
 				F292AE31261E9DAC006B2C7C /* WaterfallVC-LoadData.swift */,
 				F2E5C3982623DF7C002E06FD /* WaterfallVC-DataSource.swift */,
 				F2E5C39B26242DA6002E06FD /* WaterfallVC-Delegate.swift */,
+				F2E4BFF626BFAB910057BD37 /* WaterfallVC-Layout.swift */,
 				F254F65E25C40C0B00A02076 /* WaterfallCell.swift */,
 				F25D6E06268483D900CFEA5A /* WaterfallCell-Like.swift */,
 				F292AE1E261593CD006B2C7C /* DraftNoteWaterfallCell.swift */,
+				F2E4BFF126BCF5F90057BD37 /* MyDraftNoteWaterfallCell.swift */,
+				F2E4BFF226BCF5F90057BD37 /* MyDraftNoteWaterfallCell.xib */,
 			);
 			path = Waterfall;
 			sourceTree = "<group>";
@@ -535,6 +550,9 @@
 				F26BA6F826B6EBF800F6A217 /* MeVC-BackOrDrawer.swift */,
 				F2FAABF126A8747B00A08DC3 /* MeHeaderView.swift */,
 				F2FAABF426A875BA00A08DC3 /* MeHeaderView.xib */,
+				62DB6A9B625D29495A42880E /* MeVC-EditIntro.swift */,
+				62DB6D95E13668A1A8F91C00 /* MeVC-EditOrFollow.swift */,
+				62DB6B8E06A44C38B07B452C /* MeVC-SettingOrChat.swift */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -712,6 +730,7 @@
 				F2041B9C267648E800BBDE6C /* avatarPH.jpeg in Resources */,
 				F2FAABF526A875BA00A08DC3 /* MeHeaderView.xib in Resources */,
 				F202D5F526920CFE006B6EE4 /* CommentView.xib in Resources */,
+				F2E4BFF426BCF5FA0057BD37 /* MyDraftNoteWaterfallCell.xib in Resources */,
 				F2AC648625BEAE85000672E8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -786,6 +805,7 @@
 				F29B9C382695C51400A4F619 /* NoteDetailVC-PostComment.swift in Sources */,
 				F2F2EDB42653BE6D00097D55 /* SocialLoginVC-Apple.swift in Sources */,
 				F2F2EDDD265EA2CD00097D55 /* LoginAndMeParentVC.swift in Sources */,
+				F2E4BFF326BCF5F90057BD37 /* MyDraftNoteWaterfallCell.swift in Sources */,
 				F2FCC57C264C20210004C106 /* SocialLoginVC-Alipay.swift in Sources */,
 				F2D1991F25FF6C5200DA1499 /* TextViewIAView.swift in Sources */,
 				F2750E9E26256D370021989A /* NoteEditVC-Helper.swift in Sources */,
@@ -842,6 +862,7 @@
 				F202D5F826920E98006B6EE4 /* NoteDetailVC-TVDelegate.swift in Sources */,
 				F292AE32261E9DAC006B2C7C /* WaterfallVC-LoadData.swift in Sources */,
 				F273781925C8E69E00F4A6E8 /* System-Extensions.swift in Sources */,
+				F2E4BFF726BFAB910057BD37 /* WaterfallVC-Layout.swift in Sources */,
 				F21D403E266E720000D91828 /* CustomViews.swift in Sources */,
 				F279B0FC269C953A00C403A4 /* ReplyCell.swift in Sources */,
 				F25D6E07268483D900CFEA5A /* WaterfallCell-Like.swift in Sources */,
@@ -863,6 +884,9 @@
 				F22E85D32604477000BF7EF9 /* POIVC.swift in Sources */,
 				F2B9EC5D2608833F001E74BA /* POIVC-Config.swift in Sources */,
 				F292AE1F261593CD006B2C7C /* DraftNoteWaterfallCell.swift in Sources */,
+				62DB6D74BDDE42B8C44D531C /* MeVC-EditIntro.swift in Sources */,
+				62DB67A14CFE4639C92B892C /* MeVC-EditOrFollow.swift in Sources */,
+				62DB65A4A9EF2E8F1FF4045C /* MeVC-SettingOrChat.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

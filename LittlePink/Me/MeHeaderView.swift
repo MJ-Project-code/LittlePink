@@ -56,10 +56,6 @@ class MeHeaderView: UIView {
             }
         }
     }
-    
-    @IBAction func logouttest(_ sender: Any) {
-        LCUser.logOut()
-    }
 }
 
 extension MeHeaderView{

@@ -9,161 +9,161 @@
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>41</integer>
+			<integer>1</integer>
 		</dict>
 		<key>AMapLocation.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>42</integer>
+			<integer>2</integer>
 		</dict>
 		<key>AMapSearch.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>43</integer>
+			<integer>3</integer>
 		</dict>
 		<key>Alamofire.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>44</integer>
+			<integer>4</integer>
 		</dict>
 		<key>AlipaySDK-iOS.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>45</integer>
+			<integer>5</integer>
 		</dict>
 		<key>CHTCollectionViewWaterfallLayout.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>46</integer>
+			<integer>6</integer>
 		</dict>
 		<key>DateToolsSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>47</integer>
+			<integer>8</integer>
 		</dict>
 		<key>DynamicBlurView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>48</integer>
+			<integer>11</integer>
 		</dict>
 		<key>FaveButton.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>49</integer>
+			<integer>14</integer>
 		</dict>
 		<key>GRDB.swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>50</integer>
+			<integer>15</integer>
 		</dict>
 		<key>GrowingTextView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>51</integer>
+			<integer>16</integer>
 		</dict>
 		<key>ImageSlideshow.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>52</integer>
+			<integer>17</integer>
 		</dict>
 		<key>JCore.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>53</integer>
+			<integer>20</integer>
 		</dict>
 		<key>JVerification.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>54</integer>
+			<integer>24</integer>
 		</dict>
 		<key>KMPlaceholderTextView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>55</integer>
+			<integer>28</integer>
 		</dict>
 		<key>Kingfisher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>56</integer>
+			<integer>32</integer>
 		</dict>
 		<key>LeanCloud.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>57</integer>
+			<integer>36</integer>
 		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>58</integer>
+			<integer>40</integer>
 		</dict>
 		<key>MJRefresh.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>59</integer>
+			<integer>44</integer>
 		</dict>
 		<key>Pods-LittlePink.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>60</integer>
+			<integer>48</integer>
 		</dict>
 		<key>PopupDialog.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>61</integer>
+			<integer>52</integer>
 		</dict>
 		<key>PryntTrimmerView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>62</integer>
+			<integer>56</integer>
 		</dict>
 		<key>SKPhotoBrowser.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>63</integer>
+			<integer>60</integer>
 		</dict>
 		<key>SegementSlide.xcscheme</key>
 		<dict>
@@ -177,35 +177,35 @@
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>65</integer>
+			<integer>68</integer>
 		</dict>
 		<key>SwiftProtobuf.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>66</integer>
+			<integer>72</integer>
 		</dict>
 		<key>XLPagerTabStrip-XLPagerTabStrip.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>67</integer>
+			<integer>76</integer>
 		</dict>
 		<key>XLPagerTabStrip.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>68</integer>
+			<integer>80</integer>
 		</dict>
 		<key>YPImagePicker.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>69</integer>
+			<integer>84</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>

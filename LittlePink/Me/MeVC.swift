@@ -48,7 +48,10 @@ class MeVC: SegementSlideDefaultViewController {
     }
     
     override func segementSlideContentViewController(at index: Int) -> SegementSlideContentScrollViewDelegate? {
+        let isMyDraft = (index == 0) && isMySelf && (UserDefaults.standard.integer(forKey: kDraftNoteCount) > 0)
+        
         let vc = storyboard?.instantiateViewController(identifier: kWaterfallVCID) as! WaterfallVC
+        vc.isMyDraft = isMyDraft
         return vc
     }
     

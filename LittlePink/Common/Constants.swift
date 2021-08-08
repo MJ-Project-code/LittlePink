@@ -26,6 +26,7 @@ let kPhotoFooterID = "PhotoFooterID"
 let kSubChannelCellID = "SubChannelCellID"
 let kPOICellID = "POICellID"
 let kDraftNoteWaterfallCellID = "DraftNoteWaterfallCellID"
+let kMyDraftNoteWaterfallCellID = "MyDraftNoteWaterfallCellID"
 let kLoginNaviID = "LoginNaviID"
 let kCommentViewID = "CommentViewID"
 let kReplyCellID = "ReplyCellID"
@@ -39,6 +40,8 @@ let mainLightColor = UIColor(named: "main-light")
 //userdefaults的key
 let kNameFromAppID = "nameFromAppID"
 let kEmailFromAppleID = "emailFromAppleID"
+let kDraftNoteCount = "draftNoteCount"
+let kDraftNoteCoverphoto = "draftNoteCoverphoto"
 
 //coredata
 let appDelegate = UIApplication.shared.delegate as! AppDelegate
