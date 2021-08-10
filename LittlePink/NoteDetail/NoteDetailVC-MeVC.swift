@@ -10,12 +10,17 @@ import LeanCloud
 extension NoteDetailVC{
     func noteToMeVC(_ user: LCUser?){
         guard let user = user else { return }
-        let meVC = storyboard!.instantiateViewController(identifier: kMeVCID){ coder in
-            MeVC(coder: coder, user: user)
+        
+        if isFromMeVC , let fromMeVCUser = fromMeVCUser , fromMeVCUser == user {
+            dismiss(animated: true)
+        }else{
+            let meVC = storyboard!.instantiateViewController(identifier: kMeVCID){ coder in
+                MeVC(coder: coder, user: user)
+            }
+            meVC.isFromNote = true
+            meVC.modalPresentationStyle = .fullScreen
+            present(meVC, animated: true)
         }
-        meVC.isFromNote = true
-        meVC.modalPresentationStyle = .fullScreen
-        present(meVC, animated: true)
     }
     
     @objc func goToMeVC(_ tap:UIPassableTapGestureRecognizer){

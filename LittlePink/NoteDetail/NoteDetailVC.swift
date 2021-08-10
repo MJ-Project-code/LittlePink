@@ -25,6 +25,9 @@ class NoteDetailVC: UIViewController {
     var replies: [ExpandableReplies] = []
     var replyToUser: LCUser?
     
+    var isFromMeVC = false
+    var fromMeVCUser: LCUser?
+    
     @IBOutlet weak var authorAvatarBtn: UIButton!
     @IBOutlet weak var authorNickNameBtn: UIButton!
     @IBOutlet weak var followBtn: UIButton!

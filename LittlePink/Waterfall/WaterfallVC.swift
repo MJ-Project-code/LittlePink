@@ -31,6 +31,9 @@ class WaterfallVC: UICollectionViewController , SegementSlideContentScrollViewDe
     var isMyNote = false
     var isMyFav = false
     var isMyselfLike = false
+    //是否是从个人页面进入的
+    var isFromMeVC = false
+    var fromMeVCUser: LCUser?
     
     override func viewDidLoad() {
         super.viewDidLoad()

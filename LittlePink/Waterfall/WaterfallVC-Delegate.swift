@@ -49,7 +49,7 @@ extension WaterfallVC{
             let detailVC = storyboard!.instantiateViewController(identifier: kNoteDetailVCID){ coder  in
                 NoteDetailVC(coder: coder,note: self.notes[item])
             }
-            if let cell = collectionView.cellForItem(at: IndexPath(item: item, section: 0)) as? WaterfallCell{
+            if let cell = collectionView.cellForItem(at: indexPath) as? WaterfallCell{
                 detailVC.isLikeFromWaterfallCell = cell.isLike
             }
             detailVC.delNoteFinished = {
@@ -58,6 +58,8 @@ extension WaterfallVC{
                     collectionView.deleteItems(at: [indexPath])
                 }
             }
+            detailVC.isFromMeVC = isFromMeVC
+            detailVC.fromMeVCUser = fromMeVCUser
             
             detailVC.modalPresentationStyle = .fullScreen
             present(detailVC, animated: true)
