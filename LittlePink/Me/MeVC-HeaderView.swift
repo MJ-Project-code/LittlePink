@@ -12,7 +12,7 @@ extension MeVC{
         let headerView = Bundle.loadView(fromNib: "MeHeaderView", with: MeHeaderView.self)
         
         headerView.translatesAutoresizingMaskIntoConstraints = false
-        headerView.heightAnchor.constraint(equalToConstant: headerView.rootStackView.frame.height + 16).isActive = true
+        headerView.heightAnchor.constraint(equalToConstant: headerView.rootStackView.frame.height + 26).isActive = true
         
         headerView.user = user
         

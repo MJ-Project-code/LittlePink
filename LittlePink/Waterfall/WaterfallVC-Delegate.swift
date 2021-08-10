@@ -9,7 +9,12 @@ import Foundation
 
 extension WaterfallVC{
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if isDraft{
+        if isMyDraft , indexPath.item == 0{
+            let navi = storyboard!.instantiateViewController(identifier: kDraftNotesNavID) as! UINavigationController
+            navi.modalPresentationStyle = .fullScreen
+            (navi.topViewController as! WaterfallVC).isDraft = true
+            present(navi, animated: true)
+        }else if isDraft{
             let draftNote =  draftNotes[indexPath.item]
             
             if let photosData = draftNote.photos,
@@ -38,15 +43,17 @@ extension WaterfallVC{
             }
             
         }else{
+            let offset = isMyDraft ? 1 : 0
+            let item = indexPath.item - offset
             //依赖注入
             let detailVC = storyboard!.instantiateViewController(identifier: kNoteDetailVCID){ coder  in
-                NoteDetailVC(coder: coder,note: self.notes[indexPath.item])
+                NoteDetailVC(coder: coder,note: self.notes[item])
             }
-            if let cell = collectionView.cellForItem(at: indexPath) as? WaterfallCell{
+            if let cell = collectionView.cellForItem(at: IndexPath(item: item, section: 0)) as? WaterfallCell{
                 detailVC.isLikeFromWaterfallCell = cell.isLike
             }
             detailVC.delNoteFinished = {
-                self.notes.remove(at: indexPath.item)
+                self.notes.remove(at: item)
                 collectionView.performBatchUpdates {
                     collectionView.deleteItems(at: [indexPath])
                 }

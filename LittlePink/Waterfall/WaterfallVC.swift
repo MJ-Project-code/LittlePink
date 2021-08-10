@@ -10,9 +10,12 @@ import CHTCollectionViewWaterfallLayout
 import XLPagerTabStrip
 import LeanCloud
 import SegementSlide
+import MJRefresh
 
 class WaterfallVC: UICollectionViewController , SegementSlideContentScrollViewDelegate{
     var channel = ""
+    lazy var header = MJRefreshNormalHeader()
+    
     @objc var scrollView: UIScrollView { collectionView }
     
     //当用户在 我的 页面点击,会传一个isDraft数据
@@ -24,16 +27,33 @@ class WaterfallVC: UICollectionViewController , SegementSlideContentScrollViewDe
     
     //首页进入,笔记详情页
     var notes: [LCObject] = []
-
+    var user: LCUser?
+    var isMyNote = false
+    var isMyFav = false
+    var isMyselfLike = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         config()
         
-        getNotes()
-        getDraftNotes()
+        if let _ = user {//个人页面瀑布流
+            if isMyNote{
+                header.setRefreshingTarget(self, refreshingAction: #selector(getMyNotes))
+            }else if isMyFav{
+                header.setRefreshingTarget(self, refreshingAction: #selector(getMyFavNotes))
+            }else{
+                header.setRefreshingTarget(self, refreshingAction: #selector(getMyLikeNotes))
+            }
+            header.beginRefreshing()
+        }else if isDraft{
+            getDraftNotes()
+        }else{
+            header.setRefreshingTarget(self, refreshingAction: #selector(getNotes))
+            header.beginRefreshing()
+        }
         
     }
-
+    
     @IBAction func dismissDraftNotesVC(_ sender: Any) {
         dismiss(animated: true)
     }

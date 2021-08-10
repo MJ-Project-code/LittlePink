@@ -15,6 +15,7 @@ class MyDraftNoteWaterfallCell: UICollectionViewCell {
         countLabel.text = "\(UserDefaults.standard.integer(forKey: kDraftNoteCount))"
         if let coverPhotoData = UserDefaults.standard.data(forKey: kDraftNoteCoverphoto){
             ImageView.image = UIImage(coverPhotoData)
+            //ImageView.image =   UIImage(named: "201704131205597084")
         }else{
             ImageView.image =   UIImage(named: "201704131205597084")
         }

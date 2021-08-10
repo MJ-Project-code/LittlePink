@@ -17,11 +17,14 @@ class WaterfallCell: UICollectionViewCell {
     @IBOutlet weak var nickNameLabel: UILabel!
     @IBOutlet weak var likeBtn: UIButton!
     
+    var isMyselfLike = false
+    
     var likeCount = 0{
         didSet{
             likeBtn.setTitle(likeCount.formattedStr, for: .normal)
         }
     }
+    
     var currentLikeCount = 0
     var isLike: Bool{ likeBtn.isSelected }
     
@@ -47,19 +50,22 @@ class WaterfallCell: UICollectionViewCell {
             nickNameLabel.text = author.getExactStringVal(knickNameCol)
             
             //点赞功能+判断是否点赞
-            if let user = LCApplication.default.currentUser{
-                let query = LCQuery(className: kUserLikeTable)
-                query.whereKey(kUserCol, .equalTo(user))
-                query.whereKey(kNoteCol, .equalTo(note))
-                query.getFirst { res in
-                    if case  .success = res{
-                        DispatchQueue.main.async {
-                            self.likeBtn.isSelected = true
+            if isMyselfLike{
+                likeBtn.isSelected = true
+            }else{
+                if let user = LCApplication.default.currentUser{
+                    let query = LCQuery(className: kUserLikeTable)
+                    query.whereKey(kUserCol, .equalTo(user))
+                    query.whereKey(kNoteCol, .equalTo(note))
+                    query.getFirst { res in
+                        if case  .success = res{
+                            DispatchQueue.main.async {
+                                self.likeBtn.isSelected = true
+                            }
                         }
                     }
                 }
             }
-            
         }
     }
     //从SB或者xib唤醒后,会加载这些函数
@@ -68,6 +74,7 @@ class WaterfallCell: UICollectionViewCell {
         
         let icon = UIImage(systemName: "heart.fill")?.withTintColor(mainColor ,renderingMode: .alwaysOriginal)
         likeBtn.setImage(icon, for: .selected)
+        
     }
     
     @IBAction func like(_ sender: Any) {
