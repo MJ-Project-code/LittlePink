@@ -18,7 +18,8 @@ let kLoginVCID = "LoginVCID"
 let kMeVCID = "MeVCID"
 let kDraftNotesNavID = "DraftNotesNavID"
 let kNoteDetailVCID = "NoteDetailVCID"
-
+let kIntroVCID = "IntroVCID"
+let kEditPorfileNaviID = "EditPorfileNaviID"
 //cell相关id
 let kWaterfallCellID = "WaterfallCellID"
 let kPhotoCellID = "PhotoCellID"
@@ -65,11 +66,13 @@ let kMaxPhotoCount = 9
 let kSpacingBetweenItems:CGFloat = 2
 
 
-//label剩余可输入字符
+//笔记
 let kmaxNoteTitleCount = 20
 let kmaxNoteTextCount = 1000
-
 let kNoteCommentPH = "精彩评论优先展示"
+
+//用户
+let kMaxIntroCount = 100
 
 
 //话题

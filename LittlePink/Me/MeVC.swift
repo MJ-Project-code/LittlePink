@@ -12,6 +12,8 @@ import SegementSlide
 class MeVC: SegementSlideDefaultViewController {
     
     var user:LCUser
+    lazy var meHeaderView = Bundle.loadView(fromNib: "MeHeaderView", with: MeHeaderView.self)
+
     //判断来源
     var isFromNote = false
     //本人已登录,查看自己的页面,可以修改资料和简介,显示'编辑资料'和 '设置' 按钮
