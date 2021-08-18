@@ -20,6 +20,8 @@ let kDraftNotesNavID = "DraftNotesNavID"
 let kNoteDetailVCID = "NoteDetailVCID"
 let kIntroVCID = "IntroVCID"
 let kEditPorfileNaviID = "EditPorfileNaviID"
+let kSettingTableVCID = "SettingTableVCID"
+
 //cell相关id
 let kWaterfallCellID = "WaterfallCellID"
 let kPhotoCellID = "PhotoCellID"
@@ -136,6 +138,7 @@ let kAvatarCol = "avatar"
 let kGenderCol = "gender"
 let kIntroCol = "intro"
 let kIdCok = "id"
+let kBirthCol = "birth"
 
 //Note表
 let kCoverPhotoCol = "coverPhoto"

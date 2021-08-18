@@ -23,3 +23,7 @@ protocol POIVCDelegate {
 protocol IntroVCDelegate{
     func updateIntro(_ intro: String)
 }
+
+protocol EditProfileDelegate{
+    func updateUser(_ avatar:UIImage?, _ nickName:String, _ gender: Bool, _ birth: Date?, _ intro: String)
+}

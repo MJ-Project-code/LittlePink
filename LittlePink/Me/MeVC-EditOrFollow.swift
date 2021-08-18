@@ -9,6 +9,9 @@ extension MeVC{
         if isMySelf{//编辑资料
             let navi = storyboard!.instantiateViewController(identifier: kEditPorfileNaviID) as UINavigationController
             navi.modalPresentationStyle = .fullScreen
+            let editProfileTableVC =  navi.topViewController as! EditPorfileTableVC
+            editProfileTableVC.user = user
+            editProfileTableVC.delegate = self
             present(navi, animated: true)
         }else{
             //用户登录看别人，或者用户未登录看所有

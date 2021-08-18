@@ -31,6 +31,7 @@
 		F22EF00B26B7C913005C9844 /* MeVC-HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22EF00A26B7C913005C9844 /* MeVC-HeaderView.swift */; };
 		F22F771A26C50F0A00C09B84 /* EditPorfileTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22F771926C50F0A00C09B84 /* EditPorfileTableVC.swift */; };
 		F22F771D26C5706D00C09B84 /* EditPorfileTableVC-Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22F771C26C5706D00C09B84 /* EditPorfileTableVC-Delegate.swift */; };
+		F23093EC26CABFA2006E1BED /* EditPorfileTableVC-UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23093EB26CABFA2006E1BED /* EditPorfileTableVC-UI.swift */; };
 		F239A8DD25C28BF700D7414C /* FollowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F239A8DC25C28BF700D7414C /* FollowVC.swift */; };
 		F239A8E325C28C6A00D7414C /* NearByVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F239A8E225C28C6A00D7414C /* NearByVC.swift */; };
 		F239A8E725C28C8200D7414C /* DiscoveryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F239A8E625C28C8200D7414C /* DiscoveryVC.swift */; };
@@ -67,6 +68,9 @@
 		F292AE1F261593CD006B2C7C /* DraftNoteWaterfallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F292AE1E261593CD006B2C7C /* DraftNoteWaterfallCell.swift */; };
 		F292AE32261E9DAC006B2C7C /* WaterfallVC-LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F292AE31261E9DAC006B2C7C /* WaterfallVC-LoadData.swift */; };
 		F292AE35261E9E03006B2C7C /* WaterfallVC-Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F292AE34261E9E03006B2C7C /* WaterfallVC-Config.swift */; };
+		F294759826CBF5D600734A6F /* MeVC-Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F294759726CBF5D600734A6F /* MeVC-Delegate.swift */; };
+		F294759E26CC0CFC00734A6F /* SettingTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F294759D26CC0CFC00734A6F /* SettingTableVC.swift */; };
+		F29475A226CCA1CC00734A6F /* SettingTableVC-Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29475A126CCA1CC00734A6F /* SettingTableVC-Delegate.swift */; };
 		F29B9C31269346B800A4F619 /* NoteDetailVC-LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29B9C30269346B800A4F619 /* NoteDetailVC-LoadData.swift */; };
 		F29B9C342694AF3000A4F619 /* NoteDetailVC-DelComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29B9C332694AF3000A4F619 /* NoteDetailVC-DelComment.swift */; };
 		F29B9C382695C51400A4F619 /* NoteDetailVC-PostComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29B9C372695C51400A4F619 /* NoteDetailVC-PostComment.swift */; };
@@ -144,6 +148,7 @@
 		F22F5DA525CCE7DF005A1AEF /* 值类型+引用类型.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "值类型+引用类型.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		F22F771926C50F0A00C09B84 /* EditPorfileTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPorfileTableVC.swift; sourceTree = "<group>"; };
 		F22F771C26C5706D00C09B84 /* EditPorfileTableVC-Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditPorfileTableVC-Delegate.swift"; sourceTree = "<group>"; };
+		F23093EB26CABFA2006E1BED /* EditPorfileTableVC-UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditPorfileTableVC-UI.swift"; sourceTree = "<group>"; };
 		F239A8DC25C28BF700D7414C /* FollowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowVC.swift; sourceTree = "<group>"; };
 		F239A8E225C28C6A00D7414C /* NearByVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearByVC.swift; sourceTree = "<group>"; };
 		F239A8E625C28C8200D7414C /* DiscoveryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryVC.swift; sourceTree = "<group>"; };
@@ -185,6 +190,9 @@
 		F292AE1E261593CD006B2C7C /* DraftNoteWaterfallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraftNoteWaterfallCell.swift; sourceTree = "<group>"; };
 		F292AE31261E9DAC006B2C7C /* WaterfallVC-LoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WaterfallVC-LoadData.swift"; sourceTree = "<group>"; };
 		F292AE34261E9E03006B2C7C /* WaterfallVC-Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WaterfallVC-Config.swift"; sourceTree = "<group>"; };
+		F294759726CBF5D600734A6F /* MeVC-Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MeVC-Delegate.swift"; sourceTree = "<group>"; };
+		F294759D26CC0CFC00734A6F /* SettingTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableVC.swift; sourceTree = "<group>"; };
+		F29475A126CCA1CC00734A6F /* SettingTableVC-Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingTableVC-Delegate.swift"; sourceTree = "<group>"; };
 		F29B9C30269346B800A4F619 /* NoteDetailVC-LoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteDetailVC-LoadData.swift"; sourceTree = "<group>"; };
 		F29B9C332694AF3000A4F619 /* NoteDetailVC-DelComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteDetailVC-DelComment.swift"; sourceTree = "<group>"; };
 		F29B9C372695C51400A4F619 /* NoteDetailVC-PostComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteDetailVC-PostComment.swift"; sourceTree = "<group>"; };
@@ -392,6 +400,7 @@
 			children = (
 				F2DAA50126C3BC20007F0FDB /* IntroVC.swift */,
 				F22F771926C50F0A00C09B84 /* EditPorfileTableVC.swift */,
+				F23093EB26CABFA2006E1BED /* EditPorfileTableVC-UI.swift */,
 				F22F771C26C5706D00C09B84 /* EditPorfileTableVC-Delegate.swift */,
 				F23D9BB326C60D3300639E7E /* EditPorfileTableVC-PHPickerVC.swift */,
 			);
@@ -512,6 +521,15 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		F294759C26CC0CD200734A6F /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				F294759D26CC0CFC00734A6F /* SettingTableVC.swift */,
+				F29475A126CCA1CC00734A6F /* SettingTableVC-Delegate.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
 		F2AC647225BEAE85000672E8 = {
 			isa = PBXGroup;
 			children = (
@@ -542,6 +560,7 @@
 				F239A8EC25C2900200D7414C /* Home */,
 				F2F2EDE2265EB2B300097D55 /* Me */,
 				F22F771626C50E9900C09B84 /* EditPorfile */,
+				F294759C26CC0CD200734A6F /* Setting */,
 				F26EDB3425C6B57C0051E9E7 /* Waterfall */,
 				F2404CB325EE1D2700AF1B55 /* NoteEdit */,
 				F22ED63726672F1A0021956C /* NoteDetail */,
@@ -570,6 +589,7 @@
 				62DB6A9B625D29495A42880E /* MeVC-EditIntro.swift */,
 				62DB6D95E13668A1A8F91C00 /* MeVC-EditOrFollow.swift */,
 				62DB6B8E06A44C38B07B452C /* MeVC-SettingOrChat.swift */,
+				F294759726CBF5D600734A6F /* MeVC-Delegate.swift */,
 				F26BA6F826B6EBF800F6A217 /* MeVC-BackOrDrawer.swift */,
 				F2FAABF126A8747B00A08DC3 /* MeHeaderView.swift */,
 				F2FAABF426A875BA00A08DC3 /* MeHeaderView.xib */,
@@ -830,6 +850,7 @@
 				F2D1991F25FF6C5200DA1499 /* TextViewIAView.swift in Sources */,
 				F2750E9E26256D370021989A /* NoteEditVC-Helper.swift in Sources */,
 				F2D7AF9C264ADAD900809FFB /* Iterator.swift in Sources */,
+				F294759826CBF5D600734A6F /* MeVC-Delegate.swift in Sources */,
 				F22E85D02603496600BF7EF9 /* Protocols.swift in Sources */,
 				F239A8E325C28C6A00D7414C /* NearByVC.swift in Sources */,
 				F27972D325DD1EC9008B2D08 /* PhotoCell.swift in Sources */,
@@ -854,6 +875,7 @@
 				F24DAEF025ECDCE7003E1043 /* PhotoFooter.swift in Sources */,
 				F2FCC579264C1E8D0004C106 /* SocialLoginVC.swift in Sources */,
 				F2752A7025D26024004EB07B /* NoteEditVC.swift in Sources */,
+				F294759E26CC0CFC00734A6F /* SettingTableVC.swift in Sources */,
 				F2750EA42626D5E30021989A /* NoteEditVC-DraftNote.swift in Sources */,
 				F2DAA50226C3BC20007F0FDB /* IntroVC.swift in Sources */,
 				F2AC647F25BEAE85000672E8 /* AppDelegate.swift in Sources */,
@@ -862,6 +884,7 @@
 				F2B0FCBF26298A5D004E206B /* MeVC.swift in Sources */,
 				F273781625C7E26100F4A6E8 /* PostVC.swift in Sources */,
 				F25D6E0F268579DF00CFEA5A /* NoteDetailVC-ShareOrMore.swift in Sources */,
+				F23093EC26CABFA2006E1BED /* EditPorfileTableVC-UI.swift in Sources */,
 				F279B0FF269EB61F00C403A4 /* ExpandableReplies.swift in Sources */,
 				F22ED63526672EF90021956C /* NoteDetailVC.swift in Sources */,
 				F29B9C31269346B800A4F619 /* NoteDetailVC-LoadData.swift in Sources */,
@@ -885,6 +908,7 @@
 				F202D5F826920E98006B6EE4 /* NoteDetailVC-TVDelegate.swift in Sources */,
 				F292AE32261E9DAC006B2C7C /* WaterfallVC-LoadData.swift in Sources */,
 				F273781925C8E69E00F4A6E8 /* System-Extensions.swift in Sources */,
+				F29475A226CCA1CC00734A6F /* SettingTableVC-Delegate.swift in Sources */,
 				F2E4BFF726BFAB910057BD37 /* WaterfallVC-Layout.swift in Sources */,
 				F21D403E266E720000D91828 /* CustomViews.swift in Sources */,
 				F279B0FC269C953A00C403A4 /* ReplyCell.swift in Sources */,
