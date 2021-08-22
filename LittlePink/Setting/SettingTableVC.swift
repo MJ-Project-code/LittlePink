@@ -7,9 +7,11 @@
 
 import UIKit
 import Kingfisher
+import LeanCloud
 
 class SettingTableVC: UITableViewController {
     
+    var user:LCUser!
     @IBOutlet weak var cacheSizeLabel: UILabel!
     
     var cacheSizeStr = "无缓存"{
@@ -19,6 +21,7 @@ class SettingTableVC: UITableViewController {
             }
         }
     }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +37,12 @@ class SettingTableVC: UITableViewController {
                 }
                 self.cacheSizeStr = cacheSizeStr
             }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let accountTableVC = segue.destination as? AccountTableVC{
+            accountTableVC.user = user
         }
     }
     

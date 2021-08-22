@@ -10,10 +10,21 @@ import UIKit
 class PasswordLoginVC: UIViewController {
 
     @IBOutlet weak var phoneNumberTF: UITextField!
+    @IBOutlet weak var passwordTF: UITextField!
+    @IBOutlet weak var loginBtn: UIButton!
+    
+    private var phoneNumStr: String { phoneNumberTF.unwrappedText }
+    private var passwordStr: String { passwordTF.unwrappedText }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        hideKeyboardWhenTappedAround()
+        loginBtn.setToDisable()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        phoneNumberTF.becomeFirstResponder()
     }
     
     @IBAction func dismiss(_ sender: Any) {
@@ -23,14 +34,32 @@ class PasswordLoginVC: UIViewController {
     @IBAction func backToCodeLoginVC(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func TFEditChanged(_ sender: Any) {
+        if phoneNumStr.isPhoneNum && passwordStr.isPassword{
+            loginBtn.setToEnable()
+        }else{
+            loginBtn.setToDisable()
+        }
     }
-    */
+    
+    @IBAction func login(_ sender: UIButton) {
+        
+    }
+    
+}
 
+extension PasswordLoginVC:UITextFieldDelegate{
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case phoneNumberTF:
+            passwordTF.becomeFirstResponder()
+        default:
+            <#code#>
+        }
+    }
 }

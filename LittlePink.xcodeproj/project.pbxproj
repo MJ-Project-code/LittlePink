@@ -71,6 +71,10 @@
 		F294759826CBF5D600734A6F /* MeVC-Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F294759726CBF5D600734A6F /* MeVC-Delegate.swift */; };
 		F294759E26CC0CFC00734A6F /* SettingTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F294759D26CC0CFC00734A6F /* SettingTableVC.swift */; };
 		F29475A226CCA1CC00734A6F /* SettingTableVC-Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29475A126CCA1CC00734A6F /* SettingTableVC-Delegate.swift */; };
+		F29475A526CE17C500734A6F /* NotificationTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29475A426CE17C500734A6F /* NotificationTableVC.swift */; };
+		F29475A826CEAB1200734A6F /* AccountTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29475A726CEAB1200734A6F /* AccountTableVC.swift */; };
+		F29475AE26D16F0A00734A6F /* AccountTableVC-Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29475AD26D16F0A00734A6F /* AccountTableVC-Delegate.swift */; };
+		F29475B126D176B700734A6F /* PasswordTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29475B026D176B700734A6F /* PasswordTableVC.swift */; };
 		F29B9C31269346B800A4F619 /* NoteDetailVC-LoadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29B9C30269346B800A4F619 /* NoteDetailVC-LoadData.swift */; };
 		F29B9C342694AF3000A4F619 /* NoteDetailVC-DelComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29B9C332694AF3000A4F619 /* NoteDetailVC-DelComment.swift */; };
 		F29B9C382695C51400A4F619 /* NoteDetailVC-PostComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29B9C372695C51400A4F619 /* NoteDetailVC-PostComment.swift */; };
@@ -193,6 +197,10 @@
 		F294759726CBF5D600734A6F /* MeVC-Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MeVC-Delegate.swift"; sourceTree = "<group>"; };
 		F294759D26CC0CFC00734A6F /* SettingTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableVC.swift; sourceTree = "<group>"; };
 		F29475A126CCA1CC00734A6F /* SettingTableVC-Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingTableVC-Delegate.swift"; sourceTree = "<group>"; };
+		F29475A426CE17C500734A6F /* NotificationTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableVC.swift; sourceTree = "<group>"; };
+		F29475A726CEAB1200734A6F /* AccountTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableVC.swift; sourceTree = "<group>"; };
+		F29475AD26D16F0A00734A6F /* AccountTableVC-Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountTableVC-Delegate.swift"; sourceTree = "<group>"; };
+		F29475B026D176B700734A6F /* PasswordTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTableVC.swift; sourceTree = "<group>"; };
 		F29B9C30269346B800A4F619 /* NoteDetailVC-LoadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteDetailVC-LoadData.swift"; sourceTree = "<group>"; };
 		F29B9C332694AF3000A4F619 /* NoteDetailVC-DelComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteDetailVC-DelComment.swift"; sourceTree = "<group>"; };
 		F29B9C372695C51400A4F619 /* NoteDetailVC-PostComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteDetailVC-PostComment.swift"; sourceTree = "<group>"; };
@@ -526,8 +534,20 @@
 			children = (
 				F294759D26CC0CFC00734A6F /* SettingTableVC.swift */,
 				F29475A126CCA1CC00734A6F /* SettingTableVC-Delegate.swift */,
+				F29475AA26CEAB4B00734A6F /* Account */,
+				F29475A426CE17C500734A6F /* NotificationTableVC.swift */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		F29475AA26CEAB4B00734A6F /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				F29475A726CEAB1200734A6F /* AccountTableVC.swift */,
+				F29475AD26D16F0A00734A6F /* AccountTableVC-Delegate.swift */,
+				F29475B026D176B700734A6F /* PasswordTableVC.swift */,
+			);
+			path = Account;
 			sourceTree = "<group>";
 		};
 		F2AC647225BEAE85000672E8 = {
@@ -901,7 +921,9 @@
 				F2D1990E25FF2DC600DA1499 /* NoteEditVC-Config.swift in Sources */,
 				F292AE35261E9E03006B2C7C /* WaterfallVC-Config.swift in Sources */,
 				F239A8DD25C28BF700D7414C /* FollowVC.swift in Sources */,
+				F29475AE26D16F0A00734A6F /* AccountTableVC-Delegate.swift in Sources */,
 				F26BA6F926B6EBF800F6A217 /* MeVC-BackOrDrawer.swift in Sources */,
+				F29475A826CEAB1200734A6F /* AccountTableVC.swift in Sources */,
 				F202D5FB26920EB1006B6EE4 /* NoteDetailVC-TVDataSource.swift in Sources */,
 				F22ED632266678A50021956C /* NoteEditVC-Note.swift in Sources */,
 				F2E5C39C26242DA6002E06FD /* WaterfallVC-Delegate.swift in Sources */,
@@ -913,6 +935,7 @@
 				F21D403E266E720000D91828 /* CustomViews.swift in Sources */,
 				F279B0FC269C953A00C403A4 /* ReplyCell.swift in Sources */,
 				F25D6E07268483D900CFEA5A /* WaterfallCell-Like.swift in Sources */,
+				F29475B126D176B700734A6F /* PasswordTableVC.swift in Sources */,
 				F26BA6F626B6E8D300F6A217 /* NoteDetailVC-MeVC.swift in Sources */,
 				F239A8E725C28C8200D7414C /* DiscoveryVC.swift in Sources */,
 				F202D5F226920CDE006B6EE4 /* CommentView.swift in Sources */,
@@ -921,6 +944,7 @@
 				F2AC648125BEAE85000672E8 /* SceneDelegate.swift in Sources */,
 				F25D6E1226857A8E00CFEA5A /* NoteDetailVC-DelNote.swift in Sources */,
 				F25D6E152685B3A800CFEA5A /* NoteDetailVC-Helper.swift in Sources */,
+				F29475A526CE17C500734A6F /* NotificationTableVC.swift in Sources */,
 				F2E5B22A2601FB350005AF9A /* ChannelTableVC.swift in Sources */,
 				F2AC648925BEAE85000672E8 /* LittlePink.xcdatamodeld in Sources */,
 				F2B9EC6026088408001E74BA /* POVIC-Location.swift in Sources */,

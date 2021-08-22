@@ -112,6 +112,7 @@ let kAppScheme = "LittlePink"
 //正则表达式
 let kPhoneRegEx = "^1\\d{10}$"  //^1\d{10}$
 let kAuthCodeRegEx = "^\\d{6}$"
+let kPasswordRegEx = "^[0-9a-zA-z]{6,16}$"
 
 
 //leanCloud
@@ -130,7 +131,8 @@ let kUserFavTable = "userFav"
 let kCommentTable = "comment"
 let kReplyTable = "replyTable"
 let kUserInfoTable = "UserInfo"
-let kFollower = "_Follower"
+let kFollower = "Follower"
+let kIsSetPasswordCol = "isSetPasswordCol"
 
 //User表
 let knickNameCol = "nickName"

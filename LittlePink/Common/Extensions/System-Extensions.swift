@@ -27,17 +27,13 @@ extension Int{
 }
 
 extension String{
-    var isBlank:Bool{
-        self.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
-    }
+    var isBlank:Bool{ self.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
     
-    var isPhoneNum: Bool{
-        Int(self) != nil  && NSRegularExpression(kPhoneRegEx).matches(self)
-    }
+    var isPhoneNum: Bool{ Int(self) != nil  && NSRegularExpression(kPhoneRegEx).matches(self) }
     
-    var isAuthCode: Bool{
-        Int(self) != nil  && NSRegularExpression(kAuthCodeRegEx).matches(self)
-    }
+    var isAuthCode: Bool{ Int(self) != nil  && NSRegularExpression(kAuthCodeRegEx).matches(self) }
+    
+    var isPassword:Bool{ NSRegularExpression(kPasswordRegEx).matches(self) }
     
     static func randomString(_ length: Int) -> String{
         let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
@@ -126,6 +122,13 @@ extension URL{
         }catch{
             return UIImage(named: "1")!;
         }
+    }
+}
+
+extension UILabel{
+    func setToLight(_ text: String){
+        self.text = text
+        textColor = .label
     }
 }
 
